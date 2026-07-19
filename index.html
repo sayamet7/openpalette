@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=film-v1" />
   </head>
   <body>
     <div class="noise" aria-hidden="true"></div>
@@ -41,25 +41,65 @@
     </nav>
 
     <main>
-      <section class="hero" id="top" aria-labelledby="hero-title">
-        <canvas id="sky" aria-hidden="true"></canvas>
-        <div class="hero-aura" aria-hidden="true"></div>
-        <div class="hero-content">
-          <p class="eyebrow hero-eyebrow reveal">Creative tools for Illustrator</p>
-          <h1 id="hero-title" class="hero-word-field" aria-label="Every shape has its perfect rhythm.">
-            <span class="hero-word" style="--x:10;--y:22;--size:1.02;--delay:.12s">Every</span>
-            <span class="hero-word" style="--x:38;--y:9;--size:1.18;--delay:.34s">shape</span>
-            <span class="hero-word" style="--x:77;--y:22;--size:.82;--delay:.58s">has</span>
-            <span class="hero-word" style="--x:18;--y:55;--size:.78;--delay:.8s">its</span>
-            <span class="hero-word" style="--x:50;--y:49;--size:1.1;--delay:1.02s">perfect</span>
-            <span class="hero-word" style="--x:86;--y:66;--size:.95;--delay:1.26s">rhythm.</span>
-          </h1>
-          <div class="hero-bottom reveal">
+      <section class="hero hero-film" id="top" aria-labelledby="hero-title">
+        <div class="film-stage" data-film-stage aria-hidden="true">
+          <div class="film-grain"></div>
+          <div class="film-word film-word-a" data-film-word="0">The</div>
+          <div class="film-word film-word-b" data-film-word="1">next</div>
+          <div class="film-word film-word-c" data-film-word="2">era</div>
+          <div class="film-word film-word-d" data-film-word="3">of</div>
+          <div class="film-word film-word-e" data-film-word="4">vector</div>
+          <div class="film-word film-word-f" data-film-word="5">tools</div>
+
+          <div class="film-media film-media-main" data-film-media="main">
+            <div class="media-meta"><span>OP / 001</span><span>PATH STUDY</span></div>
+            <svg viewBox="0 0 860 520" preserveAspectRatio="xMidYMid slice">
+              <defs>
+                <linearGradient id="film-line-gradient" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#f0ff6d" />
+                  <stop offset=".5" stop-color="#6ef3d6" />
+                  <stop offset="1" stop-color="#7184ff" />
+                </linearGradient>
+              </defs>
+              <g class="film-grid"><path d="M0 104H860M0 208H860M0 312H860M0 416H860" /><path d="M172 0V520M344 0V520M516 0V520M688 0V520" /></g>
+              <path class="film-path film-path-glow" d="M-60 364C82 350 114 124 257 154S367 438 481 405 638 173 920 215" />
+              <path class="film-path film-path-main" d="M-60 364C82 350 114 124 257 154S367 438 481 405 638 173 920 215" />
+              <g class="film-points"><path d="M257 154L177 126M257 154L336 181M481 405L404 430M481 405L557 380" /><circle cx="177" cy="126" r="5" /><circle cx="257" cy="154" r="9" /><circle cx="336" cy="181" r="5" /><circle cx="404" cy="430" r="5" /><circle cx="481" cy="405" r="9" /><circle cx="557" cy="380" r="5" /></g>
+            </svg>
+            <div class="media-footer"><span>G1 / G2 CONTINUITY</span><span>LIVE</span></div>
+          </div>
+
+          <div class="film-statement" data-film-statement>
+            <span>DESIGN</span><span>IN HARMONY</span>
+          </div>
+
+          <div class="film-media film-media-detail" data-film-media="detail">
+            <div class="detail-panel detail-before"><span>BEFORE</span><svg viewBox="0 0 360 540"><path d="M25 405C102 345 55 225 145 188S191 342 278 266 259 112 345 78" /><g><circle cx="145" cy="188" r="8" /><circle cx="278" cy="266" r="8" /></g></svg></div>
+            <div class="detail-panel detail-after"><span>AFTER</span><svg viewBox="0 0 360 540"><path d="M25 405C102 345 74 230 145 188S199 334 278 266 283 130 345 78" /><g><circle cx="145" cy="188" r="8" /><circle cx="278" cy="266" r="8" /></g></svg></div>
+          </div>
+
+          <div class="film-detail-copy" data-film-detail-copy>
+            <span>Turning</span><span>rough</span><span>SVG paths</span><span>into</span><span>balanced</span><span>forms</span>
+          </div>
+
+          <div class="film-collage" data-film-collage>
+            <div class="collage-card collage-one"><span>01 / INPUT</span><svg viewBox="0 0 300 210"><path d="M-20 175C45 118 72 86 110 111S133 206 182 160 205 43 320 72" /><circle cx="110" cy="111" r="6" /><circle cx="182" cy="160" r="6" /></svg></div>
+            <div class="collage-card collage-two"><span>02 / TUNE</span><svg viewBox="0 0 300 210"><path d="M-20 159C56 162 79 41 137 66S154 191 204 164 232 85 322 97" /><path class="collage-accent" d="M0 97H300M150 0V210" /></svg></div>
+            <div class="collage-card collage-three"><span>03 / OUTPUT</span><svg viewBox="0 0 300 210"><path d="M-20 140C74 139 72 58 142 66S198 168 320 61" /><path class="collage-accent" d="M45 154L142 66L230 117" /></svg></div>
+          </div>
+
+          <div class="film-lockup" data-film-lockup>
+            <span class="lockup-kicker">OPEN PALETTE / 2026</span>
+            <span class="lockup-title">Harmony Lines</span>
+            <span class="lockup-note">Perfect rhythm for every path.</span>
+          </div>
+        </div>
+        <div class="hero-content film-ui">
+          <p class="eyebrow hero-eyebrow">Creative tools for Illustrator</p>
+          <h1 id="hero-title" class="sr-only">Open Palette creates creative tools for Illustrator.</h1>
+          <div class="hero-bottom film-ui-bottom">
             <p>線も、色も、もっと美しく。<br />Open Paletteは、デザイナーの感覚を拡張する<br />Illustratorプラグインをつくります。</p>
-            <a class="round-link" href="#tools" aria-label="ツールを見る">
-              <span>Explore<br />the tools</span>
-              <span class="round-link-arrow" aria-hidden="true">↓</span>
-            </a>
+            <a class="round-link" href="#tools" aria-label="ツールを見る"><span>Explore<br />the tools</span><span class="round-link-arrow" aria-hidden="true">↓</span></a>
           </div>
         </div>
         <div class="hero-index" aria-hidden="true">OP / 001</div>
@@ -173,6 +213,6 @@
         <p>© 2026 Open Palette</p><p>Made for creative people in Japan</p>
       </div>
     </footer>
-    <script src="./script.js"></script>
+    <script src="./script.js?v=film-v1"></script>
   </body>
 </html>
