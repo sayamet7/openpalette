@@ -7,8 +7,7 @@
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const loopDuration = 20;
   const phaseStops = [
-    [0, 'intro'],
-    [1.35, 'main'],
+    [0, 'type'],
     [4.55, 'statement'],
     [7.15, 'detail'],
     [10.2, 'type'],

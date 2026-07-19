@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles.css?v=film-v4" />
+    <link rel="stylesheet" href="./styles.css?v=film-v5" />
   </head>
   <body>
     <div class="noise" aria-hidden="true"></div>
@@ -20,7 +20,6 @@
       </a>
       <nav class="nav-links" aria-label="メインナビゲーション">
         <a href="#tools">Tools</a>
-        <a href="#about">About</a>
       </nav>
       <a class="header-cta" href="#harmony-lines"><span>View Harmony Lines</span><span aria-hidden="true">↗</span></a>
       <button class="menu-button" type="button" aria-label="メニューを開く" aria-expanded="false">
@@ -30,8 +29,7 @@
 
     <nav class="mobile-nav" aria-label="モバイルナビゲーション" aria-hidden="true">
       <a href="#tools"><span>01</span>Tools</a>
-      <a href="#about"><span>02</span>About</a>
-      <a href="#harmony-lines"><span>03</span>Harmony Lines</a>
+      <a href="#harmony-lines"><span>02</span>Harmony Lines</a>
     </nav>
 
     <main>
@@ -82,8 +80,14 @@
             <figcaption><span>WORKSPACE / 003</span><span>TOOLS IN USE</span></figcaption>
           </figure>
 
-          <figure class="film-photo film-photo-type" data-film-photo="type">
+          <figure class="film-photo film-photo-type type-slide type-slide-one" data-film-photo="type">
             <img src="./assets/graphic-worktable.png" alt="" />
+          </figure>
+          <figure class="film-photo film-photo-type type-slide type-slide-two" data-film-photo="type">
+            <img src="./assets/graphic-worktable-digital.png" alt="" />
+          </figure>
+          <figure class="film-photo film-photo-type type-slide type-slide-three" data-film-photo="type">
+            <img src="./assets/graphic-worktable-screen.png" alt="" />
           </figure>
 
           <div class="film-detail-copy" data-film-detail-copy>
@@ -91,9 +95,9 @@
           </div>
 
           <div class="film-collage" data-film-collage>
-            <div class="collage-card collage-one"><span>01 / IDENTITY</span><img src="./assets/identity-board.png" alt="" /></div>
-            <div class="collage-card collage-two"><span>02 / WEB SYSTEM</span><img src="./assets/design-studio.png" alt="" /></div>
-            <div class="collage-card collage-three"><span>03 / PLACE + MOTION</span><img src="./assets/creative-district.png" alt="" /></div>
+            <div class="collage-card collage-one"><span>01 / IDENTITY</span><img src="./assets/graphic-worktable.png" alt="" /></div>
+            <div class="collage-card collage-two"><span>02 / WEB SYSTEM</span><img src="./assets/graphic-worktable-digital.png" alt="" /></div>
+            <div class="collage-card collage-three"><span>03 / PLACE + MOTION</span><img src="./assets/graphic-worktable-screen.png" alt="" /></div>
           </div>
 
           <div class="film-lockup" data-film-lockup>
@@ -113,37 +117,9 @@
         <div class="hero-index" aria-hidden="true">OP / 001</div>
       </section>
 
-      <section class="intro" id="about">
-        <div class="section-meta reveal"><span>01</span><span>Our belief</span></div>
-        <div class="intro-copy reveal">
-          <p class="intro-lead">One toolkit<br />for <span class="serif">many visual worlds.</span></p>
-          <div class="intro-note">
-            <p>ブランドのロゴから、WebのUI、ポスター、映像まで。いろんなデザイナーの手元で、自然に使える道具をつくります。</p>
-            <svg viewBox="0 0 112 58" aria-hidden="true">
-              <path d="M3 46C25 6 45 6 57 30s25 28 52-17" fill="none" stroke="currentColor" stroke-width="1.25" />
-              <circle cx="3" cy="46" r="2.5" /><circle cx="109" cy="13" r="2.5" />
-            </svg>
-          </div>
-        </div>
-        <div class="capability-reel reveal" aria-label="Open Paletteが使えるデザイン領域">
-          <figure class="capability-card capability-identity">
-            <img src="./assets/identity-board.png" alt="抽象的なロゴとタイポグラフィのデザインボード" loading="lazy" />
-            <figcaption><span>01</span><strong>Identity</strong><small>logos / type / systems</small></figcaption>
-          </figure>
-          <figure class="capability-card capability-web">
-            <img src="./assets/design-studio.png" alt="デザイナーのスタジオとWebレイアウト" loading="lazy" />
-            <figcaption><span>02</span><strong>Web</strong><small>interfaces / motion / flow</small></figcaption>
-          </figure>
-          <figure class="capability-card capability-place">
-            <img src="./assets/creative-district.png" alt="グラフィックで彩られたクリエイティブな街並み" loading="lazy" />
-            <figcaption><span>03</span><strong>Place</strong><small>campaigns / spaces / culture</small></figcaption>
-          </figure>
-        </div>
-      </section>
-
       <section class="tools" id="tools" aria-labelledby="tools-title">
         <div class="tools-heading reveal">
-          <div class="section-meta light"><span>02</span><span>Our tools</span></div>
+          <div class="section-meta light"><span>01</span><span>Our tools</span></div>
           <h2 id="tools-title">A growing palette<br />for your <span class="serif">practice.</span></h2>
           <p>ロゴにも、Webにも、イラストにも。<br />制作の流れに馴染む道具を増やしていきます。</p>
         </div>
@@ -235,6 +211,6 @@
         <p>© 2026 Open Palette</p><p>Made for creative people in Japan</p>
       </div>
     </footer>
-    <script src="./script.js?v=film-v3"></script>
+    <script src="./script.js?v=film-v5"></script>
   </body>
 </html>
