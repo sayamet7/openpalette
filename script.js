@@ -5,14 +5,15 @@
   const filmPath = document.querySelector('.film-path-main');
   const filmPathGlow = document.querySelector('.film-path-glow');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const loopDuration = 18;
+  const loopDuration = 20;
   const phaseStops = [
     [0, 'intro'],
     [1.35, 'main'],
     [4.55, 'statement'],
     [7.15, 'detail'],
-    [10.7, 'collage'],
-    [14.75, 'lockup']
+    [10.2, 'image'],
+    [13.0, 'collage'],
+    [16.2, 'lockup']
   ];
   const wordStarts = [.78, 1.08, 1.38, 1.72, 2.08, 2.42];
   let filmRaf = 0;
