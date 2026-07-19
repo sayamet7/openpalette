@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Open Palette — Illustratorのための、創造を整えるプラグインコレクティブ。" />
+    <meta name="theme-color" content="#0c0c0c" />
+    <title>Open Palette — Tools for a harmonious canvas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="Open Palette ホーム">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M6 6.5h20v19H6z" fill="none" stroke="currentColor" stroke-width="1.5" />
+          <circle cx="11" cy="11.5" r="2.25" fill="#ff6933" />
+          <circle cx="16" cy="16" r="2.25" fill="#79a9ff" />
+          <circle cx="21" cy="20.5" r="2.25" fill="#efff8d" />
+        </svg>
+        <span>open palette</span>
+      </a>
+      <nav class="nav-links" aria-label="メインナビゲーション">
+        <a href="#tools">Tools</a>
+        <a href="#about">About</a>
+      </nav>
+      <a class="header-cta" href="#harmony-lines"><span>View Harmony Lines</span><span aria-hidden="true">↗</span></a>
+      <button class="menu-button" type="button" aria-label="メニューを開く" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <nav class="mobile-nav" aria-label="モバイルナビゲーション" aria-hidden="true">
+      <a href="#tools"><span>01</span>Tools</a>
+      <a href="#about"><span>02</span>About</a>
+      <a href="#harmony-lines"><span>03</span>Harmony Lines</a>
+    </nav>
+
+    <main>
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <canvas id="sky" aria-hidden="true"></canvas>
+        <div class="hero-aura" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow hero-eyebrow reveal">Creative tools for Illustrator</p>
+          <h1 id="hero-title" class="hero-title reveal">
+            <span>Every shape has</span>
+            <span>its <em>perfect</em> rhythm.</span>
+          </h1>
+          <div class="hero-bottom reveal">
+            <p>線も、色も、もっと美しく。<br />Open Paletteは、デザイナーの感覚を拡張する<br />Illustratorプラグインをつくります。</p>
+            <a class="round-link" href="#tools" aria-label="ツールを見る">
+              <span>Explore<br />the tools</span>
+              <span class="round-link-arrow" aria-hidden="true">↓</span>
+            </a>
+          </div>
+        </div>
+        <div class="hero-index" aria-hidden="true">OP / 001</div>
+      </section>
+
+      <section class="intro" id="about">
+        <div class="section-meta reveal"><span>01</span><span>Our belief</span></div>
+        <div class="intro-copy reveal">
+          <p class="intro-lead">We make small tools<br />for <span class="serif">big creative flow.</span></p>
+          <div class="intro-note">
+            <p>操作を増やすのではなく、迷いを減らす。手で描く楽しさと、計算の正確さ。その間にある道具を届けます。</p>
+            <svg viewBox="0 0 112 58" aria-hidden="true">
+              <path d="M3 46C25 6 45 6 57 30s25 28 52-17" fill="none" stroke="currentColor" stroke-width="1.25" />
+              <circle cx="3" cy="46" r="2.5" /><circle cx="109" cy="13" r="2.5" />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section class="tools" id="tools" aria-labelledby="tools-title">
+        <div class="tools-heading reveal">
+          <div class="section-meta light"><span>02</span><span>Our tools</span></div>
+          <h2 id="tools-title">A growing palette<br />for your <span class="serif">practice.</span></h2>
+          <p>ひとつずつ、丁寧に。<br />あなたの制作に馴染む道具を増やしていきます。</p>
+        </div>
+
+        <article class="product product-primary" id="harmony-lines">
+          <div class="product-copy reveal">
+            <div class="product-topline">
+              <span class="product-number">01</span>
+              <span class="status available"><i></i> Available now</span>
+            </div>
+            <div>
+              <p class="product-type">Adobe Illustrator Plugin</p>
+              <h3>Harmony<br /><span>Lines</span></h3>
+              <p class="product-jp">パスに、心地よい連続性を。</p>
+              <p class="product-description">SVGやベジェパスの接続をG1・G2連続へ。形の意図を残したまま、流れのあるラインに整えます。</p>
+              <div class="feature-list" aria-label="主な機能">
+                <span>G1 / G2 Continuity</span><span>Live Preview</span><span>SVG Ready</span>
+              </div>
+            </div>
+            <a class="text-link" href="#contact"><span>Discover Harmony Lines</span><span>↗</span></a>
+          </div>
+
+          <div class="line-lab" data-line-lab aria-label="Harmony Linesの動作イメージ">
+            <div class="lab-toolbar">
+              <span>Harmony Lines / Live</span>
+              <div class="lab-toggle"><span>G1</span><span class="active">G2</span></div>
+            </div>
+            <svg class="line-visual" viewBox="0 0 900 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <defs>
+                <linearGradient id="line-gradient" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#dfff64" /><stop offset=".45" stop-color="#6ef3d6" /><stop offset="1" stop-color="#7d84ff" />
+                </linearGradient>
+                <filter id="line-glow"><feGaussianBlur stdDeviation="10" result="b" /><feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
+              </defs>
+              <g class="grid-lines" opacity=".22">
+                <path d="M0 100H900M0 200H900M0 300H900M0 400H900M0 500H900M0 600H900" />
+                <path d="M100 0V700M200 0V700M300 0V700M400 0V700M500 0V700M600 0V700M700 0V700M800 0V700" />
+              </g>
+              <path class="flow flow-glow" d="M-50 476C78 472 82 167 238 184S344 558 507 532 659 198 950 246" />
+              <path class="flow flow-main" d="M-50 476C78 472 82 167 238 184S344 558 507 532 659 198 950 246" />
+              <g class="control-points">
+                <path d="M238 184L153 164M238 184L322 205M507 532L421 548M507 532L589 510" />
+                <circle cx="153" cy="164" r="5" /><circle cx="238" cy="184" r="9" /><circle cx="322" cy="205" r="5" />
+                <circle cx="421" cy="548" r="5" /><circle cx="507" cy="532" r="9" /><circle cx="589" cy="510" r="5" />
+              </g>
+            </svg>
+            <div class="lab-caption"><span>Move to reshape</span><span>60 FPS</span></div>
+          </div>
+        </article>
+
+        <article class="product product-soon" aria-disabled="true">
+          <div class="product-copy reveal">
+            <div class="product-topline">
+              <span class="product-number">02</span><span class="status"><i></i> In development</span>
+            </div>
+            <div>
+              <p class="product-type">Adobe Illustrator Plugin</p>
+              <h3>Harmony<br /><span>Gradient</span></h3>
+              <p class="product-jp">色のあいだを、もっと自然に。</p>
+              <p class="product-description">知覚的に美しいカラー補間と、自由なリズム。新しいグラデーション体験を開発中です。</p>
+            </div>
+            <span class="text-link disabled"><span>Coming soon</span><span>—</span></span>
+          </div>
+          <div class="gradient-preview" aria-hidden="true">
+            <div class="gradient-orb"></div><span>Preview unavailable</span>
+            <div class="lock-mark"><span></span><span></span></div>
+          </div>
+        </article>
+
+        <div class="next-tool reveal">
+          <span>03</span><p>What should we<br />make <span class="serif">next?</span></p>
+          <a href="mailto:hello@openpalette.jp">Tell us your idea <span>↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact">
+      <div class="footer-top reveal">
+        <p>Keep your<br />ideas <span class="serif">in motion.</span></p>
+        <a href="mailto:hello@openpalette.jp" class="footer-contact">hello@openpalette.jp <span>↗</span></a>
+      </div>
+      <div class="footer-bottom">
+        <a class="brand footer-brand" href="#top">
+          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M6 6.5h20v19H6z" fill="none" stroke="currentColor" stroke-width="1.5" />
+            <circle cx="11" cy="11.5" r="2.25" fill="#ff6933" /><circle cx="16" cy="16" r="2.25" fill="#79a9ff" /><circle cx="21" cy="20.5" r="2.25" fill="#efff8d" />
+          </svg><span>open palette</span>
+        </a>
+        <p>© 2026 Open Palette</p><p>Made for creative people in Japan</p>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
