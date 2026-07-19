@@ -12,6 +12,15 @@
     opacity: .075 + (index % 6) * .018,
     phase: index * 1.93
   }));
+  const cloudBanks = Array.from({ length: 9 }, (_, index) => ({
+    x: ((index * 317) % 1100) / 1000 - .12,
+    y: .18 + (((index * 71) % 430) / 1000),
+    width: .42 + (((index * 43) % 380) / 1000),
+    height: .075 + (((index * 29) % 90) / 1000),
+    speed: .000006 + (index % 4) * .000002,
+    opacity: .075 + (index % 4) * .018,
+    phase: index * 2.47
+  }));
 
   function resize() {
     const rect = hero.getBoundingClientRect();
@@ -38,6 +47,41 @@
     });
   }
 
+  function cloudBank(item, time) {
+    const travel = (item.x + time * item.speed) % 1.34 - .17;
+    const x = travel * width + Math.sin(time * .00008 + item.phase) * width * .025;
+    const y = item.y * height + Math.sin(time * .00012 + item.phase) * height * .024;
+    const bankWidth = item.width * width;
+    const bankHeight = item.height * height;
+    const puffs = 5;
+
+    ctx.save();
+    ctx.filter = `blur(${Math.max(5, width * .005)}px)`;
+    for (let puff = 0; puff < puffs; puff += 1) {
+      const ratio = puff / (puffs - 1);
+      const puffX = x + bankWidth * (ratio - .5) * .92;
+      const puffY = y + Math.sin(time * .00016 + item.phase + puff) * bankHeight * .38;
+      const puffRadius = bankHeight * (1.65 - Math.abs(ratio - .5) * .72);
+      const shadow = ctx.createRadialGradient(puffX, puffY + puffRadius * .12, 0, puffX, puffY, puffRadius * 1.8);
+      shadow.addColorStop(0, `rgba(89,113,143,${item.opacity * .22})`);
+      shadow.addColorStop(.68, 'rgba(130,145,164,0)');
+      ctx.fillStyle = shadow;
+      ctx.beginPath();
+      ctx.ellipse(puffX, puffY + puffRadius * .16, puffRadius * 1.45, puffRadius * .54, -.04, 0, Math.PI * 2);
+      ctx.fill();
+
+      const highlight = ctx.createRadialGradient(puffX, puffY - puffRadius * .08, 0, puffX, puffY, puffRadius * 1.35);
+      highlight.addColorStop(0, `rgba(255,252,241,${item.opacity * (1.08 - ratio * .22)})`);
+      highlight.addColorStop(.42, `rgba(245,242,231,${item.opacity * .52})`);
+      highlight.addColorStop(1, 'rgba(224,226,224,0)');
+      ctx.fillStyle = highlight;
+      ctx.beginPath();
+      ctx.ellipse(puffX, puffY, puffRadius * 1.35, puffRadius * .66, -.04, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    ctx.restore();
+  }
+
   function render(time = 0) {
     pointerX += (targetX - pointerX) * .018; pointerY += (targetY - pointerY) * .018;
     const sky = ctx.createLinearGradient(0, 0, 0, height);
@@ -54,6 +98,7 @@
       const drift = Math.sin(time * .00018 + item.phase) * height * .045;
       cloud(travel * width + (pointerX - .5) * width * (index % 3) * .015, item.y * height + drift, item.size * width, item.opacity, time * .0002 + item.phase);
     });
+    cloudBanks.forEach(item => cloudBank(item, time));
     ctx.restore();
     const haze = ctx.createLinearGradient(0, height * .62, 0, height);
     haze.addColorStop(0, 'rgba(255,225,200,0)'); haze.addColorStop(.47, 'rgba(239,175,143,.1)'); haze.addColorStop(1, 'rgba(14,15,25,.16)');
