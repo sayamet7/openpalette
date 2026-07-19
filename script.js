@@ -2,9 +2,10 @@
   const canvas = document.querySelector('#sky');
   const ctx = canvas.getContext('2d', { alpha: false });
   const hero = document.querySelector('.hero');
+  const heroWords = document.querySelectorAll('.hero-word');
   let width = 0, height = 0, dpr = 1, pointerX = .62, pointerY = .38;
   let targetX = pointerX, targetY = pointerY, raf;
-  const clouds = Array.from({ length: 30 }, (_, index) => ({
+  const clouds = Array.from({ length: 16 }, (_, index) => ({
     x: ((index * 197) % 1000) / 1000,
     y: .12 + (((index * 83) % 620) / 1000),
     size: .06 + (((index * 47) % 145) / 1000),
@@ -12,7 +13,7 @@
     opacity: .075 + (index % 6) * .018,
     phase: index * 1.93
   }));
-  const cloudBanks = Array.from({ length: 9 }, (_, index) => ({
+  const cloudBanks = Array.from({ length: 5 }, (_, index) => ({
     x: ((index * 317) % 1100) / 1000 - .12,
     y: .18 + (((index * 71) % 430) / 1000),
     width: .42 + (((index * 43) % 380) / 1000),
@@ -53,7 +54,7 @@
     const y = item.y * height + Math.sin(time * .00012 + item.phase) * height * .024;
     const bankWidth = item.width * width;
     const bankHeight = item.height * height;
-    const puffs = 5;
+    const puffs = 4;
 
     ctx.save();
     ctx.filter = `blur(${Math.max(5, width * .005)}px)`;
@@ -109,6 +110,11 @@
   hero.addEventListener('pointermove', (event) => {
     const rect = hero.getBoundingClientRect();
     targetX = (event.clientX - rect.left) / rect.width; targetY = (event.clientY - rect.top) / rect.height;
+    heroWords.forEach((word, index) => {
+      const depth = .65 + (index % 4) * .28;
+      word.style.setProperty('--drift-x', `${(targetX - .5) * 24 * depth}px`);
+      word.style.setProperty('--drift-y', `${(targetY - .5) * 14 * depth}px`);
+    });
   });
   window.addEventListener('resize', resize); resize(); render();
   const header = document.querySelector('[data-header]');
