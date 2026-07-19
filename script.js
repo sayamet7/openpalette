@@ -11,7 +11,7 @@
     [1.35, 'main'],
     [4.55, 'statement'],
     [7.15, 'detail'],
-    [10.2, 'image'],
+    [10.2, 'type'],
     [13.0, 'collage'],
     [16.2, 'lockup']
   ];
