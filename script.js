@@ -4,12 +4,12 @@
   const hero = document.querySelector('.hero');
   let width = 0, height = 0, dpr = 1, pointerX = .62, pointerY = .38;
   let targetX = pointerX, targetY = pointerY, raf;
-  const clouds = Array.from({ length: 22 }, (_, index) => ({
+  const clouds = Array.from({ length: 30 }, (_, index) => ({
     x: ((index * 197) % 1000) / 1000,
     y: .12 + (((index * 83) % 620) / 1000),
-    size: .08 + (((index * 47) % 130) / 1000),
-    speed: .000004 + (index % 5) * .000001,
-    opacity: .035 + (index % 6) * .012,
+    size: .06 + (((index * 47) % 145) / 1000),
+    speed: .000012 + (index % 5) * .000004,
+    opacity: .075 + (index % 6) * .018,
     phase: index * 1.93
   }));
 
@@ -22,13 +22,20 @@
   }
 
   function cloud(x, y, radius, opacity, time) {
-    const gradient = ctx.createRadialGradient(x, y, 0, x, y, radius);
-    gradient.addColorStop(0, `rgba(255,250,234,${opacity})`);
-    gradient.addColorStop(.35, `rgba(248,238,218,${opacity * .65})`);
-    gradient.addColorStop(1, 'rgba(225,222,215,0)');
-    ctx.fillStyle = gradient; ctx.beginPath();
-    ctx.ellipse(x, y, radius * (1.7 + Math.sin(time) * .12), radius * .72, -.16, 0, Math.PI * 2);
-    ctx.fill();
+    const puffs = [[-.58,.13,.64],[-.28,-.09,.82],[.04,-.18,1.06],[.36,-.04,.78],[.64,.12,.56]];
+    puffs.forEach(([offset, yOffset, scale], puffIndex) => {
+      const puffX = x + radius * offset;
+      const puffY = y + radius * (yOffset + Math.sin(time * 1.8 + puffIndex) * .055);
+      const puffRadius = radius * scale;
+      const gradient = ctx.createRadialGradient(puffX, puffY, 0, puffX, puffY, puffRadius);
+      const puffOpacity = opacity * (.88 - puffIndex * .055);
+      gradient.addColorStop(0, `rgba(255,252,242,${puffOpacity})`);
+      gradient.addColorStop(.38, `rgba(248,239,222,${puffOpacity * .68})`);
+      gradient.addColorStop(1, 'rgba(225,222,215,0)');
+      ctx.fillStyle = gradient; ctx.beginPath();
+      ctx.ellipse(puffX, puffY, puffRadius * (1.05 + Math.sin(time + puffIndex) * .06), puffRadius * .52, -.16, 0, Math.PI * 2);
+      ctx.fill();
+    });
   }
 
   function render(time = 0) {
@@ -37,14 +44,14 @@
     sky.addColorStop(0, '#526f9b'); sky.addColorStop(.32, '#91a8c5');
     sky.addColorStop(.62, '#d8c9be'); sky.addColorStop(.82, '#c58f75'); sky.addColorStop(1, '#493e40');
     ctx.fillStyle = sky; ctx.fillRect(0, 0, width, height);
-    const sunX = width * (.72 + (pointerX - .5) * .05), sunY = height * (.47 + (pointerY - .5) * .035);
+    const sunX = width * (.72 + (pointerX - .5) * .05 + Math.sin(time * .00012) * .045), sunY = height * (.47 + (pointerY - .5) * .035 + Math.sin(time * .00009) * .02);
     const sun = ctx.createRadialGradient(sunX, sunY, 0, sunX, sunY, width * .42);
     sun.addColorStop(0, 'rgba(255,235,179,.52)'); sun.addColorStop(.25, 'rgba(252,205,160,.19)'); sun.addColorStop(1, 'rgba(255,196,153,0)');
     ctx.fillStyle = sun; ctx.fillRect(0, 0, width, height);
     ctx.save(); ctx.globalCompositeOperation = 'screen';
     clouds.forEach((item, index) => {
       const travel = (item.x + time * item.speed) % 1.28 - .14;
-      const drift = Math.sin(time * .00012 + item.phase) * height * .018;
+      const drift = Math.sin(time * .00018 + item.phase) * height * .045;
       cloud(travel * width + (pointerX - .5) * width * (index % 3) * .015, item.y * height + drift, item.size * width, item.opacity, time * .0002 + item.phase);
     });
     ctx.restore();
