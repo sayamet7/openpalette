@@ -3,15 +3,15 @@
   const filmStage = document.querySelector('[data-film-stage]');
   const filmWords = [...document.querySelectorAll('[data-film-word]')];
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const loopDuration = 26;
+  const loopDuration = 28;
   const filmTickMs = 80;
   const phaseStops = [
     [0, 'type'],
-    [5.2, 'statement'],
-    [9.0, 'detail'],
-    [13.4, 'type'],
-    [18.1, 'collage'],
-    [22.4, 'lockup']
+    [7.2, 'statement'],
+    [11.0, 'detail'],
+    [15.4, 'type'],
+    [20.1, 'collage'],
+    [24.4, 'lockup']
   ];
   const wordStarts = [.78, 1.08, 1.38, 1.72, 2.08, 2.42];
   let filmTimer = 0;
