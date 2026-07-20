@@ -80,19 +80,19 @@
       <section class="research-lede research-wrap" id="question">
         <div class="research-section-meta"><span>01</span><span>The question</span></div>
         <div class="research-lede-grid">
-          <h2>When a curve feels wrong,<br /><em>what exactly is wrong?</em></h2>
+          <h2>When a curve feels wrong,<br /><em>what exactly is happening?</em></h2>
           <div class="research-copy">
-            <p>Zoom into the outline of a logo, a letter, or an icon: the anchor points look considered, the handles appear aligned, and yet the line seems to bulge by just a little. Manual correction often fixes one area while making another thinner, heavier, or less balanced. The hard part of Bézier editing is explaining what feels unnatural, preserving the designer’s intent, and changing only what is safe to change.</p>
+            <p>Zoom in on the outline of a logo, a letter, or an icon. The anchor points have been carefully considered, and the handles appear to be aligned correctly. And yet the line seems to bulge ever so slightly. Manual correction often fixes one area only to make another thinner, heavier, or throw off the balance of the whole shape. The challenge of editing Bézier curves is to articulate what feels unnatural, preserve the designer’s intent, and change only what is safe to change.</p>
           </div>
         </div>
-        <div class="research-thesis"><span>Our working thesis</span><strong>Measure the discomfort.<br />Protect the intention.</strong></div>
+        <div class="research-thesis"><span>Our working thesis</span><strong>Quantify the discomfort.<br />Protect the design intent.</strong></div>
       </section>
 
       <section class="research-dark research-wrap" id="continuity">
         <div class="research-section-meta"><span>02</span><span>Continuity</span></div>
         <div class="research-section-heading">
           <h2>Smoothness<br /><em>is not one thing.</em></h2>
-          <p>Two curves can meet at the same point and still create a visible bump. We study the levels of continuity that sit behind the word “smooth.”</p>
+          <p>Two curves can meet at the same point and still produce a visible “step.” We investigate the levels of continuity behind the word “smooth.”</p>
         </div>
         <figure class="research-process-visual">
           <div class="research-process-stage">
@@ -128,79 +128,79 @@
           </div>
           <figcaption class="sr-only">An abstract study of a Bézier curve being tuned toward G2 curvature continuity.</figcaption>
         </figure>
-        <div class="formula-row"><span>Signed curvature</span><code>κ(t) = cross(B′(t), B″(t)) / |B′(t)|³</code><p>We compare how each side bends, including direction, as geometric continuity rather than raw second-derivative values.</p></div>
+        <div class="formula-row"><span>Signed curvature</span><code>κ(t) = cross(B′(t), B″(t)) / |B′(t)|³</code><p>We compare how much each side bends—including the direction of that bending—not as a raw second-derivative value, but as geometric continuity at the connection.</p></div>
       </section>
 
       <section class="research-wrap research-section" id="fairness">
         <div class="research-section-meta"><span>03</span><span>Fairness</span></div>
         <div class="research-section-heading">
           <h2>A correct junction<br /><em>is not a beautiful line.</em></h2>
-          <p>Matching the two sides at the connection can still leave a swelling or a ripple somewhere along the curve. We separate local continuity from the fairness of the whole line.</p>
+          <p>Even when both sides match perfectly at the connection, distortion or a small ripple can remain somewhere along the curve. We distinguish local continuity from the natural fairness of the entire line.</p>
         </div>
-        <div class="equation-callout"><code>E<sub>fair</sub> = ∫(dκ/ds)² ds</code><p>A representative measure for penalizing sudden curvature change. It is a guide, not a single answer: the smoothest curve may not be the curve that still feels like the brand.</p></div>
+        <div class="equation-callout"><code>E<sub>fair</sub> = ∫(dκ/ds)² ds</code><p><strong>Curvature-change energy.</strong> A measure that penalizes abrupt changes in curvature. It is a guide, not an absolute answer: the mathematically smoothest curve is not necessarily the one that preserves the brand’s character.</p></div>
       </section>
 
       <section class="research-dark research-wrap" id="design-intent">
         <div class="research-section-meta"><span>04</span><span>Design intent</span></div>
         <div class="research-section-heading">
-          <h2>Let intention<br /><em>become a constraint.</em></h2>
-          <p>The same G2 adjustment produces different results depending on what is allowed to move. The prototype therefore separates three correction modes.</p>
+          <h2>Turn intent<br /><em>into a constraint.</em></h2>
+          <p>The same G2 correction can produce different results depending on which elements are allowed to move. The prototype therefore offers three correction modes.</p>
         </div>
         <div class="mode-grid">
           <article class="mode-card">
             <div class="mode-number">01</div>
             <h3>Anchor-only</h3>
-            <span class="mode-rule">Protects handle direction</span>
+            <span class="mode-rule">Keeps handle direction fixed</span>
           </article>
           <article class="mode-card is-acid">
             <div class="mode-number">02</div>
             <h3>Handles-only</h3>
-            <span class="mode-rule">Protects anchor position</span>
+            <span class="mode-rule">Keeps anchor positions fixed</span>
           </article>
           <article class="mode-card is-blue">
             <div class="mode-number">03</div>
             <h3>Balanced</h3>
-            <span class="mode-rule">Preserves the larger shape</span>
+            <span class="mode-rule">Preserves the character of the overall shape</span>
           </article>
         </div>
-        <div class="constraint-strip"><span>DO NOT BREAK</span><p>Path closure · topology · pinned points · maximum deformation · no new cusp, loop, or self-intersection</p></div>
+        <div class="constraint-strip"><span>MUST PROTECT</span><p>Path closure · topology · pinned points · maximum deformation · no new cusp, loop, or self-intersection</p></div>
       </section>
 
       <section class="research-wrap research-section" id="perception">
         <div class="research-section-meta"><span>05</span><span>Perception</span></div>
         <div class="research-section-heading">
           <h2>Not “0.01 units.”<br /><em>How many pixels move?</em></h2>
-          <p>The meaning of a coordinate difference depends on the final viewing size. A 0.1-unit change on a 1000-unit artboard is not a useful judgement until it becomes a visible distance.</p>
+          <p>The meaning of a coordinate difference changes with the final display size. A 0.1-unit change on a 1000-unit artboard becomes meaningful only after it is converted into a distance people can see.</p>
         </div>
         <div class="research-scale-strip" aria-label="Perceptual scale examples">
           <div><strong>16 px</strong><span>ICON</span></div>
           <div class="is-key"><strong>256 px</strong><span>SCREEN</span></div>
-          <div><strong>1 : 1</strong><span>WALL SIGN</span></div>
+          <div><strong>1 : 1</strong><span>OUTDOOR SIGN</span></div>
         </div>
-        <p class="research-scale-caption">Convert maximum displacement into the pixels people will actually see. A small residual may be harmless at one size and damaging at another.</p>
+        <p class="research-scale-caption">Evaluate maximum displacement in the pixels people will actually see. A small residual may be harmless at one size and a critical flaw at another.</p>
         <div class="research-note-grid">
-          <div><span>DETECTION PRIORITY</span><strong>Perceptual impact<br />over residual size.</strong></div>
-          <p>We plan to vary display size, contrast, stroke weight, and output medium to learn where mathematical indicators and expert judgement agree.</p>
+          <div><span>DETECTION PRIORITY</span><strong>Prioritize perceptual impact<br />over absolute residual size.</strong></div>
+          <p>We will vary display size, contrast, stroke weight, and output medium to identify where mathematical metrics align with expert judgement.</p>
         </div>
       </section>
 
       <section class="research-dark research-wrap" id="illustrator">
         <div class="research-section-meta"><span>06</span><span>Illustrator</span></div>
         <div class="research-section-heading">
-          <h2>Before the equation,<br /><em>protect the document.</em></h2>
-          <p>Illustrator exposes a clear path model. The difficult part is everything around it: compound paths, clipping, transforms, selection state, locked objects, and what the designer expects Undo to do.</p>
+          <h2>Protect the document<br /><em>before applying the equation.</em></h2>
+          <p>Adobe Illustrator provides a clear path model. The real difficulty lies in everything around it: compound paths, clipping masks, transforms, selection state, locked objects, and what users expect Undo to do.</p>
         </div>
         <div class="pipeline" aria-label="Illustrator research pipeline">
-          <div class="pipeline-step"><span>01</span><strong>PathItem</strong><small>anchors / handles</small></div>
+          <div class="pipeline-step"><span>01</span><strong>PathItem</strong><small>read anchors / handles</small></div>
           <div class="pipeline-arrow">→</div>
-          <div class="pipeline-step"><span>02</span><strong>Diagnose</strong><small>G1 / G2 / safety</small></div>
+          <div class="pipeline-step"><span>02</span><strong>Diagnose</strong><small>validate G1 / G2 / safety</small></div>
           <div class="pipeline-arrow">→</div>
-          <div class="pipeline-step"><span>03</span><strong>Preview</strong><small>screen-space delta</small></div>
+          <div class="pipeline-step"><span>03</span><strong>Preview</strong><small>show screen-space delta</small></div>
           <div class="pipeline-arrow">→</div>
           <div class="pipeline-step is-acid"><span>04</span><strong>Apply</strong><small>one Undo unit</small></div>
         </div>
         <div class="research-copy research-copy-wide">
-          <p>We imagine a staged implementation: first validate path reads and writes through scripting, then move to an HTML / JavaScript panel, and only introduce a C++ plugin when live preview, curvature combs, drag updates, and native Undo integration require it.</p>
+          <p>We imagine a staged implementation. First, we will validate path reads and writes through scripting; next, we will move to an HTML / JavaScript panel. Only when live preview, curvature combs, drag updates, and native Undo integration become necessary would we introduce a C++ plug-in.</p>
           <a class="research-reference" href="https://ai-scripting.docsforadobe.dev/jsobjref/PathPoint/" target="_blank" rel="noreferrer">Read the Illustrator PathPoint reference ↗</a>
         </div>
       </section>
@@ -208,8 +208,8 @@
       <section class="research-wrap research-section" id="trust">
         <div class="research-section-meta"><span>07</span><span>Trust</span></div>
         <div class="research-section-heading">
-          <h2>Preview before<br /><em>automatic correction.</em></h2>
-          <p>A mathematically successful correction can still damage a working file. The preview itself is part of the research.</p>
+          <h2>Always preview<br /><em>before automatic correction.</em></h2>
+          <p>No matter how mathematically successful the correction is, it is meaningless if it damages the working file. The preview itself is a core part of this research.</p>
         </div>
         <div class="workflow-grid">
           <div class="workflow-step"><span>01</span><strong>Detect</strong></div>
@@ -224,14 +224,14 @@
         <div class="research-section-meta"><span>08</span><span>Evaluation</span></div>
         <div class="research-section-heading">
           <h2>What would make<br /><em>the research successful?</em></h2>
-          <p>Zero G2 residual is not enough. We need geometric correctness, perceptual validity, and tool-level trust to agree.</p>
+          <p>Zero G2 residual is not enough. Geometric correctness, perceptual validity, and tool reliability must agree.</p>
         </div>
         <div class="evaluation-grid">
           <article><span>01</span><h3>Geometric<br />correctness</h3></article>
           <article class="is-acid"><span>02</span><h3>Perceptual<br />validity</h3></article>
           <article class="is-blue"><span>03</span><h3>Tool<br />reliability</h3></article>
         </div>
-        <div class="research-stat"><strong>79</strong><span>automated checks passed in the macOS / SVG prototype as of 20.07.2026.</span></div>
+        <div class="research-stat"><strong>79</strong><span>automated checks passed in the macOS / SVG prototype as of July 20, 2026.</span></div>
       </section>
 
       <section class="research-conclusion research-wrap" id="conclusion">
@@ -239,7 +239,7 @@
         <div class="research-conclusion-grid">
           <h2>Do not decide the<br /><em>right line for people.</em></h2>
           <div class="research-copy">
-            <p>harmonism line is not meant to replace the designer’s eye. It should make discomfort measurable, show what moved and what was protected, and make experimentation safe. The equations are only the starting point; the real research sits at the boundary between mathematics, perception, and interaction, without breaking the way Illustrator already works.</p>
+            <p>harmonism line is not meant to replace the designer’s eye. It is a tool for making discomfort measurable, showing what changed and what was preserved, and making experimentation safe. Equations are only the starting point. The real research lies at the boundary between mathematics, cognition, and interaction—without compromising Illustrator’s existing workflow.</p>
           </div>
         </div>
         <div class="research-reference-row">
