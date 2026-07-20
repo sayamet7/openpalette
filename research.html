@@ -104,31 +104,30 @@
             <div class="continuity-row">
               <div class="continuity-label"><strong>G0</strong><span>Position</span></div>
               <svg viewBox="0 0 520 100" role="img" aria-label="G0 position continuity diagram">
-                <path d="M20 78 C72 22 128 18 252 50" /><path d="M252 50 C310 78 386 83 500 25" /><circle cx="252" cy="50" r="5" />
+                <path class="curve" d="M20 78 C80 18 150 18 252 50" /><path class="curve" d="M252 50 C306 86 410 90 500 22" /><path class="tangent-guide" d="M222 39L252 50L280 69" /><circle cx="252" cy="50" r="5" />
               </svg>
-              <p>Same point.<br /><b>Not necessarily smooth.</b></p>
+              <p>Same point.<br /><b>Tangent can jump.</b></p>
             </div>
             <div class="continuity-row">
               <div class="continuity-label"><strong>G1</strong><span>Tangent</span></div>
               <svg viewBox="0 0 520 100" role="img" aria-label="G1 tangent continuity diagram">
-                <path d="M20 78 C86 26 148 50 252 50" /><path d="M252 50 C356 50 420 76 500 25" /><circle cx="252" cy="50" r="5" />
+                <path class="curve" d="M20 78 C82 18 156 20 252 50" /><path class="curve" d="M252 50 C336 77 424 88 500 22" /><path class="tangent-guide" d="M216 39L288 62" /><circle cx="252" cy="50" r="5" />
               </svg>
-              <p>Same direction.<br /><b>The corner disappears.</b></p>
+              <p>Same tangent direction.<br /><b>Curvature can jump.</b></p>
             </div>
             <div class="continuity-row is-highlighted">
               <div class="continuity-label"><strong>G2</strong><span>Curvature</span></div>
               <svg viewBox="0 0 520 100" role="img" aria-label="G2 curvature continuity diagram">
-                <path d="M20 78 C86 26 150 42 252 50" /><path d="M252 50 C354 58 420 76 500 25" /><circle cx="252" cy="50" r="5" />
+                <path class="curve" d="M20 78 C65 43 158.75 25.5 254.375 25.5 C350 25.5 447.5 43 500 78" /><path class="tangent-guide" d="M214 25.5H294" /><path class="curvature-guide" d="M238 25.5V38M270 25.5V38" /><circle cx="254.375" cy="25.5" r="5" />
               </svg>
-              <p>Same bend strength.<br /><b>Fewer bumps and steps.</b></p>
+              <p>Same curvature.<br /><b>The bend joins continuously.</b></p>
             </div>
             <div class="continuity-row">
               <div class="continuity-label"><strong>G3</strong><span>Curvature change</span></div>
               <svg viewBox="0 0 520 100" role="img" aria-label="G3 curvature change continuity diagram">
-                <path d="M20 78 C86 26 150 42 252 50" /><path d="M252 50 C354 58 420 76 500 25" /><circle cx="252" cy="50" r="5" />
-                <path class="guide" d="M44 90H476" />
+                <path class="curve" d="M20 78 C65 43 158.75 25.5 254.375 25.5 C350 25.5 447.5 43 500 78" /><path class="tangent-guide" d="M214 25.5H294" /><path class="comb" d="M190 32V19M214 27V11M238 25V7M254 25V5M270 25V7M294 27V11M318 32V19" /><circle cx="254.375" cy="25.5" r="5" />
               </svg>
-              <p>Same change in bend.<br /><b>Useful only when needed.</b></p>
+              <p>Same curvature change.<br /><b>Higher-order smoothness.</b></p>
             </div>
           </div>
           <figcaption>Higher order is not automatically better. The right level depends on the object, the display size, and the visual intent.</figcaption>
