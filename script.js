@@ -88,6 +88,23 @@
   menuButton.addEventListener('click', () => setMenu(!mobileNav.classList.contains('open')));
   mobileNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
 
+  const researchToc = document.querySelector('.research-toc');
+  if (researchToc) {
+    const researchLinks = [...researchToc.querySelectorAll('a[href^="#"]')];
+    const researchSections = researchLinks
+      .map(link => document.querySelector(link.getAttribute('href')))
+      .filter(Boolean);
+    const setResearchSection = id => researchLinks.forEach(link => {
+      if (link.getAttribute('href') === `#${id}`) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+    const researchObserver = new IntersectionObserver(entries => {
+      entries.filter(entry => entry.isIntersecting).forEach(entry => setResearchSection(entry.target.id));
+    }, { rootMargin: '-18% 0px -68% 0px', threshold: 0 });
+    researchSections.forEach(section => researchObserver.observe(section));
+    setResearchSection(researchSections[0]?.id);
+  }
+
   const newsList = document.querySelector('[data-news-list]');
   if (newsList) {
     const renderNews = items => {
