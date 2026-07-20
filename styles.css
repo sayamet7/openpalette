@@ -270,3 +270,9 @@ body{background:var(--paper);color:var(--ink)}
 .product-primary .product-copy{background:#ff6b58}
 .lab-toggle .active{background:#ff6b58}
 .news-item:hover .news-item-number{color:#ff6b58}
+
+/* OpenAI-style navigation: quiet labels, no active or hover underline. */
+.nav-links{gap:34px;font:500 14px/1 var(--sans);text-transform:none;letter-spacing:-.02em}
+.nav-links a:after{display:none}
+.site-header.scrolled{border-bottom:0}
+body.research-page .site-header{border-bottom:0}
