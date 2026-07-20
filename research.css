@@ -260,3 +260,59 @@
   .research-page .research-process-index{top:16px;left:16px;font-size:7px}
   .research-page .research-scale-strip strong{font-size:30px}
 }
+
+/* Let whitespace and type carry the structure; remove the surplus rule lines. */
+.research-page .site-header,
+.research-page .research-hero-top,
+.research-page .scroll-mark,
+.research-page .research-hero-foot,
+.research-page .research-section-meta,
+.research-page .research-thesis,
+.research-page .continuity-figure,
+.research-page .formula-row,
+.research-page .equation-callout,
+.research-page .constraint-strip,
+.research-page .research-note-grid,
+.research-page .research-reference,
+.research-page .research-reference-row,
+.research-page .research-process-visual,
+.research-page .research-scale-strip,
+.research-page .research-scale-strip div,
+.research-page .research-toc,
+.research-page .workflow-grid,
+.research-page .fairness-grid,
+.research-page .mode-grid,
+.research-page .evaluation-grid,
+.research-page footer {
+  border: 0 !important;
+}
+
+.research-page .workflow-grid,
+.research-page .fairness-grid,
+.research-page .mode-grid,
+.research-page .evaluation-grid {
+  background: transparent !important;
+}
+
+.research-page * {
+  border-width: 0 !important;
+  border-style: none !important;
+}
+
+.research-page .mode-card,
+.research-page .workflow-step,
+.research-page .research-stat {
+  box-shadow: none !important;
+}
+
+.research-page .research-scale-strip div {
+  padding-right: 0;
+}
+
+/* Keep only the composed G2 curve in the KV-inspired study. */
+.research-page .geometry-grid,
+.research-page .geometry-ring,
+.research-page .geometry-ghost,
+.research-page .geometry-handles {
+  display: none;
+}
