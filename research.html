@@ -68,8 +68,7 @@
         <div class="research-lede-grid">
           <h2>When a curve feels wrong,<br /><em>what exactly is wrong?</em></h2>
           <div class="research-copy">
-            <p>Zoom into the outline of a logo, a letter, or an icon. The anchor points look considered. The handles appear aligned. And yet the line seems to bulge by just a little.</p>
-            <p>Manual correction often fixes one area while making another thinner, heavier, or less balanced. The hard part of Bézier editing is not simply making a line smooth. It is explaining what feels unnatural, preserving the designer’s intent, and changing only what is safe to change.</p>
+            <p>Zoom into the outline of a logo, a letter, or an icon: the anchor points look considered, the handles appear aligned, and yet the line seems to bulge by just a little. Manual correction often fixes one area while making another thinner, heavier, or less balanced. The hard part of Bézier editing is explaining what feels unnatural, preserving the designer’s intent, and changing only what is safe to change.</p>
           </div>
         </div>
         <div class="research-thesis"><span>Our working thesis</span><strong>Measure the discomfort.<br />Protect the intention.</strong></div>
@@ -149,21 +148,18 @@
             <div class="mode-number">01</div>
             <div class="mode-art mode-anchor" aria-hidden="true"><span class="handle h1"></span><span class="handle h2"></span><span class="node n1"></span><span class="node n2"></span><span class="curve-line"></span></div>
             <h3>Anchor-only</h3>
-            <p>Handles stay fixed. Only the connection point moves.</p>
             <span class="mode-rule">Protects handle direction</span>
           </article>
           <article class="mode-card is-acid">
             <div class="mode-number">02</div>
             <div class="mode-art mode-handles" aria-hidden="true"><span class="handle h1"></span><span class="handle h2"></span><span class="node n1"></span><span class="node n2"></span><span class="curve-line"></span></div>
             <h3>Handles-only</h3>
-            <p>Connection points stay fixed. The two handles are adjusted.</p>
             <span class="mode-rule">Protects anchor position</span>
           </article>
           <article class="mode-card is-blue">
             <div class="mode-number">03</div>
             <div class="mode-art mode-balanced" aria-hidden="true"><span class="handle h1"></span><span class="handle h2"></span><span class="node n1"></span><span class="node n2"></span><span class="curve-line"></span></div>
             <h3>Balanced</h3>
-            <p>Anchor and handle movement are evaluated and distributed locally.</p>
             <span class="mode-rule">Preserves the larger shape</span>
           </article>
         </div>
@@ -214,11 +210,11 @@
           <p>A mathematically successful correction can still damage a working file. The preview itself is part of the research.</p>
         </div>
         <div class="workflow-grid">
-          <div class="workflow-step"><span>01</span><strong>Detect</strong><p>Find a candidate and explain the reason in one sentence.</p></div>
-          <div class="workflow-step"><span>02</span><strong>Preview</strong><p>Show the proposed shape without changing the source.</p></div>
-          <div class="workflow-step"><span>03</span><strong>Compare</strong><p>Switch between Original, Preview, and Difference.</p></div>
-          <div class="workflow-step"><span>04</span><strong>Verify</strong><p>Report displacement, residuals, and safety checks.</p></div>
-          <div class="workflow-step is-acid"><span>05</span><strong>Apply</strong><p>Commit the result as one action that Undo can reverse.</p></div>
+          <div class="workflow-step"><span>01</span><strong>Detect</strong></div>
+          <div class="workflow-step"><span>02</span><strong>Preview</strong></div>
+          <div class="workflow-step"><span>03</span><strong>Compare</strong></div>
+          <div class="workflow-step"><span>04</span><strong>Verify</strong></div>
+          <div class="workflow-step is-acid"><span>05</span><strong>Apply</strong></div>
         </div>
         <div class="preview-board" aria-label="Original, Preview, Difference comparison">
           <div class="preview-panel"><span>ORIGINAL</span><svg viewBox="0 0 240 150" aria-hidden="true"><path d="M20 115 C65 24 88 42 121 78 S175 96 220 32" /></svg></div>
@@ -234,9 +230,9 @@
           <p>Zero G2 residual is not enough. We need geometric correctness, perceptual validity, and tool-level trust to agree.</p>
         </div>
         <div class="evaluation-grid">
-          <article><span>01</span><h3>Geometric<br />correctness</h3><p>Scale, rotation, reflection, degenerate handles, topology, area, and impossible cases.</p></article>
-          <article class="is-acid"><span>02</span><h3>Perceptual<br />validity</h3><p>Designer judgement across logos, type, icons, sizes, and correction modes.</p></article>
-          <article class="is-blue"><span>03</span><h3>Tool<br />reliability</h3><p>Clear reasons, readable differences, safe previews, and trustworthy Undo.</p></article>
+          <article><span>01</span><h3>Geometric<br />correctness</h3></article>
+          <article class="is-acid"><span>02</span><h3>Perceptual<br />validity</h3></article>
+          <article class="is-blue"><span>03</span><h3>Tool<br />reliability</h3></article>
         </div>
         <div class="research-stat"><strong>79</strong><span>automated checks passed in the macOS / SVG prototype as of 20.07.2026.</span></div>
       </section>
@@ -246,8 +242,7 @@
         <div class="research-conclusion-grid">
           <h2>Do not decide the<br /><em>right line for people.</em></h2>
           <div class="research-copy">
-            <p>harmonism line is not meant to replace the designer’s eye. It should make the discomfort measurable, show what moved and what was protected, and make experimentation safe.</p>
-            <p>The equations are only the starting point. The real research sits at the boundary between mathematics, perception, and interaction: how to define the identity of a shape, connect visible difference to numerical difference, and present the right information without breaking the way Illustrator already works.</p>
+            <p>harmonism line is not meant to replace the designer’s eye. It should make discomfort measurable, show what moved and what was protected, and make experimentation safe. The equations are only the starting point; the real research sits at the boundary between mathematics, perception, and interaction, without breaking the way Illustrator already works.</p>
           </div>
         </div>
         <div class="research-reference-row">
