@@ -120,15 +120,11 @@ body{background:var(--paper);color:var(--ink)}
   .brand-logo{width:92px;max-height:48px}
 }
 
-/* Typography-led hero: let the idea occupy the whole field. */
-.hero-film{background:#f5f2ea;color:#171717}
-.film-stage{background:#f5f2ea!important;color:#171717}
-.film-stage:before,.film-stage:after,.film-grain{display:none!important}
-.film-media,.film-photo,.film-statement,.film-detail-copy,.film-collage,.film-lockup{display:none!important}
+/* Keep the full hero sequence; only tune the type and supporting labels. */
 .film-note{position:absolute;z-index:3;color:#6d6b67;font:9px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase}
 .film-note-left{left:6%;top:22%}
 .film-note-right{right:7%;top:22%}
-.film-word{z-index:3;color:#171717;opacity:1!important;transform:none!important;font-size:clamp(24px,2.8vw,48px);letter-spacing:-.065em}
+.film-word{z-index:3;color:#171717;font-size:clamp(14px,1.7vw,27px);letter-spacing:-.055em}
 .film-word-a{left:1%;top:32%}
 .film-word-b{left:23%;top:46%}
 .film-word-c{left:47%;top:60%}
@@ -140,7 +136,7 @@ body{background:var(--paper);color:var(--ink)}
   .film-note{font-size:7px;letter-spacing:.1em}
   .film-note-left{left:22px;top:22%}
   .film-note-right{right:22px;top:22%}
-  .film-word{font-size:clamp(22px,5.5vw,34px)}
+  .film-word{font-size:clamp(14px,3.2vw,22px)}
   .film-word-a{left:3%;top:31%}
   .film-word-b{left:20%;top:45%}
   .film-word-c{left:47%;top:59%}
@@ -152,13 +148,42 @@ body{background:var(--paper);color:var(--ink)}
 @media(max-width:560px){
   .film-note-left{left:18px}
   .film-note-right{right:18px}
-  .film-word{font-size:8vw}
+  .film-word{font-size:6.2vw}
   .film-word-a{left:2%;top:30%}
   .film-word-b{left:19%;top:44%}
   .film-word-c{left:46%;top:58%}
   .film-word-d{left:74%;top:44%}
   .film-word-e{left:68%;top:30%}
   .film-word-f{left:8%;top:58%}
+}
+
+/* Compact header: keep the navigation quiet and leave the work more room. */
+.site-header{height:64px;padding:0 28px}
+.site-header.scrolled{height:56px}
+.brand-logo-frame{width:96px;height:46px}
+.brand-logo{left:0;top:50%;width:86px;max-height:46px;transform:translateY(-50%);object-fit:contain}
+.nav-links{gap:28px;font-size:10px}
+.header-cta{min-width:148px;padding:10px 0;font-size:9px}
+.film-statement{font-size:clamp(30px,5vw,82px)}
+.film-detail-copy{font-size:clamp(16px,2.2vw,34px);gap:clamp(12px,2.2vh,24px)}
+.lockup-title{font-size:clamp(32px,5vw,78px)}
+.lockup-kicker,.lockup-note{font-size:8px}
+
+@media(max-width:900px){
+  .site-header{height:60px;padding:0 18px}
+  .site-header.scrolled{height:56px}
+  .brand-logo-frame{width:82px;height:40px}
+  .brand-logo{width:74px;max-height:40px}
+  .hero-film .hero-content{padding:82px 18px 24px}
+  .film-statement{font-size:11vw}
+  .film-detail-copy{font-size:clamp(15px,4vw,28px);gap:16px}
+  .lockup-title{font-size:12vw}
+}
+
+@media(max-width:560px){
+  .film-statement{font-size:12vw}
+  .film-detail-copy{font-size:6vw;gap:14px}
+  .lockup-title{font-size:11vw}
 }
 
 /* Harmony Lines is a dark working surface, not a light illustration card. */
