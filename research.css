@@ -140,3 +140,51 @@
   .research-page .research-hero h1{font-size:clamp(40px,11vw,56px)}
   .research-page .research-hero-grid{margin:6vh 0 5vh}
 }
+
+/* Use one calm, article-like system across the page. */
+.research-page main{max-width:1200px;margin:0 auto}
+.research-page .research-hero{min-height:auto;padding:126px clamp(22px,5.5vw,88px) 64px}
+.research-page .research-hero-grid{grid-template-columns:minmax(0,1.35fr) minmax(240px,.65fr);gap:72px;margin:88px 0 72px}
+.research-page .research-hero-note p{max-width:300px;font-size:15px;line-height:1.6;letter-spacing:-.015em}
+.research-page .research-wrap{max-width:1200px;margin:0 auto;padding:80px clamp(22px,5.5vw,88px) 88px}
+.research-page .research-section-meta{display:grid;grid-template-columns:44px 1fr;justify-content:initial;gap:18px;padding-bottom:14px;font-size:8px;letter-spacing:.12em}
+.research-page .research-lede-grid,.research-page .research-conclusion-grid{grid-template-columns:minmax(0,1.3fr) minmax(260px,.7fr);gap:72px;margin-top:64px}
+.research-page .research-section-heading{grid-template-columns:minmax(0,1.3fr) minmax(260px,.7fr);gap:72px;margin:64px 0 52px}
+.research-page .research-lede h2,.research-page .research-conclusion h2,.research-page .research-section-heading h2{max-width:680px;font-size:clamp(38px,4.4vw,64px);line-height:.94;letter-spacing:-.055em}
+.research-page .research-copy,.research-page .research-section-heading p{max-width:500px;font-size:14px;line-height:1.75}
+.research-page .fairness-grid,.research-page .mode-grid,.research-page .workflow-grid,.research-page .evaluation-grid{gap:0;background:transparent;border-top:1px solid #dedede;border-bottom:1px solid #dedede}
+.research-page .fairness-card,.research-page .mode-card,.research-page .workflow-step,.research-page .evaluation-grid article{background:transparent!important;border:0;border-right:1px solid #dedede}
+.research-page .fairness-card:last-child,.research-page .mode-card:last-child,.research-page .workflow-step:last-child,.research-page .evaluation-grid article:last-child{border-right:0}
+.research-page .mode-card,.research-page .workflow-step,.research-page .evaluation-grid article{color:#111!important}
+.research-page .mode-card{min-height:340px;padding:24px 28px}
+.research-page .mode-card h3,.research-page .workflow-step strong,.research-page .evaluation-grid h3{font-size:clamp(24px,2.3vw,36px);line-height:.94;letter-spacing:-.055em}
+.research-page .workflow-step{min-height:160px;padding:20px 22px}
+.research-page .workflow-step strong{margin-top:56px}
+.research-page .evaluation-grid article{min-height:250px;padding:24px 28px}
+.research-page .evaluation-grid h3{margin:auto 0 0}
+.research-page .research-stat strong{font-size:clamp(48px,6vw,84px)}
+.research-page .research-reference-row{margin-top:80px}
+
+@media(max-width:900px){
+  .research-page .research-hero{padding-top:100px}
+  .research-page .research-hero-grid{grid-template-columns:1fr;gap:42px;margin:72px 0 56px}
+  .research-page .research-wrap{padding-top:64px;padding-bottom:72px}
+  .research-page .research-lede-grid,.research-page .research-conclusion-grid,.research-page .research-section-heading{gap:36px;margin-top:48px}
+  .research-page .research-section-heading{margin-bottom:40px}
+  .research-page .fairness-grid,.research-page .mode-grid,.research-page .evaluation-grid{grid-template-columns:1fr}
+  .research-page .fairness-card,.research-page .mode-card,.research-page .evaluation-grid article{border-right:0;border-bottom:1px solid #dedede}
+  .research-page .fairness-card:last-child,.research-page .mode-card:last-child,.research-page .evaluation-grid article:last-child{border-bottom:0}
+  .research-page .workflow-grid{grid-template-columns:repeat(2,1fr)}
+  .research-page .workflow-step{border-bottom:1px solid #dedede}
+  .research-page .workflow-step:nth-child(2n){border-right:0}
+}
+@media(max-width:560px){
+  .research-page .research-hero{min-height:auto;padding:88px 18px 52px}
+  .research-page .research-hero-grid{margin:56px 0 44px}
+  .research-page .research-wrap{padding:56px 18px 64px}
+  .research-page .research-section-heading h2,.research-page .research-lede h2,.research-page .research-conclusion h2{font-size:clamp(32px,9vw,48px)}
+  .research-page .research-copy,.research-page .research-section-heading p{font-size:13px}
+  .research-page .workflow-grid{grid-template-columns:1fr}
+  .research-page .workflow-step,.research-page .workflow-step:nth-child(2n){border-right:0}
+  .research-page .workflow-step:last-child{border-bottom:0}
+}
