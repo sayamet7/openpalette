@@ -1,0 +1,61 @@
+name: Bug report
+description: Report something that is not working in Open Palette or Harmony Lines.
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Open Palette.
+        Please include enough detail for us to reproduce the problem.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Tell us what went wrong and which tool was involved.
+      placeholder: A short description of the problem.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: List the smallest set of steps that consistently shows the bug.
+      placeholder: |
+        1. Open ...
+        2. Select ...
+        3. Click ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual result
+      description: What did you expect to happen, and what happened instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include your OS, Illustrator version, and Open Palette or plugin version.
+      placeholder: |
+        - OS: macOS 15.5
+        - Illustrator: 29.x
+        - Open Palette / Harmony Lines: 0.x.x
+    validations:
+      required: true
+
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Screenshots or recordings
+      description: Drag and drop screenshots, screen recordings, or relevant files here.
+      placeholder: Add anything that helps us see the issue.
+    validations:
+      required: false
