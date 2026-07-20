@@ -309,11 +309,6 @@
   padding-right: 0;
 }
 
-/* One quiet rule anchors each section label, matching the reference layout. */
-.research-page .research-section-meta {
-  border-bottom: 1px solid #dedede !important;
-}
-
 /* Keep only the composed G2 curve in the KV-inspired study. */
 .research-page .geometry-grid,
 .research-page .geometry-ring,
