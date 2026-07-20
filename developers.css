@@ -60,3 +60,34 @@
   .developers-page .developer-request{font-size:18px}
   .developers-page .developer-bottom-grid p{font-size:10vw}
 }
+
+/* Keep the developer hero quiet and legible at the same editorial scale. */
+.developers-page .developer-hero-grid {
+  grid-template-columns:minmax(0,1fr) minmax(280px,360px);
+  gap:72px;
+  align-items:start;
+  margin:72px 0 64px;
+}
+.developers-page .developer-hero-grid > * {
+  min-width:0;
+}
+.developers-page .developer-hero h1 {
+  font-size:45px !important;
+  line-height:1.02;
+  letter-spacing:-.045em;
+}
+.developers-page .developer-side-note {
+  width:100%;
+  max-width:360px;
+}
+
+@media(max-width:900px){
+  .developers-page .developer-hero-grid {
+    grid-template-columns:1fr;
+    gap:36px;
+    margin:56px 0 48px;
+  }
+  .developers-page .developer-side-note {
+    max-width:380px;
+  }
+}
