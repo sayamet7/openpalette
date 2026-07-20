@@ -98,37 +98,18 @@
           <h2>Smoothness<br /><em>is not one thing.</em></h2>
           <p>Two curves can meet at the same point and still create a visible bump. We study the levels of continuity that sit behind the word “smooth.”</p>
         </div>
-        <figure class="continuity-figure">
-          <div class="diagram-caption"><span>SCHEMATIC / NOT TO SCALE</span><span>FROM POSITION TO CURVATURE CHANGE</span></div>
-          <div class="continuity-ladder">
-            <div class="continuity-row">
-              <div class="continuity-label"><strong>G0</strong><span>Position</span></div>
-              <svg viewBox="0 0 520 100" role="img" aria-label="G0 position continuity diagram">
-                <path class="curve" d="M20 78 C80 18 150 18 252 50" /><path class="curve" d="M252 50 C306 86 410 90 500 22" /><path class="tangent-guide" d="M222 39L252 50L280 69" /><circle cx="252" cy="50" r="5" />
-              </svg>
-              <p>Same point.<br /><b>Tangent can jump.</b></p>
-            </div>
-            <div class="continuity-row">
-              <div class="continuity-label"><strong>G1</strong><span>Tangent</span></div>
-              <svg viewBox="0 0 520 100" role="img" aria-label="G1 tangent continuity diagram">
-                <path class="curve" d="M20 78 C82 18 156 20 252 50" /><path class="curve" d="M252 50 C336 77 424 88 500 22" /><path class="tangent-guide" d="M216 39L288 62" /><circle cx="252" cy="50" r="5" />
-              </svg>
-              <p>Same tangent direction.<br /><b>Curvature can jump.</b></p>
-            </div>
-            <div class="continuity-row is-highlighted">
-              <div class="continuity-label"><strong>G2</strong><span>Curvature</span></div>
-              <svg viewBox="0 0 520 100" role="img" aria-label="G2 curvature continuity diagram">
-                <path class="curve" d="M20 78 C65 43 158.75 25.5 254.375 25.5 C350 25.5 447.5 43 500 78" /><path class="tangent-guide" d="M214 25.5H294" /><path class="curvature-guide" d="M238 25.5V38M270 25.5V38" /><circle cx="254.375" cy="25.5" r="5" />
-              </svg>
-              <p>Same curvature.<br /><b>The bend joins continuously.</b></p>
-            </div>
-            <div class="continuity-row">
-              <div class="continuity-label"><strong>G3</strong><span>Curvature change</span></div>
-              <svg viewBox="0 0 520 100" role="img" aria-label="G3 curvature change continuity diagram">
-                <path class="curve" d="M20 78 C65 43 158.75 25.5 254.375 25.5 C350 25.5 447.5 43 500 78" /><path class="tangent-guide" d="M214 25.5H294" /><path class="comb" d="M190 32V19M214 27V11M238 25V7M254 25V5M270 25V7M294 27V11M318 32V19" /><circle cx="254.375" cy="25.5" r="5" />
-              </svg>
-              <p>Same curvature change.<br /><b>Higher-order smoothness.</b></p>
-            </div>
+        <figure class="research-fv-visual research-fv-visual-continuity">
+          <div class="research-fv-media">
+            <img src="./assets/graphic-worktable-screen.png" alt="Illustrator artwork with visible curve handles and color studies." />
+            <div class="research-fv-media-top"><span>CURVE STUDY / 001</span><span>PATH + PERCEPTION</span></div>
+            <div class="research-fv-lockup"><span>G2</span><i>→</i><span>G3</span></div>
+            <div class="research-fv-media-bottom"><span>CURVATURE</span><span>CHANGE</span></div>
+          </div>
+          <div class="continuity-spectrum" aria-label="Continuity levels from position to curvature change">
+            <span><b>G0</b><small>Position</small></span>
+            <span><b>G1</b><small>Tangent</small></span>
+            <span class="is-key"><b>G2</b><small>Curvature</small></span>
+            <span class="is-key"><b>G3</b><small>Curvature change</small></span>
           </div>
           <figcaption>Higher order is not automatically better. The right level depends on the object, the display size, and the visual intent.</figcaption>
         </figure>
@@ -141,16 +122,14 @@
           <h2>A correct junction<br /><em>is not a beautiful line.</em></h2>
           <p>Matching the two sides at the connection can still leave a swelling or a ripple somewhere along the curve. We separate local continuity from the fairness of the whole line.</p>
         </div>
-        <div class="fairness-grid">
-          <figure class="fairness-card">
-            <div class="fairness-art"><svg viewBox="0 0 560 230" role="img" aria-label="A curve with a local bump"><path class="fairness-axis" d="M30 190H530" /><path class="curve curve-bumpy" d="M30 180 C120 42 192 56 280 115 C340 156 366 58 530 48" /><circle cx="280" cy="115" r="6" /></svg></div>
-            <figcaption><span>CONTINUITY ONLY</span><strong>A good junction can hide a bad middle.</strong></figcaption>
-          </figure>
-          <figure class="fairness-card is-blue">
-            <div class="fairness-art"><svg viewBox="0 0 560 230" role="img" aria-label="A smooth fair curve"><path class="fairness-axis" d="M30 190H530" /><path class="curve curve-fair" d="M30 180 C120 42 192 56 280 115 C368 174 430 76 530 48" /><circle cx="280" cy="115" r="6" /></svg></div>
-            <figcaption><span>FAIRNESS</span><strong>Keep the curvature change quiet across the whole line.</strong></figcaption>
-          </figure>
-        </div>
+        <figure class="research-fv-visual research-fv-visual-fairness">
+          <div class="research-fv-media research-fv-media-light">
+            <img src="./assets/creative-worktable-geometry.png" alt="A colorful geometry study arranged on a design worktable." />
+            <div class="research-fv-media-top"><span>FAIRNESS / 002</span><span>WHOLE-LINE JUDGEMENT</span></div>
+            <div class="research-fv-lockup"><span>LOCAL</span><i>→</i><span>WHOLE</span></div>
+          </div>
+          <figcaption>Continuity tells us what happens at the junction. Fairness asks whether the entire line keeps a quiet rhythm.</figcaption>
+        </figure>
         <div class="equation-callout"><code>E<sub>fair</sub> = ∫(dκ/ds)² ds</code><p>A representative measure for penalizing sudden curvature change. It is a guide, not a single answer: the smoothest curve may not be the curve that still feels like the brand.</p></div>
       </section>
 
@@ -163,19 +142,16 @@
         <div class="mode-grid">
           <article class="mode-card">
             <div class="mode-number">01</div>
-            <div class="mode-art mode-anchor" aria-hidden="true"><span class="handle h1"></span><span class="handle h2"></span><span class="node n1"></span><span class="node n2"></span><span class="curve-line"></span></div>
             <h3>Anchor-only</h3>
             <span class="mode-rule">Protects handle direction</span>
           </article>
           <article class="mode-card is-acid">
             <div class="mode-number">02</div>
-            <div class="mode-art mode-handles" aria-hidden="true"><span class="handle h1"></span><span class="handle h2"></span><span class="node n1"></span><span class="node n2"></span><span class="curve-line"></span></div>
             <h3>Handles-only</h3>
             <span class="mode-rule">Protects anchor position</span>
           </article>
           <article class="mode-card is-blue">
             <div class="mode-number">03</div>
-            <div class="mode-art mode-balanced" aria-hidden="true"><span class="handle h1"></span><span class="handle h2"></span><span class="node n1"></span><span class="node n2"></span><span class="curve-line"></span></div>
             <h3>Balanced</h3>
             <span class="mode-rule">Preserves the larger shape</span>
           </article>
@@ -189,10 +165,12 @@
           <h2>Not “0.01 units.”<br /><em>How many pixels move?</em></h2>
           <p>The meaning of a coordinate difference depends on the final viewing size. A 0.1-unit change on a 1000-unit artboard is not a useful judgement until it becomes a visible distance.</p>
         </div>
-        <figure class="scale-figure">
-          <div class="scale-stage"><span class="scale-label scale-small">16 px icon</span><span class="scale-label scale-mid">256 px screen</span><span class="scale-label scale-large">wall sign</span><div class="scale-line"><i></i><i></i><i></i></div><div class="scale-dots"><b></b><b></b><b></b></div></div>
-          <figcaption>Convert maximum displacement into the pixels people will actually see. A small residual may be harmless at one size and damaging at another.</figcaption>
-        </figure>
+        <div class="research-scale-strip" aria-label="Perceptual scale examples">
+          <div><strong>16 px</strong><span>ICON</span></div>
+          <div class="is-key"><strong>256 px</strong><span>SCREEN</span></div>
+          <div><strong>1 : 1</strong><span>WALL SIGN</span></div>
+        </div>
+        <p class="research-scale-caption">Convert maximum displacement into the pixels people will actually see. A small residual may be harmless at one size and damaging at another.</p>
         <div class="research-note-grid">
           <div><span>DETECTION PRIORITY</span><strong>Perceptual impact<br />over residual size.</strong></div>
           <p>We plan to vary display size, contrast, stroke weight, and output medium to learn where mathematical indicators and expert judgement agree.</p>
@@ -233,11 +211,15 @@
           <div class="workflow-step"><span>04</span><strong>Verify</strong></div>
           <div class="workflow-step is-acid"><span>05</span><strong>Apply</strong></div>
         </div>
-        <div class="preview-board" aria-label="Original, Preview, Difference comparison">
-          <div class="preview-panel"><span>ORIGINAL</span><svg viewBox="0 0 240 150" aria-hidden="true"><path d="M20 115 C65 24 88 42 121 78 S175 96 220 32" /></svg></div>
-          <div class="preview-panel is-acid"><span>PREVIEW</span><svg viewBox="0 0 240 150" aria-hidden="true"><path d="M20 115 C65 24 91 48 121 78 S177 91 220 32" /></svg></div>
-          <div class="preview-panel is-blue"><span>DIFFERENCE</span><svg viewBox="0 0 240 150" aria-hidden="true"><path d="M20 115 C65 24 91 48 121 78 S177 91 220 32" /><path class="difference" d="M20 115 C65 24 88 42 121 78 S175 96 220 32" /></svg></div>
-        </div>
+        <figure class="research-fv-visual research-fv-visual-trust">
+          <div class="research-fv-media research-fv-media-dark">
+            <img src="./assets/design-studio.png" alt="A design studio with an Illustrator curve study on screen." />
+            <div class="research-fv-media-top"><span>PREVIEW / 003</span><span>SAFE TO APPLY</span></div>
+            <div class="research-fv-lockup"><span>SEE</span><i>→</i><span>TRUST</span></div>
+            <div class="research-fv-media-bottom"><span>ORIGINAL</span><span>PREVIEW</span><span>DIFFERENCE</span></div>
+          </div>
+          <figcaption>Show what moved before anything is applied. The visual comparison is part of the correction, not a postscript.</figcaption>
+        </figure>
       </section>
 
       <section class="research-dark research-wrap" id="evaluation">
