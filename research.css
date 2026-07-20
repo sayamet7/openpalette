@@ -316,3 +316,11 @@
 .research-page .geometry-handles {
   display: none;
 }
+
+/* Four chapter breaks only; the rest of the page stays open. */
+.research-page #question .research-section-meta,
+.research-page #fairness .research-section-meta,
+.research-page #illustrator .research-section-meta,
+.research-page #conclusion .research-section-meta {
+  border-bottom: 1px solid #dedede !important;
+}
