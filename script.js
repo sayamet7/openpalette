@@ -116,7 +116,7 @@
     mobileNav.classList.toggle('open', open);
     menuButton.setAttribute('aria-expanded', String(open));
     mobileNav.setAttribute('aria-hidden', String(!open));
-    menuButton.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+    menuButton.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
     document.body.classList.toggle('menu-open', open);
   };
   menuButton.addEventListener('click', () => setMenu(!mobileNav.classList.contains('open')));
@@ -151,7 +151,7 @@
       }));
     };
     fetch('./news.json').then(response => response.json()).then(renderNews).catch(() => {
-      renderNews([{ date: '2026-07-20', tag: 'OPEN PALETTE', title: 'Open Paletteを公開しました', summary: '新しいツールと、制作の途中で見つけたこと。' }]);
+      renderNews([{ date: '2026-07-20', tag: 'OPEN PALETTE', title: 'Open Palette is now live', summary: 'A toolkit for shaping Illustrator paths and color with more intention.' }]);
     });
   }
 

@@ -162,7 +162,7 @@ body{background:var(--paper);color:var(--ink)}
 .site-header.scrolled{height:56px}
 .brand-logo-frame{width:96px;height:46px}
 .brand-logo{left:0;top:50%;width:86px;max-height:46px;transform:translateY(-50%);object-fit:contain}
-.nav-links{gap:28px;font-size:10px}
+.nav-links{gap:30px;font-size:10px}
 .header-cta{min-width:148px;padding:10px 0;font-size:9px}
 .film-statement{font-size:clamp(30px,5vw,82px)}
 .film-detail-copy{font-size:clamp(16px,2.2vw,34px);gap:clamp(12px,2.2vh,24px)}
