@@ -160,3 +160,14 @@ body{background:var(--paper);color:var(--ink)}
   .film-word-e{left:68%;top:30%}
   .film-word-f{left:8%;top:58%}
 }
+
+/* Harmony Lines is a dark working surface, not a light illustration card. */
+.line-lab{background:#171719;color:#f5f2ea}
+.line-lab:after{box-shadow:inset 0 0 100px #0008}
+.lab-toolbar,.lab-caption{color:#aaa8a1}
+.lab-toggle{border-color:#414143}
+.lab-toggle .active{background:#d7f126;color:#171717}
+.grid-lines path{stroke:#79797b}
+.flow-glow{stroke:#68e9ff;opacity:.35}
+.control-points path{stroke:#fff8}
+.control-points circle{fill:#171719;stroke:#e8e8e3}
