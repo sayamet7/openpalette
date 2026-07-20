@@ -122,7 +122,7 @@ body{background:var(--paper);color:var(--ink)}
 
 /* Keep the full hero sequence; only tune the type and supporting labels. */
 .film-note{position:absolute;z-index:3;color:#6d6b67;font:9px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase}
-.film-note-left{left:6%;top:22%}
+.film-note-left{display:none}
 .film-note-right{right:7%;top:22%}
 .film-word{z-index:3;color:#171717;font-size:clamp(14px,1.7vw,27px);letter-spacing:-.055em}
 .film-word-a{left:1%;top:32%}
