@@ -40,3 +40,23 @@
   .developers-page .developer-hero-grid{grid-template-columns:minmax(0,1.6fr) minmax(260px,.7fr);gap:6vw}
   .developers-page .developer-hero h1{font-size:clamp(64px,8vw,128px)}
 }
+
+/* Keep the standalone type scale restrained and information-led. */
+.developers-page .developer-hero h1{font-size:clamp(56px,6.5vw,104px);line-height:.86}
+.developers-page .developer-request{font-size:clamp(18px,1.8vw,28px)}
+.developers-page .developer-guide h2{font-size:clamp(40px,5vw,80px)}
+.developers-page .developer-copy>p{font-size:13px}
+.developers-page .developer-copy li strong{font-size:17px}
+.developers-page .developer-copy li small{font-size:11px}
+.developers-page .developer-bottom-grid p{font-size:clamp(24px,3.4vw,52px)}
+
+@media(max-width:900px){
+  .developers-page .developer-hero h1{font-size:clamp(54px,11vw,94px)}
+  .developers-page .developer-guide h2{font-size:clamp(38px,9vw,68px)}
+}
+@media(max-width:560px){
+  .developers-page .developer-hero h1{font-size:clamp(50px,12vw,82px)}
+  .developers-page .developer-guide h2{font-size:11vw}
+  .developers-page .developer-request{font-size:18px}
+  .developers-page .developer-bottom-grid p{font-size:10vw}
+}
