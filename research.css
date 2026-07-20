@@ -155,9 +155,8 @@
 .research-page .research-lede h2,.research-page .research-conclusion h2,.research-page .research-section-heading h2{max-width:680px;font-size:clamp(38px,4.4vw,64px);line-height:.94;letter-spacing:-.055em}
 .research-page .research-copy,.research-page .research-section-heading p{max-width:500px;font-size:14px;line-height:1.75}
 .research-page .research-kicker{color:var(--research-coral)}
-.research-page .research-hero h1 em,.research-page .research-section h2 em,.research-page .research-lede h2 em,.research-page .research-conclusion h2 em{color:var(--research-blue)}
+.research-page .research-hero h1 em,.research-page .research-section h2 em,.research-page .research-lede h2 em,.research-page .research-conclusion h2 em{color:inherit}
 .research-page .research-section-meta span:first-child{color:var(--research-coral)}
-.research-page .research-thesis strong{color:var(--research-blue)}
 .research-page .fairness-grid,.research-page .mode-grid,.research-page .workflow-grid,.research-page .evaluation-grid{gap:0;background:transparent;border-top:1px solid #dedede;border-bottom:1px solid #dedede}
 .research-page .fairness-card,.research-page .mode-card,.research-page .workflow-step,.research-page .evaluation-grid article{background:transparent!important;border:0;border-right:1px solid #dedede}
 .research-page .fairness-card:last-child,.research-page .mode-card:last-child,.research-page .workflow-step:last-child,.research-page .evaluation-grid article:last-child{border-right:0}
