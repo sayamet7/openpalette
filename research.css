@@ -143,7 +143,7 @@
 
 /* Use one calm, article-like system across the page. */
 .research-page{--research-coral:#ff6b58;--research-blue:#3157f4;--research-blue-wash:#f1f4ff;--research-coral-wash:#fff1ee}
-.research-page main{max-width:1200px;margin:0 auto}
+.research-page main{max-width:none;margin:0}
 .research-page .research-hero{min-height:auto;padding:126px clamp(22px,5.5vw,88px) 64px}
 .research-page .research-hero-grid{grid-template-columns:minmax(0,1.35fr) minmax(240px,.65fr);gap:72px;margin:88px 0 72px}
 .research-page .research-hero-note p{max-width:300px;font-size:15px;line-height:1.6;letter-spacing:-.015em}
@@ -176,11 +176,11 @@
 .research-page .research-reference-row{margin-top:80px}
 
 /* Keep the section index visible as a quiet left rail, like the reference article. */
-.research-page .research-article-shell{display:grid;grid-template-columns:minmax(180px,220px) minmax(0,1fr);gap:clamp(48px,6vw,88px);max-width:1200px;margin:0 auto;padding:0 clamp(22px,5.5vw,88px)}
-.research-page .research-toc{position:sticky;top:106px;align-self:start;display:flex;flex-direction:column;gap:28px;max-width:none;margin:0;padding:76px 0 0;border:0}
+.research-page .research-article-shell{display:grid;grid-template-columns:166.6667px 802.6667px;gap:40px;width:1280px;max-width:100%;margin:0 auto;padding:0 32px}
+.research-page .research-toc{position:sticky;top:112px;align-self:start;display:flex;flex-direction:column;gap:0;max-width:none;margin:0;padding:0;border:0}
 .research-page .research-toc-label{display:none}
-.research-page .research-toc-links{display:flex;flex-direction:column;gap:28px}
-.research-page .research-toc a{display:block;min-width:0;padding:0;color:#8a8a8a;text-decoration:none;font-size:clamp(15px,1.35vw,19px);line-height:1.14;letter-spacing:-.03em;transition:color .2s ease}
+.research-page .research-toc-links{display:flex;flex-direction:column;gap:0}
+.research-page .research-toc a{display:block;min-width:0;padding:8px 0;color:rgba(0,0,0,.6);text-decoration:none;font-size:12px;line-height:15px;letter-spacing:-.015em;transition:color .2s ease}
 .research-page .research-toc a span{display:none}
 .research-page .research-toc a strong{font-weight:400}
 .research-page .research-toc a[aria-current="location"]{color:#111}
@@ -204,6 +204,9 @@
   .research-page .research-article-shell{display:block;padding:0 22px}
   .research-page .research-toc{position:static;gap:18px;padding:24px 0;border-top:1px solid #dedede;border-bottom:1px solid #dedede}
   .research-page .research-toc-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px;row-gap:10px}
+}
+@media(min-width:901px) and (max-width:1120px){
+  .research-page .research-article-shell{grid-template-columns:150px minmax(0,1fr);gap:32px;width:100%;padding:0 24px}
 }
 @media(max-width:560px){
   .research-page .research-hero{min-height:auto;padding:88px 18px 52px}
