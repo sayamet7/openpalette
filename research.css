@@ -63,7 +63,8 @@
 /* Quiet editorial treatment for the standalone research page. */
 .research-page{background:#fff;color:#111}
 .research-page .research-hero,.research-page .research-dark{background:#fff;color:#111}
-.research-page .research-hero h1 em,.research-page .research-section h2 em,.research-page .research-lede h2 em,.research-page .research-conclusion h2 em{color:#111}
+.research-page h1 em,.research-page h2 em{color:#111}
+.research-page .research-thesis strong{color:#111}
 .research-page .research-kicker{color:#666}
 .research-page .research-hero-top,.research-page .research-hero-foot,.research-page .research-section-meta,.research-page .continuity-figure,.research-page .formula-row,.research-page .research-thesis,.research-page .research-note-grid,.research-page .research-reference-row{border-color:#dedede}
 .research-page .research-hero-foot,.research-page .research-copy,.research-page .research-section-heading p,.research-page .research-hero-note p,.research-page .research-note-grid p,.research-page .equation-callout p,.research-page .research-reference-row,.research-page .continuity-row p,.research-page .continuity-figure>figcaption{color:#666}
@@ -195,6 +196,7 @@
 .research-page .research-lede-grid .research-copy,.research-page .research-conclusion-grid .research-copy,.research-page .research-section-heading p{max-width:620px;margin-top:30px}
 .research-page .research-thesis{grid-template-columns:1fr;gap:18px;margin-top:72px}
 .research-page .research-thesis strong{max-width:760px}
+.research-page .research-hero h1 em,.research-page .research-section h2 em,.research-page .research-lede h2 em,.research-page .research-conclusion h2 em{color:#111}
 
 @media(max-width:900px){
   .research-page .research-hero{padding-top:100px}
