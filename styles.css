@@ -219,3 +219,40 @@ body{background:var(--paper);color:var(--ink)}
   .film-stage.phase-collage .collage-two{left:24%;top:43%;width:52vw;height:21vh}
   .film-stage.phase-collage .collage-three{right:5%;top:21%;width:39vw;height:17vh}
 }
+
+/* Editorial collage: three vertical studies with a quiet, gallery-like rhythm. */
+.film-stage.phase-collage .collage-card{
+  border:0;
+  box-shadow:none;
+  transform:translateY(14px);
+  background:#171717;
+}
+.film-stage.phase-collage .collage-card img{filter:saturate(.78) contrast(1.04);transform:scale(1.04)}
+.film-stage.phase-collage .collage-card:after{background:linear-gradient(180deg,rgba(4,4,16,.04),transparent 48%,rgba(4,4,16,.7))}
+.film-stage.phase-collage .collage-card span{
+  left:16px;
+  top:auto;
+  bottom:16px;
+  color:#f5f2ea;
+  text-shadow:none;
+  font-size:7px;
+}
+.film-stage.phase-collage .collage-one{left:10%;top:17%;width:min(18vw,260px);height:min(56vh,560px)}
+.film-stage.phase-collage .collage-two{left:41%;top:10%;width:min(20vw,300px);height:min(68vh,680px)}
+.film-stage.phase-collage .collage-three{right:10%;top:17%;width:min(18vw,260px);height:min(56vh,560px)}
+.film-stage.phase-collage .collage-one img{object-position:38% center}
+.film-stage.phase-collage .collage-two img{object-position:52% center}
+.film-stage.phase-collage .collage-three img{object-position:64% center}
+
+@media(max-width:900px){
+  .film-stage.phase-collage .collage-one{left:4%;top:21%;width:27vw;height:48vh}
+  .film-stage.phase-collage .collage-two{left:36%;top:15%;width:29vw;height:58vh}
+  .film-stage.phase-collage .collage-three{right:4%;top:21%;width:27vw;height:48vh}
+}
+
+@media(max-width:560px){
+  .film-stage.phase-collage .collage-one{left:4%;top:23%;width:27vw;height:45vh}
+  .film-stage.phase-collage .collage-two{left:36%;top:17%;width:29vw;height:54vh}
+  .film-stage.phase-collage .collage-three{right:4%;top:23%;width:27vw;height:45vh}
+  .film-stage.phase-collage .collage-card span{left:9px;bottom:10px;font-size:6px}
+}
