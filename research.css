@@ -189,6 +189,13 @@
 .research-page .research-article .research-wrap{max-width:none;margin:0;padding-left:0;padding-right:0}
 .research-page main section[id]{scroll-margin-top:84px}
 
+/* Keep every section on one calm reading axis: title first, copy directly below. */
+.research-page .research-lede-grid,.research-page .research-conclusion-grid,.research-page .research-section-heading{display:block;max-width:900px;margin-top:56px}
+.research-page .research-lede h2,.research-page .research-conclusion h2,.research-page .research-section-heading h2{max-width:820px}
+.research-page .research-lede-grid .research-copy,.research-page .research-conclusion-grid .research-copy,.research-page .research-section-heading p{max-width:620px;margin-top:30px}
+.research-page .research-thesis{grid-template-columns:1fr;gap:18px;margin-top:72px}
+.research-page .research-thesis strong{max-width:760px}
+
 @media(max-width:900px){
   .research-page .research-hero{padding-top:100px}
   .research-page .research-hero-grid{grid-template-columns:1fr;gap:42px;margin:72px 0 56px}
