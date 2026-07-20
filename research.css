@@ -221,30 +221,22 @@
   .research-page .research-toc-links{grid-template-columns:1fr;row-gap:8px}
 }
 
-/* Apply the KV language to one working visual: a curve moving from rough to G2. */
+/* Apply the KV language to one composed geometric study, without instructional callouts. */
 .research-page .research-process-visual{margin:0;padding-top:28px;border-top:1px solid #dedede}
 .research-page .research-process-stage{position:relative;min-height:420px;overflow:hidden;background:#f5f2ea;isolation:isolate}
+.research-page .research-process-index{position:absolute;z-index:3;top:22px;left:24px;color:#171717;font:9px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase}
 .research-page .research-process-stage::before{content:"";position:absolute;inset:-20%;z-index:-1;background:radial-gradient(circle at 15% 20%,rgba(255,107,88,.2),transparent 30%),radial-gradient(circle at 78% 14%,rgba(49,87,244,.18),transparent 34%),radial-gradient(circle at 52% 92%,rgba(221,240,38,.18),transparent 34%);filter:blur(28px)}
-.research-page .research-process-stage svg{display:block;width:100%;height:100%;min-height:420px}
-.research-page .process-grid path{fill:none;stroke:#1717171b;stroke-width:1}
-.research-page .process-ghost{fill:none;stroke:#17171766;stroke-width:3;stroke-linecap:round;stroke-dasharray:5 7}
-.research-page .process-main{fill:none;stroke:url(#g2-process-gradient);stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
-.research-page .process-handles path{fill:none;stroke:#3157f4aa;stroke-width:1.5;stroke-dasharray:4 5}
-.research-page .process-handles circle{fill:#f5f2ea;stroke:#ff6b58;stroke-width:2}
-.research-page .research-process-top,.research-page .research-process-bottom{position:absolute;z-index:2;left:24px;right:24px;display:flex;justify-content:space-between;gap:16px;color:#171717;font:9px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase}
-.research-page .research-process-top{top:22px}
-.research-page .research-process-bottom{bottom:20px;color:#5e5c57}
-.research-page .research-process-lockup{position:absolute;z-index:2;left:24px;bottom:50px;display:flex;align-items:baseline;gap:18px;color:#171717}
-.research-page .research-process-lockup strong{font-size:clamp(64px,10vw,120px);font-weight:500;line-height:.75;letter-spacing:-.1em}
-.research-page .research-process-lockup span{font-size:12px;line-height:1.35;letter-spacing:-.02em}
-.research-page .research-process-steps{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid #dedede}
-.research-page .research-process-steps span{padding:16px 18px 15px 0;border-right:1px solid #dedede;color:#666;font:10px/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase}
-.research-page .research-process-steps span:last-child{border-right:0}
-.research-page .research-process-steps b{display:block;margin-bottom:8px;color:var(--research-coral);font-weight:400}
-.research-page .research-process-visual figcaption{max-width:540px;margin:18px 0 0 auto;color:#666;font-size:13px;line-height:1.7}
-.research-page .research-note-strip{display:grid;grid-template-columns:180px minmax(0,1fr);gap:28px;margin-top:28px;padding:18px 0;border-top:1px solid #dedede;border-bottom:1px solid #dedede}
-.research-page .research-note-strip>span{color:#666;font:9px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase}
-.research-page .research-note-strip strong{max-width:520px;color:#111;font-size:clamp(22px,2.8vw,36px);font-weight:500;line-height:.98;letter-spacing:-.055em}
+.research-page .process-geometry{display:block;width:100%;height:100%;min-height:420px}
+.research-page .geometry-panel{fill:#f5f2ea}
+.research-page .geometry-grid path{fill:none;stroke:#1717171b;stroke-width:1}
+.research-page .geometry-orb{mix-blend-mode:multiply}
+.research-page .geometry-orb-mix{fill:#b8c9ff44;mix-blend-mode:multiply}
+.research-page .geometry-ring{fill:none;stroke:#17171725;stroke-width:1.2}
+.research-page .geometry-ghost{fill:none;stroke:#17171755;stroke-width:2.5;stroke-linecap:round;stroke-dasharray:5 7}
+.research-page .geometry-main{fill:none;stroke:url(#g2-process-gradient);stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
+.research-page .geometry-handles path{fill:none;stroke:#3157f4aa;stroke-width:1.5;stroke-dasharray:4 5}
+.research-page .geometry-handles circle{fill:#f5f2ea;stroke:#ff6b58;stroke-width:2}
+.research-page .research-process-visual figcaption{display:none}
 .research-page .research-scale-strip{display:grid;grid-template-columns:repeat(3,1fr);margin-top:24px;border-top:1px solid #dedede;border-bottom:1px solid #dedede}
 .research-page .research-scale-strip div{padding:20px 18px 18px 0;border-right:1px solid #dedede}
 .research-page .research-scale-strip div:last-child{border-right:0}
@@ -257,16 +249,6 @@
 
 @media(max-width:560px){
   .research-page .research-process-stage,.research-page .research-process-stage svg{min-height:280px}
-  .research-page .research-process-top,.research-page .research-process-bottom{left:16px;right:16px;font-size:7px}
-  .research-page .research-process-top{top:16px}
-  .research-page .research-process-bottom{bottom:16px}
-  .research-page .research-process-lockup{left:16px;bottom:42px;gap:10px}
-  .research-page .research-process-lockup strong{font-size:58px}
-  .research-page .research-process-lockup span{font-size:10px}
-  .research-page .research-process-steps span{padding:14px 8px 14px 0;font-size:8px}
-  .research-page .research-process-steps b{margin-bottom:6px}
-  .research-page .research-process-visual figcaption,.research-page .research-scale-caption{font-size:12px}
-  .research-page .research-note-strip{grid-template-columns:1fr;gap:14px}
-  .research-page .research-note-strip strong{font-size:27px}
+  .research-page .research-process-index{top:16px;left:16px;font-size:7px}
   .research-page .research-scale-strip strong{font-size:30px}
 }

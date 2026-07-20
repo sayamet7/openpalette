@@ -100,37 +100,37 @@
         </div>
         <figure class="research-process-visual">
           <div class="research-process-stage">
-            <div class="research-process-top"><span>PATH STUDY / 002</span><span>G2 CURVATURE</span></div>
-            <svg viewBox="0 0 860 460" role="img" aria-label="A Bézier curve being adjusted toward G2 curvature continuity">
+            <span class="research-process-index">G2 / 002</span>
+            <svg class="process-geometry" viewBox="0 0 860 460" role="img" aria-label="Abstract geometric study of a smooth G2 curve">
               <defs>
                 <linearGradient id="g2-process-gradient" x1="0" y1="0" x2="1" y2="1">
                   <stop offset="0" stop-color="#ff6b58" />
                   <stop offset=".52" stop-color="#3157f4" />
                   <stop offset="1" stop-color="#ff6b58" />
                 </linearGradient>
+                <radialGradient id="g2-coral-orb" cx="35%" cy="32%" r="70%"><stop offset="0" stop-color="#ff9b88" stop-opacity=".78" /><stop offset="1" stop-color="#ff6b58" stop-opacity=".18" /></radialGradient>
+                <radialGradient id="g2-blue-orb" cx="62%" cy="36%" r="72%"><stop offset="0" stop-color="#91a9ff" stop-opacity=".74" /><stop offset="1" stop-color="#3157f4" stop-opacity=".16" /></radialGradient>
                 <filter id="g2-process-glow" x="-20%" y="-30%" width="140%" height="160%">
-                  <feGaussianBlur stdDeviation="10" result="blur" />
+                  <feGaussianBlur stdDeviation="8" result="blur" />
                   <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
                 </filter>
               </defs>
-              <g class="process-grid" aria-hidden="true"><path d="M0 92H860M0 184H860M0 276H860M0 368H860" /><path d="M172 0V460M344 0V460M516 0V460M688 0V460" /></g>
-              <path class="process-ghost" d="M-60 364C82 350 114 124 257 154S367 438 481 405 638 173 920 215" />
-              <path class="process-main" d="M-60 364C82 350 130 136 257 154S367 410 481 405 655 192 920 215" filter="url(#g2-process-glow)" />
-              <g class="process-handles" aria-hidden="true">
+              <rect class="geometry-panel" x="0" y="0" width="860" height="460" />
+              <g class="geometry-grid" aria-hidden="true"><path d="M0 92H860M0 184H860M0 276H860M0 368H860" /><path d="M172 0V460M344 0V460M516 0V460M688 0V460" /></g>
+              <circle class="geometry-orb geometry-orb-coral" cx="216" cy="205" r="156" fill="url(#g2-coral-orb)" />
+              <circle class="geometry-orb geometry-orb-blue" cx="648" cy="250" r="164" fill="url(#g2-blue-orb)" />
+              <circle class="geometry-orb geometry-orb-mix" cx="432" cy="230" r="84" />
+              <ellipse class="geometry-ring" cx="432" cy="230" rx="302" ry="168" transform="rotate(-12 432 230)" />
+              <path class="geometry-ghost" d="M-60 364C82 350 114 124 257 154S367 438 481 405 638 173 920 215" />
+              <path class="geometry-main" d="M-60 364C82 350 130 136 257 154S367 410 481 405 655 192 920 215" filter="url(#g2-process-glow)" />
+              <g class="geometry-handles" aria-hidden="true">
                 <path d="M257 154L165 112M257 154L340 180M481 405L404 430M481 405L558 374" />
                 <circle cx="165" cy="112" r="5" /><circle cx="257" cy="154" r="9" /><circle cx="340" cy="180" r="5" />
                 <circle cx="404" cy="430" r="5" /><circle cx="481" cy="405" r="9" /><circle cx="558" cy="374" r="5" />
               </g>
             </svg>
-            <div class="research-process-lockup"><strong>G2</strong><span>tune the handles<br />until the bend is quiet</span></div>
-            <div class="research-process-bottom"><span>ORIGINAL / GHOST</span><span>ADJUST / HANDLE DIRECTION</span><span>AFTER / G2</span></div>
           </div>
-          <div class="research-process-steps" aria-label="G2 curve creation steps">
-            <span><b>01</b>Pin the intention</span>
-            <span><b>02</b>Move the handles</span>
-            <span><b>03</b>Read the curvature</span>
-          </div>
-          <figcaption>G2 is not a decorative effect. It is the moment where a local adjustment becomes a quieter, more coherent line without losing the original gesture.</figcaption>
+          <figcaption class="sr-only">An abstract study of a Bézier curve being tuned toward G2 curvature continuity.</figcaption>
         </figure>
         <div class="formula-row"><span>Signed curvature</span><code>κ(t) = cross(B′(t), B″(t)) / |B′(t)|³</code><p>We compare how each side bends, including direction, as geometric continuity rather than raw second-derivative values.</p></div>
       </section>
@@ -140,10 +140,6 @@
         <div class="research-section-heading">
           <h2>A correct junction<br /><em>is not a beautiful line.</em></h2>
           <p>Matching the two sides at the connection can still leave a swelling or a ripple somewhere along the curve. We separate local continuity from the fairness of the whole line.</p>
-        </div>
-        <div class="research-note-strip">
-          <span>FAIRNESS CHECK</span>
-          <strong>Continuity tells us what happens at the junction. Fairness asks whether the whole line keeps a quiet rhythm.</strong>
         </div>
         <div class="equation-callout"><code>E<sub>fair</sub> = ∫(dκ/ds)² ds</code><p>A representative measure for penalizing sudden curvature change. It is a guide, not a single answer: the smoothest curve may not be the curve that still feels like the brand.</p></div>
       </section>
@@ -225,10 +221,6 @@
           <div class="workflow-step"><span>03</span><strong>Compare</strong></div>
           <div class="workflow-step"><span>04</span><strong>Verify</strong></div>
           <div class="workflow-step is-acid"><span>05</span><strong>Apply</strong></div>
-        </div>
-        <div class="research-note-strip research-note-strip-trust">
-          <span>PREVIEW / SAFE TO APPLY</span>
-          <strong>Show what moved before anything is applied. The visual comparison is part of the correction.</strong>
         </div>
       </section>
 
