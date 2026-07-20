@@ -91,8 +91,8 @@
 
 @media(min-width:901px){.research-page .research-hero h1{font-size:clamp(92px,12vw,190px)}}
 
-/* Keep the standalone type scale restrained and information-led. */
-.research-page .research-hero h1{font-size:clamp(64px,8vw,128px);line-height:.82}
+/* Keep the research title restrained and information-led, closer to OpenAI's editorial scale. */
+.research-page .research-hero h1{font-size:clamp(48px,6.6vw,96px);line-height:.9;letter-spacing:-.06em}
 .research-page .research-lede h2,.research-page .research-conclusion h2{font-size:clamp(38px,5vw,76px)}
 .research-page .research-section-heading h2{font-size:clamp(40px,5vw,80px)}
 .research-page .research-copy,.research-page .research-section-heading p,.research-page .research-hero-note p{font-size:13px}
@@ -106,12 +106,12 @@
 .research-page .research-stat strong{font-size:clamp(54px,7vw,108px)}
 
 @media(max-width:900px){
-  .research-page .research-hero h1{font-size:clamp(64px,13vw,110px)}
+  .research-page .research-hero h1{font-size:clamp(52px,11vw,88px)}
   .research-page .research-lede h2,.research-page .research-conclusion h2{font-size:clamp(36px,9vw,64px)}
   .research-page .research-section-heading h2{font-size:clamp(38px,10vw,72px)}
 }
 @media(max-width:560px){
-  .research-page .research-hero h1{font-size:clamp(64px,16vw,100px)}
+  .research-page .research-hero h1{font-size:clamp(48px,14vw,78px)}
   .research-page .research-lede h2,.research-page .research-conclusion h2{font-size:10vw}
   .research-page .research-section-heading h2{font-size:11vw}
   .research-page .research-copy,.research-page .research-section-heading p,.research-page .research-hero-note p{font-size:12px}
