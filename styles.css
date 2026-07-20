@@ -186,6 +186,9 @@ body{background:var(--paper);color:var(--ink)}
   .lockup-title{font-size:11vw}
 }
 
+.footer-brand{gap:0}
+.footer-logo{display:block;width:132px;height:auto}
+
 /* Harmony Lines is a dark working surface, not a light illustration card. */
 .line-lab{background:#171719;color:#f5f2ea}
 .line-lab:after{box-shadow:inset 0 0 100px #0008}
