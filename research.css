@@ -142,6 +142,7 @@
 }
 
 /* Use one calm, article-like system across the page. */
+.research-page{--research-coral:#ff6b58;--research-blue:#3157f4;--research-blue-wash:#f1f4ff;--research-coral-wash:#fff1ee}
 .research-page main{max-width:1200px;margin:0 auto}
 .research-page .research-hero{min-height:auto;padding:126px clamp(22px,5.5vw,88px) 64px}
 .research-page .research-hero-grid{grid-template-columns:minmax(0,1.35fr) minmax(240px,.65fr);gap:72px;margin:88px 0 72px}
@@ -152,6 +153,10 @@
 .research-page .research-section-heading{grid-template-columns:minmax(0,1.3fr) minmax(260px,.7fr);gap:72px;margin:64px 0 52px}
 .research-page .research-lede h2,.research-page .research-conclusion h2,.research-page .research-section-heading h2{max-width:680px;font-size:clamp(38px,4.4vw,64px);line-height:.94;letter-spacing:-.055em}
 .research-page .research-copy,.research-page .research-section-heading p{max-width:500px;font-size:14px;line-height:1.75}
+.research-page .research-kicker{color:var(--research-coral)}
+.research-page .research-hero h1 em,.research-page .research-section h2 em,.research-page .research-lede h2 em,.research-page .research-conclusion h2 em{color:var(--research-blue)}
+.research-page .research-section-meta span:first-child{color:var(--research-coral)}
+.research-page .research-thesis strong{color:var(--research-blue)}
 .research-page .fairness-grid,.research-page .mode-grid,.research-page .workflow-grid,.research-page .evaluation-grid{gap:0;background:transparent;border-top:1px solid #dedede;border-bottom:1px solid #dedede}
 .research-page .fairness-card,.research-page .mode-card,.research-page .workflow-step,.research-page .evaluation-grid article{background:transparent!important;border:0;border-right:1px solid #dedede}
 .research-page .fairness-card:last-child,.research-page .mode-card:last-child,.research-page .workflow-step:last-child,.research-page .evaluation-grid article:last-child{border-right:0}
@@ -162,7 +167,12 @@
 .research-page .workflow-step strong{margin-top:56px}
 .research-page .evaluation-grid article{min-height:250px;padding:24px 28px}
 .research-page .evaluation-grid h3{margin:auto 0 0}
-.research-page .research-stat strong{font-size:clamp(48px,6vw,84px)}
+.research-page .mode-card:nth-child(2){box-shadow:inset 0 -3px var(--research-coral)}
+.research-page .mode-card:nth-child(3){box-shadow:inset 0 -3px var(--research-blue)}
+.research-page .workflow-step.is-acid{box-shadow:inset 0 -3px var(--research-coral)}
+.research-page .preview-panel.is-acid{background:var(--research-coral-wash)!important}
+.research-page .preview-panel.is-blue{background:var(--research-blue-wash)!important}
+.research-page .research-stat strong{font-size:clamp(48px,6vw,84px);color:var(--research-coral)}
 .research-page .research-reference-row{margin-top:80px}
 
 @media(max-width:900px){
