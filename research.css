@@ -324,3 +324,33 @@
 .research-page #conclusion .research-section-meta {
   border-bottom: 1px solid #dedede !important;
 }
+
+/* Keep the curvature formula readable instead of squeezing its explanation. */
+.research-page .formula-row {
+  grid-template-columns: minmax(130px, .42fr) minmax(0, 1.58fr);
+  gap: 24px 30px;
+  align-items: start;
+}
+.research-page .formula-row code {
+  grid-column: 2;
+  min-width: 0;
+  display: block;
+  overflow-wrap: anywhere;
+  line-height: 1.1;
+}
+.research-page .formula-row p {
+  grid-column: 2;
+  max-width: 420px;
+  margin: 14px 0 0;
+}
+
+@media(max-width:560px){
+  .research-page .formula-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .research-page .formula-row code,
+  .research-page .formula-row p {
+    grid-column: auto;
+  }
+}
