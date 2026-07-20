@@ -176,7 +176,7 @@
 .research-page .research-reference-row{margin-top:80px}
 
 /* Keep the section index visible as a quiet left rail, like the reference article. */
-.research-page .research-article-shell{display:grid;grid-template-columns:166.6667px 802.6667px;gap:40px;width:1280px;max-width:100%;margin:0 auto;padding:0 32px}
+.research-page .research-article-shell{display:grid;grid-template-columns:minmax(0,166.6667px) minmax(0,802.6667px);gap:40px;width:min(1280px,100%);max-width:100%;margin:0 auto;padding:0 32px}
 .research-page .research-toc{position:sticky;top:112px;align-self:start;display:flex;flex-direction:column;gap:0;max-width:none;margin:0;padding:0;border:0}
 .research-page .research-toc-label{display:none}
 .research-page .research-toc-links{display:flex;flex-direction:column;gap:0}
