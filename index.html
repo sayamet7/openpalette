@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles.css?v=film-v7" />
+    <link rel="stylesheet" href="./styles.css?v=film-v9" />
   </head>
   <body>
     <div class="noise" aria-hidden="true"></div>
@@ -23,6 +23,8 @@
       </a>
       <nav class="nav-links" aria-label="メインナビゲーション">
         <a href="#tools">Tools</a>
+        <a href="#rd-product">R&amp;D product</a>
+        <a href="#news">News</a>
       </nav>
       <a class="header-cta" href="#harmony-lines"><span>View Harmony Lines</span><span aria-hidden="true">↗</span></a>
       <button class="menu-button" type="button" aria-label="メニューを開く" aria-expanded="false">
@@ -32,7 +34,9 @@
 
     <nav class="mobile-nav" aria-label="モバイルナビゲーション" aria-hidden="true">
       <a href="#tools"><span>01</span>Tools</a>
-      <a href="#harmony-lines"><span>02</span>Harmony Lines</a>
+      <a href="#rd-product"><span>02</span>R&amp;D product</a>
+      <a href="#news"><span>03</span>News</a>
+      <a href="#harmony-lines"><span>04</span>Harmony Lines</a>
     </nav>
 
     <main>
@@ -173,7 +177,7 @@
           </div>
         </article>
 
-        <article class="product product-soon" aria-disabled="true">
+        <article class="product product-soon" id="rd-product" aria-disabled="true">
           <div class="product-copy reveal">
             <div class="product-topline">
               <span class="product-number">02</span><span class="status"><i></i> In development</span>
@@ -197,12 +201,26 @@
           <a href="#tools">Explore the tools <span>↗</span></a>
         </div>
       </section>
+
+      <section class="news-section" id="news" aria-labelledby="news-title">
+        <div class="section-meta light"><span>02</span><span>News</span></div>
+        <div class="news-heading">
+          <h2 id="news-title">Notes from<br /><span>the palette.</span></h2>
+          <p>新しいツールと、制作の途中で見つけたこと。</p>
+        </div>
+        <div class="news-list" data-news-list aria-live="polite"></div>
+      </section>
     </main>
 
     <footer id="contact">
       <div class="footer-top reveal">
         <p>Keep your<br />ideas <span class="serif">in motion.</span></p>
-        <p class="footer-note">Creative tools<br />for Illustrator.</p>
+        <div class="footer-aside">
+          <p class="footer-note">Creative tools<br />for Illustrator.</p>
+          <a class="footer-contact" href="https://github.com/sayamet7/openpalette/issues" target="_blank" rel="noopener noreferrer" aria-label="GitHubでバグ報告や機能要望を送る">
+            <span>Bug reports &amp; requests</span><span aria-hidden="true">↗</span>
+          </a>
+        </div>
       </div>
       <div class="footer-bottom">
         <a class="brand footer-brand" href="#top">
@@ -214,6 +232,6 @@
         <p>© 2026 Open Palette</p><p>Made for creative people in Japan</p>
       </div>
     </footer>
-    <script src="./script.js?v=film-v7"></script>
+    <script src="./script.js?v=film-v8"></script>
   </body>
 </html>

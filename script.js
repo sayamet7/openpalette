@@ -121,6 +121,40 @@
   };
   menuButton.addEventListener('click', () => setMenu(!mobileNav.classList.contains('open')));
   mobileNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+
+  const newsList = document.querySelector('[data-news-list]');
+  if (newsList) {
+    const renderNews = items => {
+      newsList.replaceChildren(...items.map((item, index) => {
+        const article = document.createElement('article');
+        article.className = 'news-item reveal visible';
+        const meta = document.createElement('div');
+        meta.className = 'news-item-meta';
+        const date = document.createElement('time');
+        date.dateTime = item.date;
+        date.textContent = item.date.replaceAll('-', '.');
+        const tag = document.createElement('span');
+        tag.textContent = item.tag;
+        meta.append(date, tag);
+        const copy = document.createElement('div');
+        copy.className = 'news-item-copy';
+        const title = document.createElement('h3');
+        title.textContent = item.title;
+        const summary = document.createElement('p');
+        summary.textContent = item.summary;
+        copy.append(title, summary);
+        const number = document.createElement('span');
+        number.className = 'news-item-number';
+        number.textContent = String(index + 1).padStart(2, '0');
+        article.append(meta, copy, number);
+        return article;
+      }));
+    };
+    fetch('./news.json').then(response => response.json()).then(renderNews).catch(() => {
+      renderNews([{ date: '2026-07-20', tag: 'OPEN PALETTE', title: 'Open Paletteを公開しました', summary: '新しいツールと、制作の途中で見つけたこと。' }]);
+    });
+  }
+
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) cancelAnimationFrame(filmRaf);
     else if (filmVisible) startFilm();
