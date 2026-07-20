@@ -63,7 +63,22 @@
         </div>
       </section>
 
-      <section class="research-lede research-wrap">
+      <nav class="research-toc" aria-label="In this research">
+        <div class="research-toc-label">IN THIS RESEARCH</div>
+        <div class="research-toc-links">
+          <a href="#question"><span>01</span><strong>The question</strong></a>
+          <a href="#continuity"><span>02</span><strong>Continuity</strong></a>
+          <a href="#fairness"><span>03</span><strong>Fairness</strong></a>
+          <a href="#design-intent"><span>04</span><strong>Design intent</strong></a>
+          <a href="#perception"><span>05</span><strong>Perception</strong></a>
+          <a href="#illustrator"><span>06</span><strong>Illustrator</strong></a>
+          <a href="#trust"><span>07</span><strong>Trust</strong></a>
+          <a href="#evaluation"><span>08</span><strong>Evaluation</strong></a>
+          <a href="#conclusion"><span>09</span><strong>Conclusion</strong></a>
+        </div>
+      </nav>
+
+      <section class="research-lede research-wrap" id="question">
         <div class="research-section-meta"><span>01</span><span>The question</span></div>
         <div class="research-lede-grid">
           <h2>When a curve feels wrong,<br /><em>what exactly is wrong?</em></h2>
@@ -118,7 +133,7 @@
         <div class="formula-row"><span>Signed curvature</span><code>κ(t) = cross(B′(t), B″(t)) / |B′(t)|³</code><p>We compare how each side bends, including direction, as geometric continuity rather than raw second-derivative values.</p></div>
       </section>
 
-      <section class="research-wrap research-section">
+      <section class="research-wrap research-section" id="fairness">
         <div class="research-section-meta"><span>03</span><span>Fairness</span></div>
         <div class="research-section-heading">
           <h2>A correct junction<br /><em>is not a beautiful line.</em></h2>
@@ -137,7 +152,7 @@
         <div class="equation-callout"><code>E<sub>fair</sub> = ∫(dκ/ds)² ds</code><p>A representative measure for penalizing sudden curvature change. It is a guide, not a single answer: the smoothest curve may not be the curve that still feels like the brand.</p></div>
       </section>
 
-      <section class="research-dark research-wrap">
+      <section class="research-dark research-wrap" id="design-intent">
         <div class="research-section-meta"><span>04</span><span>Design intent</span></div>
         <div class="research-section-heading">
           <h2>Let intention<br /><em>become a constraint.</em></h2>
@@ -166,7 +181,7 @@
         <div class="constraint-strip"><span>DO NOT BREAK</span><p>Path closure · topology · pinned points · maximum deformation · no new cusp, loop, or self-intersection</p></div>
       </section>
 
-      <section class="research-wrap research-section">
+      <section class="research-wrap research-section" id="perception">
         <div class="research-section-meta"><span>05</span><span>Perception</span></div>
         <div class="research-section-heading">
           <h2>Not “0.01 units.”<br /><em>How many pixels move?</em></h2>
@@ -182,7 +197,7 @@
         </div>
       </section>
 
-      <section class="research-dark research-wrap">
+      <section class="research-dark research-wrap" id="illustrator">
         <div class="research-section-meta"><span>06</span><span>Illustrator</span></div>
         <div class="research-section-heading">
           <h2>Before the equation,<br /><em>protect the document.</em></h2>
@@ -203,7 +218,7 @@
         </div>
       </section>
 
-      <section class="research-wrap research-section">
+      <section class="research-wrap research-section" id="trust">
         <div class="research-section-meta"><span>07</span><span>Trust</span></div>
         <div class="research-section-heading">
           <h2>Preview before<br /><em>automatic correction.</em></h2>
@@ -223,7 +238,7 @@
         </div>
       </section>
 
-      <section class="research-dark research-wrap">
+      <section class="research-dark research-wrap" id="evaluation">
         <div class="research-section-meta"><span>08</span><span>Evaluation</span></div>
         <div class="research-section-heading">
           <h2>What would make<br /><em>the research successful?</em></h2>
@@ -237,7 +252,7 @@
         <div class="research-stat"><strong>79</strong><span>automated checks passed in the macOS / SVG prototype as of 20.07.2026.</span></div>
       </section>
 
-      <section class="research-conclusion research-wrap">
+      <section class="research-conclusion research-wrap" id="conclusion">
         <div class="research-section-meta"><span>09</span><span>Conclusion</span></div>
         <div class="research-conclusion-grid">
           <h2>Do not decide the<br /><em>right line for people.</em></h2>

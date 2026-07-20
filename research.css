@@ -175,6 +175,16 @@
 .research-page .research-stat strong{font-size:clamp(48px,6vw,84px);color:var(--research-coral)}
 .research-page .research-reference-row{margin-top:80px}
 
+/* A compact contents rail gives the article the same editorial entry point as the reference page. */
+.research-page .research-toc{display:grid;grid-template-columns:minmax(150px,.35fr) minmax(0,1fr);gap:64px;max-width:1200px;margin:0 auto;padding:28px clamp(22px,5.5vw,88px) 30px;border-top:1px solid #dedede;border-bottom:1px solid #dedede}
+.research-page .research-toc-label{padding-top:5px;color:#666;font:9px/1 var(--mono);letter-spacing:.12em}
+.research-page .research-toc-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:28px;row-gap:7px}
+.research-page .research-toc a{display:flex;gap:12px;align-items:baseline;min-width:0;padding:4px 0;color:#111;text-decoration:none;font-size:13px;line-height:1.25;letter-spacing:-.015em}
+.research-page .research-toc a span{flex:none;color:var(--research-coral);font:9px/1 var(--mono);letter-spacing:.08em}
+.research-page .research-toc a strong{font-weight:500}
+.research-page .research-toc a:hover strong{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
+.research-page main section[id]{scroll-margin-top:84px}
+
 @media(max-width:900px){
   .research-page .research-hero{padding-top:100px}
   .research-page .research-hero-grid{grid-template-columns:1fr;gap:42px;margin:72px 0 56px}
@@ -187,6 +197,8 @@
   .research-page .workflow-grid{grid-template-columns:repeat(2,1fr)}
   .research-page .workflow-step{border-bottom:1px solid #dedede}
   .research-page .workflow-step:nth-child(2n){border-right:0}
+  .research-page .research-toc{grid-template-columns:1fr;gap:20px}
+  .research-page .research-toc-links{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px}
 }
 @media(max-width:560px){
   .research-page .research-hero{min-height:auto;padding:88px 18px 52px}
@@ -197,4 +209,6 @@
   .research-page .workflow-grid{grid-template-columns:1fr}
   .research-page .workflow-step,.research-page .workflow-step:nth-child(2n){border-right:0}
   .research-page .workflow-step:last-child{border-bottom:0}
+  .research-page .research-toc{padding:22px 18px 24px}
+  .research-page .research-toc-links{grid-template-columns:1fr;row-gap:2px}
 }
