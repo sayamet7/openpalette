@@ -98,20 +98,39 @@
           <h2>Smoothness<br /><em>is not one thing.</em></h2>
           <p>Two curves can meet at the same point and still create a visible bump. We study the levels of continuity that sit behind the word “smooth.”</p>
         </div>
-        <figure class="research-fv-visual research-fv-visual-continuity">
-          <div class="research-fv-media">
-            <img src="./assets/graphic-worktable-screen.png" alt="Illustrator artwork with visible curve handles and color studies." />
-            <div class="research-fv-media-top"><span>CURVE STUDY / 001</span><span>PATH + PERCEPTION</span></div>
-            <div class="research-fv-lockup"><span>G2</span><i>→</i><span>G3</span></div>
-            <div class="research-fv-media-bottom"><span>CURVATURE</span><span>CHANGE</span></div>
+        <figure class="research-process-visual">
+          <div class="research-process-stage">
+            <div class="research-process-top"><span>PATH STUDY / 002</span><span>G2 CURVATURE</span></div>
+            <svg viewBox="0 0 860 460" role="img" aria-label="A Bézier curve being adjusted toward G2 curvature continuity">
+              <defs>
+                <linearGradient id="g2-process-gradient" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#ff6b58" />
+                  <stop offset=".52" stop-color="#3157f4" />
+                  <stop offset="1" stop-color="#ff6b58" />
+                </linearGradient>
+                <filter id="g2-process-glow" x="-20%" y="-30%" width="140%" height="160%">
+                  <feGaussianBlur stdDeviation="10" result="blur" />
+                  <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+                </filter>
+              </defs>
+              <g class="process-grid" aria-hidden="true"><path d="M0 92H860M0 184H860M0 276H860M0 368H860" /><path d="M172 0V460M344 0V460M516 0V460M688 0V460" /></g>
+              <path class="process-ghost" d="M-60 364C82 350 114 124 257 154S367 438 481 405 638 173 920 215" />
+              <path class="process-main" d="M-60 364C82 350 130 136 257 154S367 410 481 405 655 192 920 215" filter="url(#g2-process-glow)" />
+              <g class="process-handles" aria-hidden="true">
+                <path d="M257 154L165 112M257 154L340 180M481 405L404 430M481 405L558 374" />
+                <circle cx="165" cy="112" r="5" /><circle cx="257" cy="154" r="9" /><circle cx="340" cy="180" r="5" />
+                <circle cx="404" cy="430" r="5" /><circle cx="481" cy="405" r="9" /><circle cx="558" cy="374" r="5" />
+              </g>
+            </svg>
+            <div class="research-process-lockup"><strong>G2</strong><span>tune the handles<br />until the bend is quiet</span></div>
+            <div class="research-process-bottom"><span>ORIGINAL / GHOST</span><span>ADJUST / HANDLE DIRECTION</span><span>AFTER / G2</span></div>
           </div>
-          <div class="continuity-spectrum" aria-label="Continuity levels from position to curvature change">
-            <span><b>G0</b><small>Position</small></span>
-            <span><b>G1</b><small>Tangent</small></span>
-            <span class="is-key"><b>G2</b><small>Curvature</small></span>
-            <span class="is-key"><b>G3</b><small>Curvature change</small></span>
+          <div class="research-process-steps" aria-label="G2 curve creation steps">
+            <span><b>01</b>Pin the intention</span>
+            <span><b>02</b>Move the handles</span>
+            <span><b>03</b>Read the curvature</span>
           </div>
-          <figcaption>Higher order is not automatically better. The right level depends on the object, the display size, and the visual intent.</figcaption>
+          <figcaption>G2 is not a decorative effect. It is the moment where a local adjustment becomes a quieter, more coherent line without losing the original gesture.</figcaption>
         </figure>
         <div class="formula-row"><span>Signed curvature</span><code>κ(t) = cross(B′(t), B″(t)) / |B′(t)|³</code><p>We compare how each side bends, including direction, as geometric continuity rather than raw second-derivative values.</p></div>
       </section>
@@ -122,14 +141,10 @@
           <h2>A correct junction<br /><em>is not a beautiful line.</em></h2>
           <p>Matching the two sides at the connection can still leave a swelling or a ripple somewhere along the curve. We separate local continuity from the fairness of the whole line.</p>
         </div>
-        <figure class="research-fv-visual research-fv-visual-fairness">
-          <div class="research-fv-media research-fv-media-light">
-            <img src="./assets/creative-worktable-geometry.png" alt="A colorful geometry study arranged on a design worktable." />
-            <div class="research-fv-media-top"><span>FAIRNESS / 002</span><span>WHOLE-LINE JUDGEMENT</span></div>
-            <div class="research-fv-lockup"><span>LOCAL</span><i>→</i><span>WHOLE</span></div>
-          </div>
-          <figcaption>Continuity tells us what happens at the junction. Fairness asks whether the entire line keeps a quiet rhythm.</figcaption>
-        </figure>
+        <div class="research-note-strip">
+          <span>FAIRNESS CHECK</span>
+          <strong>Continuity tells us what happens at the junction. Fairness asks whether the whole line keeps a quiet rhythm.</strong>
+        </div>
         <div class="equation-callout"><code>E<sub>fair</sub> = ∫(dκ/ds)² ds</code><p>A representative measure for penalizing sudden curvature change. It is a guide, not a single answer: the smoothest curve may not be the curve that still feels like the brand.</p></div>
       </section>
 
@@ -211,15 +226,10 @@
           <div class="workflow-step"><span>04</span><strong>Verify</strong></div>
           <div class="workflow-step is-acid"><span>05</span><strong>Apply</strong></div>
         </div>
-        <figure class="research-fv-visual research-fv-visual-trust">
-          <div class="research-fv-media research-fv-media-dark">
-            <img src="./assets/design-studio.png" alt="A design studio with an Illustrator curve study on screen." />
-            <div class="research-fv-media-top"><span>PREVIEW / 003</span><span>SAFE TO APPLY</span></div>
-            <div class="research-fv-lockup"><span>SEE</span><i>→</i><span>TRUST</span></div>
-            <div class="research-fv-media-bottom"><span>ORIGINAL</span><span>PREVIEW</span><span>DIFFERENCE</span></div>
-          </div>
-          <figcaption>Show what moved before anything is applied. The visual comparison is part of the correction, not a postscript.</figcaption>
-        </figure>
+        <div class="research-note-strip research-note-strip-trust">
+          <span>PREVIEW / SAFE TO APPLY</span>
+          <strong>Show what moved before anything is applied. The visual comparison is part of the correction.</strong>
+        </div>
       </section>
 
       <section class="research-dark research-wrap" id="evaluation">
