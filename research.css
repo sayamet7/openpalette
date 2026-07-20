@@ -196,7 +196,7 @@
 .research-page .research-lede-grid .research-copy,.research-page .research-conclusion-grid .research-copy,.research-page .research-section-heading p{max-width:620px;margin-top:30px}
 .research-page .research-thesis{grid-template-columns:1fr;gap:18px;margin-top:72px}
 .research-page .research-thesis strong{max-width:760px}
-.research-page .research-hero h1 em,.research-page .research-section h2 em,.research-page .research-lede h2 em,.research-page .research-conclusion h2 em{color:#111}
+.research-page h1 em,.research-page h2 em,.research-page .research-thesis strong{color:#111!important}
 
 @media(max-width:900px){
   .research-page .research-hero{padding-top:100px}
