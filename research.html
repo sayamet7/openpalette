@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Researching harmonism line: curve diagnosis and adjustment for Adobe Illustrator." />
+    <meta name="theme-color" content="#f5f2ea" />
+    <title>Research / harmonism line — Open Palette</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css?v=film-v19" />
+    <link rel="stylesheet" href="./research.css?v=research-v1" />
+  </head>
+  <body class="research-page">
+    <div class="noise" aria-hidden="true"></div>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="./index.html#top" aria-label="Open Palette home">
+        <span class="brand-logo-frame">
+          <img class="brand-logo brand-logo-light" src="./assets/w.svg" alt="Open Palette" />
+          <img class="brand-logo brand-logo-dark" src="./assets/b.svg" alt="" aria-hidden="true" />
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="./research.html" aria-current="page">Research</a>
+        <a href="./index.html#tools">Products</a>
+        <a href="./index.html#harmony-lines">Developers</a>
+        <a href="./index.html#contact">Company</a>
+      </nav>
+      <a class="header-cta" href="./index.html#harmony-lines"><span>Try Harmony Lines</span><span aria-hidden="true">↗</span></a>
+      <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <nav class="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+      <a href="./research.html" aria-current="page"><span>01</span>Research</a>
+      <a href="./index.html#tools"><span>02</span>Products</a>
+      <a href="./index.html#harmony-lines"><span>03</span>Developers</a>
+      <a href="./index.html#contact"><span>04</span>Company</a>
+    </nav>
+
+    <main>
+      <section class="research-hero">
+        <div class="research-hero-top">
+          <span>R&amp;D / 001</span>
+          <span>CURVE DIAGNOSTICS / ILLUSTRATOR</span>
+        </div>
+        <div class="research-hero-grid">
+          <div>
+            <p class="research-kicker">A study in continuity, fairness, and intent.</p>
+            <h1>harmonism<br /><em>line</em></h1>
+          </div>
+          <div class="research-hero-note">
+            <p>Researching a curve diagnosis and adjustment technology for Adobe Illustrator.</p>
+            <span class="scroll-mark">Scroll to explore <b>↓</b></span>
+          </div>
+        </div>
+        <div class="research-hero-foot">
+          <span>Open Palette Research Notes</span>
+          <span>Updated 20.07.2026</span>
+        </div>
+      </section>
+
+      <section class="research-lede research-wrap">
+        <div class="research-section-meta"><span>01</span><span>The question</span></div>
+        <div class="research-lede-grid">
+          <h2>When a curve feels wrong,<br /><em>what exactly is wrong?</em></h2>
+          <div class="research-copy">
+            <p>Zoom into the outline of a logo, a letter, or an icon. The anchor points look considered. The handles appear aligned. And yet the line seems to bulge by just a little.</p>
+            <p>Manual correction often fixes one area while making another thinner, heavier, or less balanced. The hard part of Bézier editing is not simply making a line smooth. It is explaining what feels unnatural, preserving the designer’s intent, and changing only what is safe to change.</p>
+          </div>
+        </div>
+        <div class="research-thesis"><span>Our working thesis</span><strong>Measure the discomfort.<br />Protect the intention.</strong></div>
+      </section>
+
+      <section class="research-dark research-wrap" id="continuity">
+        <div class="research-section-meta"><span>02</span><span>Continuity</span></div>
+        <div class="research-section-heading">
+          <h2>Smoothness<br /><em>is not one thing.</em></h2>
+          <p>Two curves can meet at the same point and still create a visible bump. We study the levels of continuity that sit behind the word “smooth.”</p>
+        </div>
+        <figure class="continuity-figure">
+          <div class="diagram-caption"><span>SCHEMATIC / NOT TO SCALE</span><span>FROM POSITION TO CURVATURE CHANGE</span></div>
+          <div class="continuity-ladder">
+            <div class="continuity-row">
+              <div class="continuity-label"><strong>G0</strong><span>Position</span></div>
+              <svg viewBox="0 0 520 100" role="img" aria-label="G0 position continuity diagram">
+                <path d="M20 78 C72 22 128 18 252 50" /><path d="M252 50 C310 78 386 83 500 25" /><circle cx="252" cy="50" r="5" />
+              </svg>
+              <p>Same point.<br /><b>Not necessarily smooth.</b></p>
+            </div>
+            <div class="continuity-row">
+              <div class="continuity-label"><strong>G1</strong><span>Tangent</span></div>
+              <svg viewBox="0 0 520 100" role="img" aria-label="G1 tangent continuity diagram">
+                <path d="M20 78 C86 26 148 50 252 50" /><path d="M252 50 C356 50 420 76 500 25" /><circle cx="252" cy="50" r="5" />
+              </svg>
+              <p>Same direction.<br /><b>The corner disappears.</b></p>
+            </div>
+            <div class="continuity-row is-highlighted">
+              <div class="continuity-label"><strong>G2</strong><span>Curvature</span></div>
+              <svg viewBox="0 0 520 100" role="img" aria-label="G2 curvature continuity diagram">
+                <path d="M20 78 C86 26 150 42 252 50" /><path d="M252 50 C354 58 420 76 500 25" /><circle cx="252" cy="50" r="5" />
+              </svg>
+              <p>Same bend strength.<br /><b>Fewer bumps and steps.</b></p>
+            </div>
+            <div class="continuity-row">
+              <div class="continuity-label"><strong>G3</strong><span>Curvature change</span></div>
+              <svg viewBox="0 0 520 100" role="img" aria-label="G3 curvature change continuity diagram">
+                <path d="M20 78 C86 26 150 42 252 50" /><path d="M252 50 C354 58 420 76 500 25" /><circle cx="252" cy="50" r="5" />
+                <path class="guide" d="M44 90H476" />
+              </svg>
+              <p>Same change in bend.<br /><b>Useful only when needed.</b></p>
+            </div>
+          </div>
+          <figcaption>Higher order is not automatically better. The right level depends on the object, the display size, and the visual intent.</figcaption>
+        </figure>
+        <div class="formula-row"><span>Signed curvature</span><code>κ(t) = cross(B′(t), B″(t)) / |B′(t)|³</code><p>We compare how each side bends, including direction, as geometric continuity rather than raw second-derivative values.</p></div>
+      </section>
+
+      <section class="research-wrap research-section">
+        <div class="research-section-meta"><span>03</span><span>Fairness</span></div>
+        <div class="research-section-heading">
+          <h2>A correct junction<br /><em>is not a beautiful line.</em></h2>
+          <p>Matching the two sides at the connection can still leave a swelling or a ripple somewhere along the curve. We separate local continuity from the fairness of the whole line.</p>
+        </div>
+        <div class="fairness-grid">
+          <figure class="fairness-card">
+            <div class="fairness-art"><svg viewBox="0 0 560 230" role="img" aria-label="A curve with a local bump"><path class="fairness-axis" d="M30 190H530" /><path class="curve curve-bumpy" d="M30 180 C120 42 192 56 280 115 C340 156 366 58 530 48" /><circle cx="280" cy="115" r="6" /></svg></div>
+            <figcaption><span>CONTINUITY ONLY</span><strong>A good junction can hide a bad middle.</strong></figcaption>
+          </figure>
+          <figure class="fairness-card is-blue">
+            <div class="fairness-art"><svg viewBox="0 0 560 230" role="img" aria-label="A smooth fair curve"><path class="fairness-axis" d="M30 190H530" /><path class="curve curve-fair" d="M30 180 C120 42 192 56 280 115 C368 174 430 76 530 48" /><circle cx="280" cy="115" r="6" /></svg></div>
+            <figcaption><span>FAIRNESS</span><strong>Keep the curvature change quiet across the whole line.</strong></figcaption>
+          </figure>
+        </div>
+        <div class="equation-callout"><code>E<sub>fair</sub> = ∫(dκ/ds)² ds</code><p>A representative measure for penalizing sudden curvature change. It is a guide, not a single answer: the smoothest curve may not be the curve that still feels like the brand.</p></div>
+      </section>
+
+      <section class="research-dark research-wrap">
+        <div class="research-section-meta"><span>04</span><span>Design intent</span></div>
+        <div class="research-section-heading">
+          <h2>Let intention<br /><em>become a constraint.</em></h2>
+          <p>The same G2 adjustment produces different results depending on what is allowed to move. The prototype therefore separates three correction modes.</p>
+        </div>
+        <div class="mode-grid">
+          <article class="mode-card">
+            <div class="mode-number">01</div>
+            <div class="mode-art mode-anchor" aria-hidden="true"><span class="handle h1"></span><span class="handle h2"></span><span class="node n1"></span><span class="node n2"></span><span class="curve-line"></span></div>
+            <h3>Anchor-only</h3>
+            <p>Handles stay fixed. Only the connection point moves.</p>
+            <span class="mode-rule">Protects handle direction</span>
+          </article>
+          <article class="mode-card is-acid">
+            <div class="mode-number">02</div>
+            <div class="mode-art mode-handles" aria-hidden="true"><span class="handle h1"></span><span class="handle h2"></span><span class="node n1"></span><span class="node n2"></span><span class="curve-line"></span></div>
+            <h3>Handles-only</h3>
+            <p>Connection points stay fixed. The two handles are adjusted.</p>
+            <span class="mode-rule">Protects anchor position</span>
+          </article>
+          <article class="mode-card is-blue">
+            <div class="mode-number">03</div>
+            <div class="mode-art mode-balanced" aria-hidden="true"><span class="handle h1"></span><span class="handle h2"></span><span class="node n1"></span><span class="node n2"></span><span class="curve-line"></span></div>
+            <h3>Balanced</h3>
+            <p>Anchor and handle movement are evaluated and distributed locally.</p>
+            <span class="mode-rule">Preserves the larger shape</span>
+          </article>
+        </div>
+        <div class="constraint-strip"><span>DO NOT BREAK</span><p>Path closure · topology · pinned points · maximum deformation · no new cusp, loop, or self-intersection</p></div>
+      </section>
+
+      <section class="research-wrap research-section">
+        <div class="research-section-meta"><span>05</span><span>Perception</span></div>
+        <div class="research-section-heading">
+          <h2>Not “0.01 units.”<br /><em>How many pixels move?</em></h2>
+          <p>The meaning of a coordinate difference depends on the final viewing size. A 0.1-unit change on a 1000-unit artboard is not a useful judgement until it becomes a visible distance.</p>
+        </div>
+        <figure class="scale-figure">
+          <div class="scale-stage"><span class="scale-label scale-small">16 px icon</span><span class="scale-label scale-mid">256 px screen</span><span class="scale-label scale-large">wall sign</span><div class="scale-line"><i></i><i></i><i></i></div><div class="scale-dots"><b></b><b></b><b></b></div></div>
+          <figcaption>Convert maximum displacement into the pixels people will actually see. A small residual may be harmless at one size and damaging at another.</figcaption>
+        </figure>
+        <div class="research-note-grid">
+          <div><span>DETECTION PRIORITY</span><strong>Perceptual impact<br />over residual size.</strong></div>
+          <p>We plan to vary display size, contrast, stroke weight, and output medium to learn where mathematical indicators and expert judgement agree.</p>
+        </div>
+      </section>
+
+      <section class="research-dark research-wrap">
+        <div class="research-section-meta"><span>06</span><span>Illustrator</span></div>
+        <div class="research-section-heading">
+          <h2>Before the equation,<br /><em>protect the document.</em></h2>
+          <p>Illustrator exposes a clear path model. The difficult part is everything around it: compound paths, clipping, transforms, selection state, locked objects, and what the designer expects Undo to do.</p>
+        </div>
+        <div class="pipeline" aria-label="Illustrator research pipeline">
+          <div class="pipeline-step"><span>01</span><strong>PathItem</strong><small>anchors / handles</small></div>
+          <div class="pipeline-arrow">→</div>
+          <div class="pipeline-step"><span>02</span><strong>Diagnose</strong><small>G1 / G2 / safety</small></div>
+          <div class="pipeline-arrow">→</div>
+          <div class="pipeline-step"><span>03</span><strong>Preview</strong><small>screen-space delta</small></div>
+          <div class="pipeline-arrow">→</div>
+          <div class="pipeline-step is-acid"><span>04</span><strong>Apply</strong><small>one Undo unit</small></div>
+        </div>
+        <div class="research-copy research-copy-wide">
+          <p>We imagine a staged implementation: first validate path reads and writes through scripting, then move to an HTML / JavaScript panel, and only introduce a C++ plugin when live preview, curvature combs, drag updates, and native Undo integration require it.</p>
+          <a class="research-reference" href="https://ai-scripting.docsforadobe.dev/jsobjref/PathPoint/" target="_blank" rel="noreferrer">Read the Illustrator PathPoint reference ↗</a>
+        </div>
+      </section>
+
+      <section class="research-wrap research-section">
+        <div class="research-section-meta"><span>07</span><span>Trust</span></div>
+        <div class="research-section-heading">
+          <h2>Preview before<br /><em>automatic correction.</em></h2>
+          <p>A mathematically successful correction can still damage a working file. The preview itself is part of the research.</p>
+        </div>
+        <div class="workflow-grid">
+          <div class="workflow-step"><span>01</span><strong>Detect</strong><p>Find a candidate and explain the reason in one sentence.</p></div>
+          <div class="workflow-step"><span>02</span><strong>Preview</strong><p>Show the proposed shape without changing the source.</p></div>
+          <div class="workflow-step"><span>03</span><strong>Compare</strong><p>Switch between Original, Preview, and Difference.</p></div>
+          <div class="workflow-step"><span>04</span><strong>Verify</strong><p>Report displacement, residuals, and safety checks.</p></div>
+          <div class="workflow-step is-acid"><span>05</span><strong>Apply</strong><p>Commit the result as one action that Undo can reverse.</p></div>
+        </div>
+        <div class="preview-board" aria-label="Original, Preview, Difference comparison">
+          <div class="preview-panel"><span>ORIGINAL</span><svg viewBox="0 0 240 150" aria-hidden="true"><path d="M20 115 C65 24 88 42 121 78 S175 96 220 32" /></svg></div>
+          <div class="preview-panel is-acid"><span>PREVIEW</span><svg viewBox="0 0 240 150" aria-hidden="true"><path d="M20 115 C65 24 91 48 121 78 S177 91 220 32" /></svg></div>
+          <div class="preview-panel is-blue"><span>DIFFERENCE</span><svg viewBox="0 0 240 150" aria-hidden="true"><path d="M20 115 C65 24 91 48 121 78 S177 91 220 32" /><path class="difference" d="M20 115 C65 24 88 42 121 78 S175 96 220 32" /></svg></div>
+        </div>
+      </section>
+
+      <section class="research-dark research-wrap">
+        <div class="research-section-meta"><span>08</span><span>Evaluation</span></div>
+        <div class="research-section-heading">
+          <h2>What would make<br /><em>the research successful?</em></h2>
+          <p>Zero G2 residual is not enough. We need geometric correctness, perceptual validity, and tool-level trust to agree.</p>
+        </div>
+        <div class="evaluation-grid">
+          <article><span>01</span><h3>Geometric<br />correctness</h3><p>Scale, rotation, reflection, degenerate handles, topology, area, and impossible cases.</p></article>
+          <article class="is-acid"><span>02</span><h3>Perceptual<br />validity</h3><p>Designer judgement across logos, type, icons, sizes, and correction modes.</p></article>
+          <article class="is-blue"><span>03</span><h3>Tool<br />reliability</h3><p>Clear reasons, readable differences, safe previews, and trustworthy Undo.</p></article>
+        </div>
+        <div class="research-stat"><strong>79</strong><span>automated checks passed in the macOS / SVG prototype as of 20.07.2026.</span></div>
+      </section>
+
+      <section class="research-conclusion research-wrap">
+        <div class="research-section-meta"><span>09</span><span>Conclusion</span></div>
+        <div class="research-conclusion-grid">
+          <h2>Do not decide the<br /><em>right line for people.</em></h2>
+          <div class="research-copy">
+            <p>harmonism line is not meant to replace the designer’s eye. It should make the discomfort measurable, show what moved and what was protected, and make experimentation safe.</p>
+            <p>The equations are only the starting point. The real research sits at the boundary between mathematics, perception, and interaction: how to define the identity of a shape, connect visible difference to numerical difference, and present the right information without breaking the way Illustrator already works.</p>
+          </div>
+        </div>
+        <div class="research-reference-row">
+          <span>REFERENCES</span>
+          <a href="https://glyphsapp.com/learn/harmonization" target="_blank" rel="noreferrer">Glyphs / Harmonization ↗</a>
+          <a href="https://www2.eecs.berkeley.edu/Pubs/TechRpts/1993/5219.html" target="_blank" rel="noreferrer">Moreton / Minimum Curvature Variation ↗</a>
+          <a href="https://developer.adobe.com/illustrator/" target="_blank" rel="noreferrer">Adobe Illustrator Developer ↗</a>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact">
+      <div class="footer-top reveal">
+        <p>Keep your<br />ideas <span class="serif">in motion.</span></p>
+        <p class="footer-note">Creative tools<br />for Illustrator.</p>
+      </div>
+      <div class="footer-contact">
+        <span>Something not working?</span>
+        <a href="https://github.com/sayamet7/openpalette/issues/new?template=bug_report.yml" target="_blank" rel="noreferrer">Report a bug <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="footer-bottom">
+        <a class="brand footer-brand" href="./index.html#top" aria-label="Open Palette home">
+          <img class="footer-logo" src="./assets/b.svg" alt="Open Palette" />
+        </a>
+        <p>© 2026 Open Palette</p><p>Made for creative people everywhere</p>
+      </div>
+    </footer>
+    <script src="./script.js?v=film-v11"></script>
+  </body>
+</html>
