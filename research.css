@@ -116,3 +116,27 @@
   .research-page .research-section-heading h2{font-size:11vw}
   .research-page .research-copy,.research-page .research-section-heading p,.research-page .research-hero-note p{font-size:12px}
 }
+
+/* Bring the research page into a tighter, editorial reading rhythm. */
+.research-page .research-wrap{padding:clamp(56px,7vw,104px) clamp(22px,5.5vw,88px)}
+.research-page .research-hero{min-height:86svh;padding:112px clamp(22px,5.5vw,88px) 28px}
+.research-page .research-hero-grid{gap:5vw;margin:8vh 0 7vh}
+.research-page .research-hero h1{font-size:clamp(42px,5vw,72px);line-height:.96;letter-spacing:-.045em}
+.research-page .research-hero-note p{margin-bottom:32px}
+.research-page .research-lede-grid,.research-page .research-conclusion-grid{gap:6vw;margin-top:56px}
+.research-page .research-section-heading{gap:6vw;margin:60px 0 52px}
+.research-page .research-thesis{margin-top:72px}
+.research-page .research-note-grid{margin-top:64px}
+.research-page .research-reference-row{margin-top:80px}
+
+@media(max-width:900px){
+  .research-page .research-hero{min-height:80svh;padding-top:96px}
+  .research-page .research-hero-grid{margin:7vh 0 6vh}
+  .research-page .research-hero h1{font-size:clamp(44px,8vw,64px)}
+}
+@media(max-width:560px){
+  .research-page .research-wrap{padding:56px 18px 64px}
+  .research-page .research-hero{min-height:680px;padding:88px 18px 22px}
+  .research-page .research-hero h1{font-size:clamp(40px,11vw,56px)}
+  .research-page .research-hero-grid{margin:6vh 0 5vh}
+}
