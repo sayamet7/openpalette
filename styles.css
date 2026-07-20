@@ -256,3 +256,11 @@ body{background:var(--paper);color:var(--ink)}
   .film-stage.phase-collage .collage-three{right:4%;top:23%;width:27vw;height:45vh}
   .film-stage.phase-collage .collage-card span{left:9px;bottom:10px;font-size:6px}
 }
+
+/* Give each cut enough air to enter and leave without a hard blink. */
+.film-word{transition-duration:.42s,.62s,.3s}
+.film-media{transition-duration:.8s,1.15s,1.15s,1.15s,1.15s,1.15s,1.15s}
+.film-photo{transition-duration:.8s,1.15s,1.15s,1.15s,1.15s,1.15s,1.15s}
+.film-statement{transition-duration:.7s,.95s}
+.film-collage{transition:opacity .8s ease}
+.film-lockup{transition-duration:.8s,1s}

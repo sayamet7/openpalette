@@ -5,22 +5,25 @@
   const filmPath = document.querySelector('.film-path-main');
   const filmPathGlow = document.querySelector('.film-path-glow');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const loopDuration = 20;
+  const loopDuration = 26;
   const phaseStops = [
     [0, 'type'],
-    [4.55, 'statement'],
-    [7.15, 'detail'],
-    [10.2, 'type'],
-    [13.0, 'collage'],
-    [16.2, 'lockup']
+    [5.2, 'statement'],
+    [9.0, 'detail'],
+    [13.4, 'type'],
+    [18.1, 'collage'],
+    [22.4, 'lockup']
   ];
   const wordStarts = [.78, 1.08, 1.38, 1.72, 2.08, 2.42];
   let filmRaf = 0;
   let filmTime = 0;
   let filmStart = 0;
   let filmVisible = true;
+  let currentFilmPhase = '';
 
   const setFilmPhase = (phase) => {
+    if (phase === currentFilmPhase) return;
+    currentFilmPhase = phase;
     filmStage.className = `film-stage phase-${phase}`;
   };
 
@@ -35,7 +38,7 @@
     filmTime = ((now - filmStart) / 1000) % loopDuration;
     setFilmPhase(phaseFor(filmTime));
     filmWords.forEach((word, index) => {
-      const visible = filmTime >= wordStarts[index] && filmTime < 4.35;
+      const visible = filmTime >= wordStarts[index] && filmTime < 4.75;
       word.classList.toggle('is-visible', visible);
     });
 
