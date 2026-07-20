@@ -25,3 +25,18 @@
 .developer-bottom{padding:70px clamp(22px,5.5vw,88px) 100px;background:#b8c9ff;color:#171717}.developer-bottom-label{padding-bottom:18px;border-bottom:1px solid #17171755}.developer-bottom-grid{display:grid;grid-template-columns:1fr auto;gap:8vw;align-items:end;margin-top:72px}.developer-bottom-grid p{max-width:620px;margin:0;font-size:clamp(28px,4.5vw,68px);font-weight:500;line-height:.9;letter-spacing:-.065em}.developer-bottom-grid a{display:flex;justify-content:space-between;gap:42px;width:240px;padding:14px 0 7px;border-bottom:1px solid #171717;font:10px/1 var(--mono);text-transform:uppercase;letter-spacing:.08em}
 @media(max-width:900px){.developer-hero{padding-top:112px}.developer-hero-grid,.developer-guide-grid{grid-template-columns:1fr;gap:48px}.developer-hero-grid{margin:10vh 0 8vh}.developer-hero h1{font-size:14vw}.developer-side-note{max-width:380px}.developer-bottom-grid{grid-template-columns:1fr;gap:44px}}
 @media(max-width:560px){.developer-hero{min-height:820px;padding:100px 18px 30px}.developer-topline,.developer-section-meta,.developer-bottom-label{font-size:7px;gap:12px}.developer-topline span:last-child{max-width:140px;text-align:right}.developer-hero-grid{margin:12vh 0 8vh}.developer-kicker{font-size:8px}.developer-hero h1{font-size:15vw}.developer-request{font-size:20px;line-height:1.25}.developer-guide{padding:72px 18px 88px}.developer-guide-grid{margin-top:64px}.developer-guide h2{font-size:15vw}.developer-copy>p{font-size:13px}.developer-bottom{padding:64px 18px 88px}.developer-bottom-grid{margin-top:54px}.developer-bottom-grid p{font-size:12vw}.developer-bottom-grid a{width:100%}}
+
+/* Quiet editorial treatment for the standalone developer page. */
+.developers-page{background:#fff;color:#111}
+.developers-page .developer-hero,.developers-page .developer-guide,.developers-page .developer-bottom{background:#fff;color:#111}
+.developers-page .developer-hero h1 em,.developers-page .developer-guide h2 em{color:#111}
+.developers-page .developer-kicker,.developers-page .developer-side-note span,.developers-page .developer-copy>p,.developers-page .developer-copy li small{color:#666}
+.developers-page .developer-topline,.developers-page .developer-section-meta,.developers-page .developer-bottom-label,.developers-page .developer-request{border-color:#dedede}
+.developers-page .developer-copy li{border-color:#e5e5e5}
+.developers-page .developer-copy li>span{color:#666}
+.developers-page footer{background:#fff;color:#111;border-top:1px solid #dedede}
+
+@media(min-width:901px){
+  .developers-page .developer-hero-grid{grid-template-columns:minmax(0,1.6fr) minmax(260px,.7fr);gap:6vw}
+  .developers-page .developer-hero h1{font-size:clamp(64px,8vw,128px)}
+}

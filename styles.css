@@ -277,6 +277,13 @@ body{background:var(--paper);color:var(--ink)}
 .site-header.scrolled{border-bottom:0}
 body.research-page .site-header{border-bottom:0}
 
+/* Standalone pages stay quiet and content-led. */
+.research-page .noise,.developers-page .noise{display:none}
+.research-page .site-header,.developers-page .site-header{background:#fff;color:#111;border-bottom:1px solid #dedede;backdrop-filter:none}
+.research-page .site-header.scrolled,.developers-page .site-header.scrolled{background:#fff;border-bottom:1px solid #dedede}
+.research-page .brand-logo-frame,.developers-page .brand-logo-frame{overflow:visible}
+.research-page .mobile-nav,.developers-page .mobile-nav{background:#fff;color:#111}
+
 /* Keep the motion study lightweight on browsers with a slower compositor. */
 .noise{
   opacity:.035;
