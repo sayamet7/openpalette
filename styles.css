@@ -99,3 +99,23 @@ body{background:var(--paper);color:var(--ink)}
 .film-photo-type{background:#f5f2ea}.film-stage.phase-type .film-photo-type.type-slide{opacity:0;transform:scale(1);animation:worktable-cycle 4.5s ease-in-out infinite}.film-stage.phase-type .type-slide-one{animation-delay:0s}.film-stage.phase-type .type-slide-two{animation-delay:-1.5s}.film-stage.phase-type .type-slide-three{animation-delay:-3s}.film-stage.phase-type .film-photo-type img{transform:scale(1)}
 @keyframes worktable-cycle{0%,27%{opacity:1}36%,100%{opacity:0}}
 .tools{background:#f0ede5;color:#171717}.tools-heading>p{color:#5b5a56}.section-meta.light{color:#171717}.product-primary .product-copy{background:#d7f126;color:#171717}.line-lab{background:#f7f5ef;color:#171717}.line-lab:after{box-shadow:inset 0 0 100px #17171714}.lab-toolbar,.lab-caption{color:#5b5a56}.lab-toggle{border-color:#17171744}.lab-toggle .active{background:#171717;color:#f5f2ea}.grid-lines path{stroke:#7d7b75}.flow-glow{stroke:#ff6b58;opacity:.22}.control-points path{stroke:#17171744}.control-points circle{fill:#f7f5ef;stroke:#171717}.product-soon{background:#e8e4f2;color:#171717}.product-soon .product-copy{border-color:#17171726}.product-soon .product-description{color:#68665f}.text-link.disabled{color:#85817a;border-color:#1717172b}.gradient-preview{background:#e5e0d4}.lock-mark{background:#f5f2eacc;border-color:#17171755}.lock-mark span:first-child,.lock-mark span:last-child{border-color:#171717}footer{background:#b8c9ff;color:#171717}
+.brand-logo-frame{width:112px;height:56px;overflow:hidden;line-height:0}
+.brand-logo{left:0;top:50%;width:100px;max-height:56px;transform:translateY(-50%);object-fit:contain}
+.site-header .brand-logo-light{opacity:0}
+.site-header .brand-logo-dark{opacity:1}
+
+/* Harmony Lines is the bright product moment; the sections after it return to black. */
+.tools{background:#101010;color:#f5f2ea}
+.tools-heading>p{color:#aaa8a1}
+.section-meta.light{color:#f5f2ea}
+.product-soon{background:#252523;color:#f5f2ea}
+.product-soon .product-copy{border-color:#353532}
+.product-soon .product-description{color:#89867f}
+.gradient-preview{background:#1e1e1c}
+.next-tool{border-color:#363634}
+.news-section{background:#101010;color:#f5f2ea}
+
+@media(max-width:900px){
+  .brand-logo-frame{width:104px;height:48px}
+  .brand-logo{width:92px;max-height:48px}
+}
