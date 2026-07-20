@@ -177,6 +177,9 @@
 
 /* Keep the section index visible as a quiet left rail, like the reference article. */
 .research-page .research-article-shell{display:grid;grid-template-columns:minmax(0,166.6667px) minmax(0,802.6667px);gap:40px;width:min(1280px,100%);max-width:100%;margin:0 auto;padding:0 32px}
+.research-page .research-hero-grid{grid-template-columns:minmax(0,1fr) minmax(280px,420px)}
+.research-page .research-hero-grid > *{min-width:0}
+.research-page .research-hero-note{width:100%;max-width:420px;justify-self:end}
 .research-page .research-toc{position:sticky;top:112px;align-self:start;display:flex;flex-direction:column;gap:0;max-width:none;margin:0;padding:0;border:0}
 .research-page .research-toc-label{display:none}
 .research-page .research-toc-links{display:flex;flex-direction:column;gap:0}
@@ -200,6 +203,7 @@
 @media(max-width:900px){
   .research-page .research-hero{padding-top:100px}
   .research-page .research-hero-grid{grid-template-columns:1fr;gap:42px;margin:72px 0 56px}
+  .research-page .research-hero-note{max-width:360px;justify-self:start}
   .research-page .research-wrap{padding-top:64px;padding-bottom:72px}
   .research-page .research-lede-grid,.research-page .research-conclusion-grid,.research-page .research-section-heading{gap:36px;margin-top:48px}
   .research-page .research-section-heading{margin-bottom:40px}
