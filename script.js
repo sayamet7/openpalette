@@ -3,17 +3,21 @@
   const filmStage = document.querySelector('[data-film-stage]');
   const filmWords = [...document.querySelectorAll('[data-film-word]')];
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const loopDuration = 28;
+  const loopDuration = 18;
   const filmTickMs = 80;
   const phaseStops = [
-    [0, 'type'],
-    [7.2, 'statement'],
-    [11.0, 'detail'],
-    [15.4, 'type'],
-    [20.1, 'collage'],
-    [24.4, 'lockup']
+    [0, 'kv'],
+    [3, 'words'],
+    [6, 'split'],
+    [9, 'slide'],
+    [12, 'triptych'],
+    [15, 'statement']
   ];
-  const wordStarts = [.78, 1.08, 1.38, 1.72, 2.08, 2.42];
+  const wordWindows = {
+    words: [3, 6],
+    split: [6, 9],
+    slide: [9, 12]
+  };
   let filmTimer = 0;
   let filmTime = 0;
   let filmStart = 0;
@@ -36,8 +40,9 @@
     if (!filmVisible || reduceMotion.matches) return;
     filmTime = ((performance.now() - filmStart) / 1000) % loopDuration;
     setFilmPhase(phaseFor(filmTime));
-    filmWords.forEach((word, index) => {
-      const visible = filmTime >= wordStarts[index] && filmTime < 4.75;
+    filmWords.forEach(word => {
+      const [start, end] = wordWindows[word.dataset.filmWord] || [];
+      const visible = Number.isFinite(start) && filmTime >= start && filmTime < end;
       word.classList.toggle('is-visible', visible);
     });
     filmTimer = window.setTimeout(updateFilm, filmTickMs);
@@ -45,7 +50,7 @@
 
   const startFilm = () => {
     if (reduceMotion.matches) {
-      setFilmPhase('lockup');
+      setFilmPhase('statement');
       filmWords.forEach(word => word.classList.remove('is-visible'));
       return;
     }
