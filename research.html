@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css?v=film-v24" />
-    <link rel="stylesheet" href="./research.css?v=research-v18" />
+    <link rel="stylesheet" href="./research.css?v=research-v19" />
   </head>
   <body class="research-page">
     <header class="site-header" data-header>
@@ -40,72 +40,87 @@
     </nav>
 
     <main>
-      <article class="research-document">
-        <div class="research-document-lede">
-          <h1>Continuity in Graphic Design</h1>
-          <div class="research-document-copy">
-            <p>The logos, lettering, icons, and other graphic designs we see every day are rarely made using only simple shapes such as circles and straight lines. In most cases, they are constructed using mathematically defined curves known as Bézier curves.</p>
-            <p>Even when curves appear to connect smoothly at first glance, closer inspection may reveal subtle visual irregularities. A connection may look slightly angular, or part of the line may appear unusually thick or swollen. This visual noise is caused by a mismatch in continuity.</p>
-            <p>In design, curve connections are generally classified into three main levels.</p>
+      <div class="research-article-shell">
+        <nav class="research-toc" aria-label="In this research">
+          <div class="research-toc-links">
+            <a href="#overview"><span>01</span><strong>Overview</strong></a>
+            <a href="#g0"><span>02</span><strong>Positional continuity</strong></a>
+            <a href="#g1"><span>03</span><strong>Tangent continuity</strong></a>
+            <a href="#g2"><span>04</span><strong>Curvature continuity</strong></a>
+            <a href="#importance"><span>05</span><strong>Why it matters</strong></a>
+            <a href="#perception"><span>06</span><strong>Human perception</strong></a>
+            <a href="#manual-adjustment"><span>07</span><strong>Manual adjustment</strong></a>
+            <a href="#design-intent"><span>08</span><strong>Design intent</strong></a>
           </div>
-        </div>
+        </nav>
 
-        <section class="research-document-section">
-          <h2>Positional Continuity (G0)</h2>
-          <div class="research-document-copy">
-            <p>Two lines simply meet at the same point.</p>
-            <p>Typical examples include polylines with obvious angles and sharply defined corners.</p>
-            <p>Although the lines are connected, their direction changes abruptly at the junction, making the connection clearly visible as a corner.</p>
-          </div>
-        </section>
+        <article class="research-document">
+          <section class="research-document-lede" id="overview">
+            <h1>Continuity in Graphic Design</h1>
+            <div class="research-document-copy">
+              <p>The logos, lettering, icons, and other graphic designs we see every day are rarely made using only simple shapes such as circles and straight lines. In most cases, they are constructed using mathematically defined curves known as Bézier curves.</p>
+              <p>Even when curves appear to connect smoothly at first glance, closer inspection may reveal subtle visual irregularities. A connection may look slightly angular, or part of the line may appear unusually thick or swollen. This visual noise is caused by a mismatch in continuity.</p>
+              <p>In design, curve connections are generally classified into three main levels.</p>
+            </div>
+          </section>
 
-        <section class="research-document-section">
-          <h2>Tangent Continuity (G1)</h2>
-          <div class="research-document-copy">
-            <p>Two lines connect smoothly while continuing in the same direction.</p>
-            <p>Typical examples include conventional rounded rectangles and ordinary path joins.</p>
-            <p>The tangent directions are aligned at the connection point. However, because a straight line may suddenly begin to curve, the area around the connection can appear slightly swollen or produce a visible shift resembling a discontinuity in reflected light.</p>
-          </div>
-        </section>
+          <section class="research-document-section" id="g0">
+            <h2>Positional Continuity (G0)</h2>
+            <div class="research-document-copy">
+              <p>Two lines simply meet at the same point.</p>
+              <p>Typical examples include polylines with obvious angles and sharply defined corners.</p>
+              <p>Although the lines are connected, their direction changes abruptly at the junction, making the connection clearly visible as a corner.</p>
+            </div>
+          </section>
 
-        <section class="research-document-section">
-          <h2>Curvature Continuity (G2)</h2>
-          <div class="research-document-copy">
-            <p>Not only the connection point but also the degree of curvature is perfectly matched.</p>
-            <p>Typical examples include the smooth corners found in Apple products, high-quality typefaces, and luxury-brand logos.</p>
-            <p>The transition from a straight line to a curve happens gradually and naturally, leaving no visible indication of where the curve begins. The result is an exceptionally smooth line with an almost imperceptible transition.</p>
-          </div>
-        </section>
+          <section class="research-document-section" id="g1">
+            <h2>Tangent Continuity (G1)</h2>
+            <div class="research-document-copy">
+              <p>Two lines connect smoothly while continuing in the same direction.</p>
+              <p>Typical examples include conventional rounded rectangles and ordinary path joins.</p>
+              <p>The tangent directions are aligned at the connection point. However, because a straight line may suddenly begin to curve, the area around the connection can appear slightly swollen or produce a visible shift resembling a discontinuity in reflected light.</p>
+            </div>
+          </section>
 
-        <section class="research-document-section">
-          <h2>Why Is This Important for Designers?</h2>
-          <div class="research-document-copy">
-            <p>This research explores how the difference between G1 and G2 continuity—a subtle visual irregularity that is difficult to identify consciously—can be captured mathematically and corrected automatically while respecting the designer’s intent.</p>
-          </div>
-        </section>
+          <section class="research-document-section" id="g2">
+            <h2>Curvature Continuity (G2)</h2>
+            <div class="research-document-copy">
+              <p>Not only the connection point but also the degree of curvature is perfectly matched.</p>
+              <p>Typical examples include the smooth corners found in Apple products, high-quality typefaces, and luxury-brand logos.</p>
+              <p>The transition from a straight line to a curve happens gradually and naturally, leaving no visible indication of where the curve begins. The result is an exceptionally smooth line with an almost imperceptible transition.</p>
+            </div>
+          </section>
 
-        <section class="research-document-section">
-          <h2>The Human Eye Is Remarkably Sensitive</h2>
-          <div class="research-document-copy">
-            <p>Even when anchor points and Bézier handles are perfectly aligned in position and direction, the human eye can perceive a slight mismatch in curvature as a line that looks thick, distorted, or uneven.</p>
-          </div>
-        </section>
+          <section class="research-document-section" id="importance">
+            <h2>Why Is This Important for Designers?</h2>
+            <div class="research-document-copy">
+              <p>This research explores how the difference between G1 and G2 continuity—a subtle visual irregularity that is difficult to identify consciously—can be captured mathematically and corrected automatically while respecting the designer’s intent.</p>
+            </div>
+          </section>
 
-        <section class="research-document-section">
-          <h2>The Limitations of Manual Adjustment</h2>
-          <div class="research-document-copy">
-            <p>When a designer moves a handle to correct the curvature on one side, the balance on the other side may be disturbed. This can easily turn into an endless cycle of adjustments.</p>
-          </div>
-        </section>
+          <section class="research-document-section" id="perception">
+            <h2>The Human Eye Is Remarkably Sensitive</h2>
+            <div class="research-document-copy">
+              <p>Even when anchor points and Bézier handles are perfectly aligned in position and direction, the human eye can perceive a slight mismatch in curvature as a line that looks thick, distorted, or uneven.</p>
+            </div>
+          </section>
 
-        <section class="research-document-section">
-          <h2>Preserving the Original Design Intent</h2>
-          <div class="research-document-copy">
-            <p>Even if a line can be automatically corrected to achieve mathematically ideal G2 continuity, the correction is meaningless if it compromises the character of the original brand logo or the designer’s intention.</p>
-            <p>Balancing geometric precision with what feels visually pleasing to the human eye is therefore an extremely important challenge in graphic design.</p>
-          </div>
-        </section>
-      </article>
+          <section class="research-document-section" id="manual-adjustment">
+            <h2>The Limitations of Manual Adjustment</h2>
+            <div class="research-document-copy">
+              <p>When a designer moves a handle to correct the curvature on one side, the balance on the other side may be disturbed. This can easily turn into an endless cycle of adjustments.</p>
+            </div>
+          </section>
+
+          <section class="research-document-section" id="design-intent">
+            <h2>Preserving the Original Design Intent</h2>
+            <div class="research-document-copy">
+              <p>Even if a line can be automatically corrected to achieve mathematically ideal G2 continuity, the correction is meaningless if it compromises the character of the original brand logo or the designer’s intention.</p>
+              <p>Balancing geometric precision with what feels visually pleasing to the human eye is therefore an extremely important challenge in graphic design.</p>
+            </div>
+          </section>
+        </article>
+      </div>
     </main>
 
     <footer id="contact">
