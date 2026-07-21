@@ -331,3 +331,29 @@ footer{min-height:auto;gap:48px;padding:40px 40px 30px}
 @media(max-width:560px){
   footer{min-height:auto;padding:36px 22px 24px}
 }
+
+/* Home page framing starts below the FV. The hero remains full-bleed and untouched. */
+.home-page .home-main > .tools{
+  width:min(calc(100% - 80px),1440px);
+  margin:32px auto 0;
+  border:1px solid rgba(23,23,23,.28);
+  border-radius:20px;
+  overflow:hidden;
+}
+.home-page .home-main > .news-section{
+  width:min(calc(100% - 80px),1440px);
+  margin:32px auto;
+  border:1px solid rgba(23,23,23,.28);
+  border-radius:20px;
+  overflow:hidden;
+}
+.home-page .product{min-height:560px}
+.home-page .product-copy,.home-page .line-lab,.home-page .gradient-preview{min-height:560px}
+.home-page .tools-heading{min-height:320px}
+
+@media(max-width:900px){
+  .home-page .home-main > .tools,
+  .home-page .home-main > .news-section{width:calc(100% - 36px);border-radius:16px}
+  .home-page .home-main > .tools{margin-top:20px}
+  .home-page .home-main > .news-section{margin-top:20px;margin-bottom:20px}
+}
