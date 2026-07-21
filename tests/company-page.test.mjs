@@ -10,7 +10,7 @@ const pages = ['index.html', 'research.html', 'developers.html'];
 
 test('Company page contains the requested vision copy and local visual', () => {
   assert.match(company, /<html lang="en">/);
-  assert.match(company, /We exist for the last 8%/);
+  assert.match(company, /We exist for the last 8%[\s\S]*人間の創造性が最も価値を持つ瞬間を支える/);
   assert.match(company, /Most tools get you through the first 92%\./);
   assert.match(company, /the stretch that carries an idea all the way to 100%\./);
   assert.match(company, /see what is almost right, refine what is easy to miss/);

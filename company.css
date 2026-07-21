@@ -17,6 +17,7 @@
 .company-intro{display:grid;grid-template-columns:minmax(0,.8fr) minmax(420px,1.2fr);gap:clamp(48px,8vw,150px);align-items:end}
 .company-kicker{margin:0;font:10px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:rgba(23,23,23,.56)}
 .company-intro h1{margin:34px 0 0;font-size:clamp(36px,5vw,45px)!important;line-height:.95;letter-spacing:-.06em;font-weight:500}
+.company-title-note{display:block;margin-top:18px;font-size:clamp(14px,1.7vw,20px);line-height:1.2;letter-spacing:-.03em;font-weight:400}
 .company-vision-image{margin:0;border:1px solid rgba(23,23,23,.2);border-radius:18px;overflow:hidden;background:#dedbd3}
 .company-vision-image img{display:block;width:100%;aspect-ratio:4 / 5;object-fit:cover}
 .company-copy{max-width:1020px;margin:clamp(86px,12vw,180px) 0 0 25%;display:grid;gap:54px}
@@ -27,6 +28,7 @@
   .company-main{padding:104px 22px 88px}
   .company-intro{grid-template-columns:1fr;gap:48px}
   .company-intro h1{margin-top:24px}
+  .company-title-note{margin-top:14px;font-size:clamp(14px,3vw,18px)}
   .company-vision-image{max-width:620px;margin-left:auto}
   .company-copy{margin:78px 0 0;gap:34px}
   .company-copy p{font-size:clamp(21px,5vw,32px)}
