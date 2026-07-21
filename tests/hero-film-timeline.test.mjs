@@ -13,7 +13,7 @@ test('FV exposes the six requested visual states', () => {
   assert.match(html, /data-film-slide/);
   assert.match(html, /data-film-triptych/);
   assert.match(html, /data-film-statement/);
-  assert.match(html, /Comb-Assisted(?:<br\s*\/?>|\s)+Evaluation of G2(?:<br\s*\/?>|\s)+\(Curvature Continuity\)(?:<br\s*\/?>|\s)+for Clearer Bump Detection/s);
+  assert.doesNotMatch(html, /Comb-Assisted|Bump Detection/);
 });
 
 test('FV opens with the pre-revision hero image', () => {
