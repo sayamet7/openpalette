@@ -324,3 +324,10 @@ body.research-page .site-header{border-bottom:0}
 :where(h1,h2,h3,h4,h5,h6){font-size:clamp(22px,5vw,45px)!important}
 .hero-title,.hero-word-field,.intro-lead,.tools-heading h2,.product h3,.next-tool p,.news-heading h2,.film-statement,.lockup-title,.footer-top>p,.developer-bottom-grid p{font-size:clamp(28px,5vw,45px)!important}
 .film-detail-copy{font-size:clamp(20px,3.5vw,36px)!important}
+
+/* The footer now contains utility links only. */
+footer{min-height:auto;gap:48px;padding:40px 40px 30px}
+
+@media(max-width:560px){
+  footer{min-height:auto;padding:36px 22px 24px}
+}

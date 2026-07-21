@@ -41,3 +41,10 @@ test('research navigation remains a sticky left rail on desktop', () => {
 test('the site-wide heading scale is capped at 45px', () => {
   assert.match(globalCss, /:where\(h1,h2,h3,h4,h5,h6\)[^{]*\{[^}]*45px[^}]*!important/s);
 });
+
+test('research typography follows the English OpenAI article scale', () => {
+  assert.match(researchCss, /\.research-document h1\s*\{[^}]*font-size:\s*45px\s*!important/s);
+  assert.match(researchCss, /\.research-document h2\s*\{[^}]*font-size:\s*28px\s*!important/s);
+  assert.match(researchCss, /\.research-document p\s*\{[^}]*font-size:\s*17px/s);
+  assert.match(researchCss, /\.research-page \.research-toc a\s*\{[^}]*font-size:\s*12px[^}]*line-height:\s*15px/s);
+});

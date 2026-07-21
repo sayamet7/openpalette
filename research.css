@@ -46,8 +46,8 @@
   display: block;
   padding: 8px 0;
   color: rgba(0, 0, 0, .46);
-  font-size: 13px;
-  line-height: 1.25;
+  font-size: 12px;
+  line-height: 15px;
   letter-spacing: -.015em;
   text-decoration: none;
   transition: color .2s ease;
@@ -78,7 +78,7 @@
 
 .research-document h1 {
   max-width: 620px;
-  font-size: clamp(32px, 4.5vw, 45px);
+  font-size: 45px !important;
   font-weight: 500;
   line-height: 1.02;
   letter-spacing: -.05em;
@@ -86,7 +86,7 @@
 
 .research-document h2 {
   max-width: 620px;
-  font-size: clamp(26px, 3.5vw, 45px);
+  font-size: 28px !important;
   font-weight: 500;
   line-height: 1.08;
   letter-spacing: -.04em;
@@ -103,8 +103,8 @@
 
 .research-document p {
   margin-top: 20px;
-  font-size: 16px;
-  line-height: 1.75;
+  font-size: 17px;
+  line-height: 28px;
   letter-spacing: -.012em;
 }
 
@@ -162,11 +162,11 @@
   }
 
   .research-document h1 {
-    font-size: 36px;
+    font-size: 36px !important;
   }
 
   .research-document h2 {
-    font-size: 28px;
+    font-size: 28px !important;
   }
 
   .research-document-section {
@@ -174,7 +174,7 @@
   }
 
   .research-document p {
-    font-size: 15px;
-    line-height: 1.7;
+    font-size: 17px;
+    line-height: 28px;
   }
 }
