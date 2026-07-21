@@ -16,6 +16,13 @@ test('FV exposes the six requested visual states', () => {
   assert.match(html, /Comb-Assisted(?:<br\s*\/?>|\s)+Evaluation of G2(?:<br\s*\/?>|\s)+\(Curvature Continuity\)(?:<br\s*\/?>|\s)+for Clearer Bump Detection/s);
 });
 
+test('FV opens with the pre-revision hero image', () => {
+  assert.match(
+    html,
+    /<figure class="film-state film-state-kv"[^>]*data-film-kv>\s*<img[^>]+src="\.\/assets\/creative-worktable-type\.png"/,
+  );
+});
+
 test('FV runs six three-second phases in an 18-second loop', () => {
   assert.match(script, /const loopDuration = 18/);
   assert.match(script, /\[0, 'kv'\][\s\S]*\[3, 'words'\][\s\S]*\[6, 'split'\][\s\S]*\[9, 'slide'\][\s\S]*\[12, 'triptych'\][\s\S]*\[15, 'statement'\]/);
