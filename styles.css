@@ -357,3 +357,53 @@ footer{min-height:auto;gap:48px;padding:40px 40px 30px}
   .home-page .home-main > .tools{margin-top:20px}
   .home-page .home-main > .news-section{margin-top:20px;margin-bottom:20px}
 }
+
+/* Below the FV, use the compact card rhythm of the OpenAI homepage. */
+.home-page .home-main > .tools{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+  padding:28px;
+}
+.home-page .tools-heading{
+  grid-column:1 / -1;
+  min-height:220px;
+  grid-template-columns:.7fr 2fr .9fr;
+}
+.home-page .tools-heading h2{margin:28px 0 0}
+.home-page .tools-heading>p{margin:115px 0 0}
+.home-page .home-main > .tools > .product{
+  display:flex;
+  flex-direction:column;
+  min-height:560px;
+  margin-bottom:0;
+}
+.home-page .home-main > .tools > .product .product-copy,
+.home-page .home-main > .tools > .product .line-lab,
+.home-page .home-main > .tools > .product .gradient-preview{min-height:280px}
+.home-page .home-main > .tools > .next-tool{
+  grid-column:1 / -1;
+  min-height:190px;
+}
+.home-page .news-list{
+  display:grid;
+  gap:12px;
+  border-top:0;
+}
+.home-page .news-item{
+  border:1px solid rgba(245,242,234,.2);
+  border-radius:12px;
+  padding:20px 22px;
+}
+
+@media(max-width:900px){
+  .home-page .home-main > .tools{grid-template-columns:1fr;padding:18px;gap:12px}
+  .home-page .tools-heading{grid-column:1;min-height:230px;grid-template-columns:1fr;gap:18px}
+  .home-page .tools-heading h2{margin:24px 0 0}
+  .home-page .tools-heading>p{margin:0}
+  .home-page .home-main > .tools > .product,
+  .home-page .home-main > .tools > .next-tool{grid-column:1}
+  .home-page .home-main > .tools > .product .product-copy,
+  .home-page .home-main > .tools > .product .line-lab,
+  .home-page .home-main > .tools > .product .gradient-preview{min-height:280px}
+}

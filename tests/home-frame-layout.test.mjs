@@ -21,7 +21,17 @@ test('only the major sections below the FV receive individual frames', () => {
   assert.doesNotMatch(css, /\.home-page \.home-main\s*>\s*\.hero[^\{]*\{[^}]*border:/s);
 });
 
-test('framed top page keeps the main blocks compact', () => {
+test('products become compact side-by-side cards below the FV', () => {
+  assert.match(css, /\.home-page \.home-main\s*>\s*\.tools\s*\{[^}]*grid-template-columns:\s*repeat\(2/s);
+  assert.match(css, /\.home-page \.home-main\s*>\s*\.tools\s*>\s*\.product\s*\{[^}]*display:\s*flex/s);
+  assert.match(css, /\.home-page \.home-main\s*>\s*\.tools\s*>\s*\.product\s*\{[^}]*flex-direction:\s*column/s);
+  assert.match(css, /\.home-page \.tools-heading\s*\{[^}]*grid-column:\s*1\s*\/\s*-1/s);
   assert.match(css, /\.home-page \.product\s*\{[^}]*min-height:\s*560px/s);
-  assert.match(css, /\.home-page \.tools-heading\s*\{[^}]*min-height:\s*320px/s);
+});
+
+test('news is stacked as bordered blocks below the product cards', () => {
+  assert.match(css, /\.home-page \.news-list\s*\{[^}]*display:\s*grid/s);
+  assert.match(css, /\.home-page \.news-list\s*\{[^}]*gap:/s);
+  assert.match(css, /\.home-page \.news-item\s*\{[^}]*border:\s*1px/s);
+  assert.match(css, /\.home-page \.news-item\s*\{[^}]*border-radius:/s);
 });
