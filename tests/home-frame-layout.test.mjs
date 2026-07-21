@@ -15,11 +15,11 @@ test('top page exposes stable home layout hooks without changing the FV structur
 test('home header keeps its logo and navigation visible over the opening FV image', () => {
   assert.match(html, /<header class="site-header"[^>]*data-header>/);
   assert.doesNotMatch(script, /lightHeaderPhases|hero-light/);
-  assert.match(css, /\.home-page \.site-header\s*,\s*\.home-page \.site-header\.scrolled\s*\{[^}]*background:\s*#171717/s);
-  assert.match(css, /\.home-page \.site-header\s*,\s*\.home-page \.site-header\.scrolled\s*\{[^}]*color:\s*#f5f2ea/s);
-  assert.match(css, /\.home-page \.site-header\s*,\s*\.home-page \.site-header\.scrolled\s*\{[^}]*text-shadow:\s*none/s);
-  assert.match(css, /\.home-page \.site-header \.brand-logo-light\s*\{[^}]*opacity:\s*1/s);
-  assert.match(css, /\.home-page \.site-header \.brand-logo-dark\s*\{[^}]*opacity:\s*0/s);
+  assert.match(css, /\.home-page \.site-header\s*\{[^}]*background:\s*transparent/s);
+  assert.match(css, /\.home-page \.site-header\s*\{[^}]*color:\s*#171717/s);
+  assert.match(css, /\.home-page \.site-header\s*\{[^}]*text-shadow:\s*none/s);
+  assert.match(css, /\.home-page \.site-header \.brand-logo-light\s*\{[^}]*opacity:\s*0/s);
+  assert.match(css, /\.home-page \.site-header \.brand-logo-dark\s*\{[^}]*opacity:\s*1/s);
 });
 
 test('only the major sections below the FV receive individual frames', () => {
