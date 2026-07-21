@@ -10,16 +10,15 @@ const pages = ['index.html', 'research.html', 'developers.html'];
 
 test('Company page contains the requested vision copy and local visual', () => {
   assert.match(company, /<html lang="en">/);
-  assert.match(company, /Company vision/);
-  assert.match(company, /Never let the limits of tools become the limits of creativity\./);
-  assert.match(company, /We don't constrain ideas to what tools can do/);
-  assert.match(company, /we create the means to make them real\./);
-  assert.match(company, /We deeply understand existing technologies, combine them, and extend them\./);
-  assert.match(company, /When necessary, we build entirely new systems from the ground up\./);
-  assert.match(company, /We don't start from “what is possible\.”/);
-  assert.match(company, /We start from “what we want to make,” then expand what is possible\./);
-  assert.match(company, /a world where creators' imaginations never become smaller/);
-  assert.match(company, /because of technology or environment\./);
+  assert.match(company, /We exist for the last 8%/);
+  assert.match(company, /Most tools get you through the first 92%\./);
+  assert.match(company, /the stretch that carries an idea all the way to 100%\./);
+  assert.match(company, /see what is almost right, refine what is easy to miss/);
+  assert.match(company, /without losing your intent\./);
+  assert.match(company, /The last 8% is not a finishing touch\./);
+  assert.match(company, /where craft turns a good result into your result\./);
+  assert.match(company, /stay with you to the end/);
+  assert.match(company, /every line, curve, and detail feels complete\./);
   assert.doesNotMatch(company, /ツールの限界|クリエイティブの限界/);
   assert.match(company, /assets\/company-vision-v1\.png/);
   assert.ok(existsSync(new URL('../assets/company-vision-v1.png', import.meta.url)));
