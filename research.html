@@ -91,8 +91,8 @@
       <section class="research-dark research-wrap" id="continuity">
         <div class="research-section-meta"><span>02</span><span>Continuity</span></div>
         <div class="research-section-heading">
-          <h2>Smoothness<br /><em>is not one thing.</em></h2>
-          <p>Two curves can meet at the same point and still produce a visible “step.” We investigate the levels of continuity behind the word “smooth.”</p>
+          <h2>Smoothness<br /><em>has levels.</em></h2>
+          <p>Most logos, letterforms, and icons are built from Bézier curves rather than simple circles or straight lines. Two curves may appear joined yet still create visual noise: a corner, a slight bulge, or a change in weight. We describe this through three levels of geometric continuity: G0 means the paths meet; G1 aligns their direction; G2 also aligns how curvature changes. G2 can make a transition feel almost invisible, but mathematical smoothness is not the whole goal. The eye is sensitive to tiny deviations, manual edits can trade one defect for another, and any correction must preserve the designer’s intent.</p>
         </div>
         <figure class="research-process-visual">
           <div class="research-process-stage">
@@ -128,16 +128,14 @@
           </div>
           <figcaption class="sr-only">An abstract study of a Bézier curve being tuned toward G2 curvature continuity.</figcaption>
         </figure>
-        <div class="formula-row"><span>Signed curvature</span><code>κ(t) = cross(B′(t), B″(t)) / |B′(t)|³</code><p>We compare how much each side bends—including the direction of that bending—not as a raw second-derivative value, but as geometric continuity at the connection.</p></div>
       </section>
 
       <section class="research-wrap research-section" id="fairness">
         <div class="research-section-meta"><span>03</span><span>Fairness</span></div>
         <div class="research-section-heading">
           <h2>A correct junction<br /><em>is not a beautiful line.</em></h2>
-          <p>Even when both sides match perfectly at the connection, distortion or a small ripple can remain somewhere along the curve. We distinguish local continuity from the natural fairness of the entire line.</p>
+          <p>A perfect local match does not guarantee a beautiful line. The curve can still carry a subtle ripple or distortion elsewhere, so we distinguish continuity at the join from fairness across the whole shape. A smoothness measure can flag abrupt changes, but it remains a guide: the mathematically smoothest curve is not always the one that preserves the brand’s character.</p>
         </div>
-        <div class="equation-callout"><code>E_fair = ∫(dκ/ds)² ds</code><p><strong>Curvature-change energy.</strong> A measure that penalizes abrupt changes in curvature. It is a guide, not an absolute answer: the mathematically smoothest curve is not necessarily the one that preserves the brand’s character.</p></div>
       </section>
 
       <section class="research-dark research-wrap" id="design-intent">
