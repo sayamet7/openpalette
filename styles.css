@@ -482,3 +482,8 @@ footer{min-height:auto;gap:48px;padding:40px 40px 30px}
 @media(max-width:900px){
   .home-page .home-main > .tools > .product .product-copy{min-height:340px}
 }
+
+/* Keep the home navigation legible over the dark opening frame. */
+.home-page .site-header:not(.scrolled){color:#f5f2ea;text-shadow:0 1px 14px rgba(0,0,0,.28)}
+.home-page .site-header:not(.scrolled) .brand-logo-light{opacity:1}
+.home-page .site-header:not(.scrolled) .brand-logo-dark{opacity:0}

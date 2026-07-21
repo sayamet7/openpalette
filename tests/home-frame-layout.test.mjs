@@ -11,6 +11,12 @@ test('top page exposes stable home layout hooks without changing the FV structur
   assert.match(html, /<section class="hero hero-film" id="top"/);
 });
 
+test('home header keeps its logo and navigation visible over the opening FV image', () => {
+  assert.match(css, /\.home-page \.site-header:not\(\.scrolled\)\s*\{[^}]*color:\s*#f5f2ea/s);
+  assert.match(css, /\.home-page \.site-header:not\(\.scrolled\) \.brand-logo-light\s*\{[^}]*opacity:\s*1/s);
+  assert.match(css, /\.home-page \.site-header:not\(\.scrolled\) \.brand-logo-dark\s*\{[^}]*opacity:\s*0/s);
+});
+
 test('only the major sections below the FV receive individual frames', () => {
   assert.match(css, /\.home-page \.home-main\s*>\s*\.tools\s*\{[^}]*width:\s*min\(/s);
   assert.match(css, /\.home-page \.home-main\s*>\s*\.tools\s*\{[^}]*margin:\s*[^;]*auto/s);
