@@ -483,7 +483,7 @@ footer{min-height:auto;gap:48px;padding:40px 40px 30px}
   .home-page .home-main > .tools > .product .product-copy{min-height:340px}
 }
 
-/* Keep the home navigation legible over the dark opening frame. */
-.home-page .site-header:not(.scrolled){color:#f5f2ea;text-shadow:0 1px 14px rgba(0,0,0,.28)}
-.home-page .site-header:not(.scrolled) .brand-logo-light{opacity:1}
-.home-page .site-header:not(.scrolled) .brand-logo-dark{opacity:0}
+/* Keep the home navigation legible with a solid black bar over every FV frame. */
+.home-page .site-header,.home-page .site-header.scrolled{background:#171717;color:#f5f2ea;border-bottom:0;box-shadow:none;text-shadow:none}
+.home-page .site-header .brand-logo-light{opacity:1}
+.home-page .site-header .brand-logo-dark{opacity:0}

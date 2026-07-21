@@ -9,16 +9,18 @@ const companyCss = existsSync(companyCssUrl) ? readFileSync(companyCssUrl, 'utf8
 const pages = ['index.html', 'research.html', 'developers.html'];
 
 test('Company page contains the requested vision copy and local visual', () => {
+  assert.match(company, /<html lang="en">/);
   assert.match(company, /Company vision/);
-  assert.match(company, /ツールの限界を、クリエイティブの限界にしない。/);
-  assert.match(company, /私たちは、発想をツールのできる範囲に収めるのではなく、/);
-  assert.match(company, /実現するための方法そのものをつくります。/);
-  assert.match(company, /既存の技術を深く理解し、組み合わせ、拡張し、/);
-  assert.match(company, /必要であれば、新しい仕組みからつくる。/);
-  assert.match(company, /「できること」から考えるのではなく、/);
-  assert.match(company, /「つくりたいもの」から、できることを広げていく。/);
-  assert.match(company, /クリエイターの想像力が、/);
-  assert.match(company, /技術や環境の都合で小さくならない世界へ。/);
+  assert.match(company, /Never let the limits of tools become the limits of creativity\./);
+  assert.match(company, /We don't constrain ideas to what tools can do/);
+  assert.match(company, /we create the means to make them real\./);
+  assert.match(company, /We deeply understand existing technologies, combine them, and extend them\./);
+  assert.match(company, /When necessary, we build entirely new systems from the ground up\./);
+  assert.match(company, /We don't start from “what is possible\.”/);
+  assert.match(company, /We start from “what we want to make,” then expand what is possible\./);
+  assert.match(company, /a world where creators' imaginations never become smaller/);
+  assert.match(company, /because of technology or environment\./);
+  assert.doesNotMatch(company, /ツールの限界|クリエイティブの限界/);
   assert.match(company, /assets\/company-vision-v1\.png/);
   assert.ok(existsSync(new URL('../assets/company-vision-v1.png', import.meta.url)));
 });

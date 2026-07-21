@@ -11,5 +11,8 @@ for (const page of pages) {
     assert.doesNotMatch(html, /Keep your/i);
     assert.doesNotMatch(html, /Creative tools/i);
     assert.doesNotMatch(html, /class="footer-top/);
+    if (page === 'developers.html') {
+      assert.doesNotMatch(html, /弊社関連製品のバグ報告はこちらにお願いします/);
+    }
   });
 }

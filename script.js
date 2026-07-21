@@ -1,6 +1,7 @@
 (() => {
   const hero = document.querySelector('.hero-film');
   const filmStage = document.querySelector('[data-film-stage]');
+  const header = document.querySelector('[data-header]');
   const filmWords = [...document.querySelectorAll('[data-film-word]')];
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const loopDuration = 18;
@@ -69,7 +70,6 @@
     startFilm();
   }
 
-  const header = document.querySelector('[data-header]');
   window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 40), { passive: true });
 
   const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => {
