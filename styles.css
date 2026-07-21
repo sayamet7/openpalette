@@ -319,3 +319,8 @@ body.research-page .site-header{border-bottom:0}
 .control-points{transition:none}
 .control-points path{stroke:rgba(23,23,23,.36)}
 .control-points circle{fill:var(--paper);stroke:var(--ink)}
+
+/* Global type rule: visible headings never exceed 45px. */
+:where(h1,h2,h3,h4,h5,h6){font-size:clamp(22px,5vw,45px)!important}
+.hero-title,.hero-word-field,.intro-lead,.tools-heading h2,.product h3,.next-tool p,.news-heading h2,.film-statement,.lockup-title,.footer-top>p,.developer-bottom-grid p{font-size:clamp(28px,5vw,45px)!important}
+.film-detail-copy{font-size:clamp(20px,3.5vw,36px)!important}
