@@ -1,20 +1,20 @@
 [
   {
+    "date": "2026-07-29",
+    "tag": "HARMONY GRADIENT",
+    "title": "Harmony Gradient enters review",
+    "summary": "Beautiful, editable Illustrator gradients with simple controls and live preview."
+  },
+  {
+    "date": "2026-07-29",
+    "tag": "HARMONY LINES",
+    "title": "Harmony Lines gets a new look",
+    "summary": "Smooth G2 corners with direct radius and curvature control."
+  },
+  {
     "date": "2026-07-20",
     "tag": "OPEN PALETTE",
     "title": "Open Palette is now live",
-    "summary": "A toolkit for shaping Illustrator paths and color with more intention."
-  },
-  {
-    "date": "2026-07-18",
-    "tag": "R&D",
-    "title": "Harmony Gradient is in development",
-    "summary": "We are exploring a simpler way to create beautiful, editable gradients in Illustrator."
-  },
-  {
-    "date": "2026-07-12",
-    "tag": "HARMONY LINES",
-    "title": "Updated the G1 / G2 continuity preview",
-    "summary": "A live preview for checking path connections while refining their rhythm."
+    "summary": "Tools for shaping Illustrator paths and color with more intention."
   }
 ]

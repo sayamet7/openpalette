@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Open Palette — tools for a more harmonious canvas." />
+    <meta name="description" content="Open Palette creates native Adobe Illustrator plug-ins for smoother lines and beautiful gradients." />
     <meta name="theme-color" content="#0c0c0c" />
     <title>Open Palette — Tools for a harmonious canvas</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles.css?v=film-v26" />
+    <link rel="stylesheet" href="./styles.css?v=film-v27" />
   </head>
   <body class="home-page">
     <div class="noise" aria-hidden="true"></div>
@@ -107,8 +107,8 @@
             <div>
               <p class="product-type">Native plug-in for Adobe Illustrator</p>
               <h3>Harmony<br /><span>Lines</span></h3>
-              <p class="product-jp">Every line can flow more beautifully.</p>
-              <p class="product-description">Reveal subtle irregularities in a curve and refine them without losing the shape’s original intent. With a dedicated analysis tool and a native plug-in for Adobe Illustrator, Harmony Lines brings a new level of precision to Bézier curves.</p>
+              <p class="product-jp">Create beautifully smooth corners.</p>
+              <p class="product-description">Create smooth, G2-continuous corners in Illustrator. Select a corner, then adjust its radius and curvature.</p>
             </div>
             <div class="product-actions" aria-label="Harmony Lines tools">
               <a class="product-action product-action-primary" href="#contact" aria-label="Available for macOS">
@@ -121,49 +121,27 @@
             </div>
           </div>
 
-          <div class="line-lab" aria-label="Harmony Lines G2 curvature study">
-            <div class="lab-toolbar">
-              <span>Harmony Lines / G2</span>
-              <span class="lab-state">CURVATURE CONTINUITY</span>
-            </div>
-            <svg class="line-visual" viewBox="0 0 900 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-              <defs>
-                <linearGradient id="line-gradient" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0" stop-color="#ff6b58" /><stop offset=".52" stop-color="#b8c9ff" /><stop offset="1" stop-color="#171717" />
-                </linearGradient>
-              </defs>
-              <g class="grid-lines" opacity=".22">
-                <path d="M0 100H900M0 200H900M0 300H900M0 400H900M0 500H900M0 600H900" />
-                <path d="M100 0V700M200 0V700M300 0V700M400 0V700M500 0V700M600 0V700M700 0V700M800 0V700" />
-              </g>
-              <path class="flow flow-glow" d="M-50 476C78 472 82 167 238 184C394 201 702 540 950 246" />
-              <path class="flow flow-main" d="M-50 476C78 472 82 167 238 184C394 201 702 540 950 246" />
-              <g class="control-points">
-                <path d="M238 184L82 167M238 184L394 201" />
-                <circle cx="82" cy="167" r="5" /><circle cx="238" cy="184" r="9" /><circle cx="394" cy="201" r="5" />
-              </g>
-            </svg>
-            <div class="lab-caption"><span>G2 / CURVATURE MATCH</span><span>STATIC STUDY</span></div>
-          </div>
+          <figure class="product-fv product-fv-lines">
+            <img src="./assets/harmony-lines-fv.jpg" alt="Harmony Lines" width="1360" height="800" />
+          </figure>
         </article>
 
-        <article class="product product-soon" id="rd-product" aria-disabled="true">
+        <article class="product product-soon product-review" id="harmony-gradient">
           <div class="product-copy reveal">
             <div class="product-topline">
-              <span class="product-number">02</span><span class="status"><i></i> In development</span>
+              <span class="product-number">02</span><span class="status"><i></i> Submitted for review</span>
             </div>
             <div>
-              <p class="product-type">Plug-in for Adobe Illustrator</p>
+              <p class="product-type">Native plug-in for Adobe Illustrator</p>
               <h3>Harmony<br /><span>Gradient</span></h3>
               <p class="product-jp">Beautiful gradients, made simple.</p>
-              <p class="product-description">Create beautiful, editable gradients in Adobe Illustrator with simple controls, live preview, and FIX PNG/SVG output.</p>
+              <p class="product-description">Create beautiful, editable gradients with simple controls and live preview. Keep them live, or finish as PNG or SVG.</p>
             </div>
-            <span class="text-link disabled"><span>Coming soon</span><span>—</span></span>
+            <span class="text-link disabled"><span>Adobe review in progress</span><span>→</span></span>
           </div>
-          <div class="gradient-preview" aria-hidden="true">
-            <div class="gradient-orb"></div><span>Preview unavailable</span>
-            <div class="lock-mark"><span></span><span></span></div>
-          </div>
+          <figure class="product-fv product-fv-gradient">
+            <img src="./assets/harmony-gradient-fv.jpg" alt="Harmony Gradient" width="1360" height="800" />
+          </figure>
         </article>
 
       </section>

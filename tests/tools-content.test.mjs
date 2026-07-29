@@ -15,9 +15,25 @@ test('Tool cards remove the old feature list and next-tool prompt', () => {
 test('Tool cards expose separate macOS analysis and Adobe native actions', () => {
   assert.match(html, /Analysis Tool/);
   assert.match(html, /Software for macOS/);
-  assert.match(html, /Adobe Native Tool/);
+  assert.match(html, /<strong>Native plug-in<\/strong>/);
   assert.match(html, /class="macos-mark"/);
   assert.match(html, /aria-label="Available for macOS"/);
   assert.match(css, /\.product-actions\s*\{[^}]*display:\s*grid/s);
   assert.match(css, /\.macos-mark\s+svg\s*\{[^}]*width:/s);
+});
+
+test('Both products use their current Adobe first-view artwork', () => {
+  assert.match(html, /src="\.\/assets\/harmony-lines-fv\.jpg"/);
+  assert.match(html, /src="\.\/assets\/harmony-gradient-fv\.jpg"/);
+  assert.match(html, /class="product-fv product-fv-lines"/);
+  assert.match(html, /class="product-fv product-fv-gradient"/);
+  assert.doesNotMatch(html, /Preview unavailable|class="line-visual"/);
+  assert.match(css, /\.product-fv\s*\{[^}]*aspect-ratio:\s*17\s*\/\s*10/s);
+});
+
+test('Product copy stays concise and reflects the current release state', () => {
+  assert.match(html, /Create smooth, G2-continuous corners in Illustrator\./);
+  assert.match(html, /Beautiful gradients, made simple\./);
+  assert.match(html, /Submitted for review/);
+  assert.doesNotMatch(html, /In development/);
 });
