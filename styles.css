@@ -470,6 +470,7 @@ footer{min-height:auto;gap:48px;padding:40px 40px 30px}
 .product-actions{display:grid;gap:10px;margin-top:26px}
 .product-action{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;padding:13px 14px;border:1px solid currentColor;font:10px/1 var(--mono);text-transform:uppercase;letter-spacing:.06em;transition:background .25s ease,color .25s ease,transform .25s ease}
 .product-action:hover{background:#171717;color:#f5f2ea;transform:translateY(-2px)}
+.product-action:focus-visible{outline:2px solid currentColor;outline-offset:3px}
 .product-action strong,.product-action small{display:block}
 .product-action strong{font:500 11px/1.2 var(--sans);text-transform:none;letter-spacing:-.02em}
 .product-action small{margin-top:4px;opacity:.62;font:8px/1 var(--mono);text-transform:uppercase;letter-spacing:.08em}
