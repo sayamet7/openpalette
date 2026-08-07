@@ -12,16 +12,21 @@ test('Tool cards remove the old feature list and next-tool prompt', () => {
   assert.doesNotMatch(html, /class="next-tool/);
 });
 
-test('Tool cards expose separate macOS analysis and Adobe purchase actions', () => {
+test('Tool cards separate the upcoming macOS analysis tool from Adobe purchase actions', () => {
   assert.match(html, /Analysis Tool/);
-  assert.match(html, /Software for macOS/);
+  assert.match(html, /For macOS/);
+  assert.match(html, /class="product-action product-action-coming-soon"/);
+  assert.match(html, /aria-label="Analysis Tool for macOS, coming soon"/);
+  assert.match(html, /class="coming-soon-label">Coming soon/);
+  assert.doesNotMatch(html, /href="#contact"/);
   assert.match(html, /<strong>Buy on Adobe Exchange<\/strong>/);
   assert.match(html, /<small>Native plug-in for Illustrator<\/small>/);
   assert.match(html, /class="macos-mark"/);
-  assert.match(html, /aria-label="Available for macOS"/);
   assert.match(css, /\.product-actions\s*\{[^}]*display:\s*grid/s);
   assert.match(css, /\.macos-mark\s+svg\s*\{[^}]*width:/s);
-  assert.match(css, /\.product-action:focus-visible\s*\{[^}]*outline:/s);
+  assert.match(css, /a\.product-action:hover\s*\{[^}]*transform:/s);
+  assert.match(css, /a\.product-action:focus-visible\s*\{[^}]*outline:/s);
+  assert.match(css, /\.product-action-coming-soon\s*\{[^}]*cursor:\s*default/s);
 });
 
 test('Both Adobe plug-ins link to their live purchase pages', () => {

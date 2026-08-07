@@ -22,22 +22,27 @@ test('home header keeps its logo and navigation visible over the opening FV imag
   assert.match(css, /\.home-page \.site-header \.brand-logo-dark\s*\{[^}]*opacity:\s*1/s);
 });
 
-test('only the major sections below the FV receive individual frames', () => {
-  assert.match(css, /\.home-page \.home-main\s*>\s*\.tools\s*\{[^}]*width:\s*min\(/s);
-  assert.match(css, /\.home-page \.home-main\s*>\s*\.tools\s*\{[^}]*margin:\s*[^;]*auto/s);
-  assert.match(css, /\.home-page \.home-main\s*>\s*\.tools\s*\{[^}]*border:\s*1px/s);
-  assert.match(css, /\.home-page \.home-main\s*>\s*\.tools\s*\{[^}]*border-radius:/s);
+test('the product shelf is full-bleed while news keeps its own frame', () => {
+  assert.match(css, /\.home-page \.home-main\s*>\s*\.tools\s*\{[^}]*width:\s*100%/s);
+  assert.match(css, /\.home-page \.home-main\s*>\s*\.tools\s*\{[^}]*margin:\s*0/s);
+  assert.match(css, /\.home-page \.home-main\s*>\s*\.tools\s*\{[^}]*border:\s*0/s);
+  assert.match(css, /\.home-page \.home-main\s*>\s*\.tools\s*\{[^}]*border-radius:\s*0/s);
   assert.match(css, /\.home-page \.home-main\s*>\s*\.news-section\s*\{[^}]*border:\s*1px/s);
   assert.match(css, /\.home-page \.home-main\s*>\s*\.news-section\s*\{[^}]*border-radius:/s);
   assert.doesNotMatch(css, /\.home-page \.home-main\s*>\s*\.hero[^\{]*\{[^}]*border:/s);
 });
 
-test('products become compact side-by-side cards below the FV', () => {
+test('products form one connected side-by-side collection below the FV', () => {
+  assert.match(html, /class="product-collection"/);
+  assert.match(html, /class="product-collection-bar"/);
   assert.match(css, /\.home-page \.home-main\s*>\s*\.tools\s*\{[^}]*grid-template-columns:\s*repeat\(2/s);
-  assert.match(css, /\.home-page \.home-main\s*>\s*\.tools\s*>\s*\.product\s*\{[^}]*display:\s*flex/s);
-  assert.match(css, /\.home-page \.home-main\s*>\s*\.tools\s*>\s*\.product\s*\{[^}]*flex-direction:\s*column/s);
+  assert.match(css, /\.product-collection\s*\{[^}]*display:\s*grid/s);
+  assert.match(css, /\.product-collection\s*\{[^}]*grid-template-columns:\s*repeat\(2/s);
+  assert.match(css, /\.product-collection\s*\{[^}]*border:\s*1px/s);
+  assert.match(css, /\.home-page \.home-main\s*>\s*\.tools\s*>\s*\.product-collection\s*>\s*\.product\s*\{[^}]*display:\s*flex/s);
+  assert.match(css, /\.home-page \.home-main\s*>\s*\.tools\s*>\s*\.product-collection\s*>\s*\.product\s*\{[^}]*flex-direction:\s*column/s);
+  assert.match(css, /\.product-collection\s*>\s*\.product\s*\+\s*\.product\s*\{[^}]*border-left:\s*1px/s);
   assert.match(css, /\.home-page \.tools-heading\s*\{[^}]*grid-column:\s*1\s*\/\s*-1/s);
-  assert.match(css, /\.home-page \.product\s*\{[^}]*min-height:\s*560px/s);
 });
 
 test('news is stacked as bordered blocks below the product cards', () => {

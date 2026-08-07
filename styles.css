@@ -332,12 +332,12 @@ footer{min-height:auto;gap:48px;padding:40px 40px 30px}
   footer{min-height:auto;padding:36px 22px 24px}
 }
 
-/* Home page framing starts below the FV. The hero remains full-bleed and untouched. */
+/* The product shelf stays full-bleed so it feels native to the page, not like an attached card. */
 .home-page .home-main > .tools{
-  width:min(calc(100% - 80px),1440px);
-  margin:32px auto 0;
-  border:1px solid rgba(23,23,23,.28);
-  border-radius:20px;
+  width:100%;
+  margin:0;
+  border:0;
+  border-radius:0;
   overflow:hidden;
 }
 .home-page .home-main > .news-section{
@@ -347,40 +347,84 @@ footer{min-height:auto;gap:48px;padding:40px 40px 30px}
   border-radius:20px;
   overflow:hidden;
 }
-.home-page .product{min-height:560px}
-.home-page .product-copy,.home-page .line-lab,.home-page .gradient-preview{min-height:560px}
 .home-page .tools-heading{min-height:320px}
 
 @media(max-width:900px){
-  .home-page .home-main > .tools,
   .home-page .home-main > .news-section{width:calc(100% - 36px);border-radius:16px}
-  .home-page .home-main > .tools{margin-top:20px}
   .home-page .home-main > .news-section{margin-top:20px;margin-bottom:20px}
 }
 
-/* Below the FV, use the compact card rhythm of the OpenAI homepage. */
+/* The two products share one continuous collection surface. */
 .home-page .home-main > .tools{
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:16px;
-  padding:28px;
+  gap:0;
+  padding:88px max(40px,calc((100vw - 1440px) / 2)) 80px;
 }
 .home-page .tools-heading{
   grid-column:1 / -1;
   min-height:220px;
   grid-template-columns:.7fr 2fr .9fr;
+  margin-bottom:36px;
 }
 .home-page .tools-heading h2{margin:28px 0 0}
 .home-page .tools-heading>p{margin:115px 0 0}
-.home-page .home-main > .tools > .product{
+.product-collection{
+  grid-column:1 / -1;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  overflow:hidden;
+  border:1px solid rgba(245,242,234,.24);
+  border-radius:16px;
+  background:#1b1b19;
+  box-shadow:0 28px 80px rgba(0,0,0,.22);
+}
+.product-collection-bar{
+  position:relative;
+  grid-column:1 / -1;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  min-height:48px;
+  padding:0 18px;
+  border-bottom:1px solid rgba(245,242,234,.18);
+  color:rgba(245,242,234,.62);
+  font:9px/1 var(--mono);
+  text-transform:uppercase;
+  letter-spacing:.11em;
+}
+.product-collection-bar:after{
+  content:"";
+  position:absolute;
+  right:0;
+  bottom:-1px;
+  left:0;
+  height:2px;
+  background:linear-gradient(90deg,#ff6b58 0 50%,#6aa8ff 50% 100%);
+}
+.home-page .home-main > .tools > .product-collection > .product{
   display:flex;
   flex-direction:column;
-  min-height:560px;
+  min-width:0;
+  min-height:0;
   margin-bottom:0;
 }
-.home-page .home-main > .tools > .product .product-copy,
-.home-page .home-main > .tools > .product .line-lab,
-.home-page .home-main > .tools > .product .gradient-preview{min-height:280px}
+.product-collection > .product + .product{border-left:1px solid rgba(245,242,234,.18)}
+.product-collection .product-copy{
+  flex:1 1 auto;
+  min-height:390px;
+  padding:34px;
+  background:#1b1b19;
+  color:#f5f2ea;
+}
+.product-collection .product-fv{flex:0 0 auto;width:100%}
+.product-collection .product-primary .product-copy{box-shadow:inset 0 3px 0 #ff6b58}
+.product-collection .product-gradient .product-copy{box-shadow:inset 0 3px 0 #6aa8ff}
+.product-collection .product-description{color:rgba(245,242,234,.64)}
+.product-collection .product-number{color:rgba(245,242,234,.72)}
+.product-collection .product-type{color:rgba(245,242,234,.62)}
+.product-collection .product-primary .status.available i{background:#ff6b58;box-shadow:0 0 0 4px rgba(255,107,88,.12)}
+.product-collection .product-gradient .status.available i{background:#6aa8ff;box-shadow:0 0 0 4px rgba(106,168,255,.12)}
 .home-page .home-main > .tools > .next-tool{
   grid-column:1 / -1;
   min-height:190px;
@@ -397,15 +441,21 @@ footer{min-height:auto;gap:48px;padding:40px 40px 30px}
 }
 
 @media(max-width:900px){
-  .home-page .home-main > .tools{grid-template-columns:1fr;padding:18px;gap:12px}
+  .home-page .home-main > .tools{grid-template-columns:1fr;padding:68px 18px 54px;gap:0}
   .home-page .tools-heading{grid-column:1;min-height:230px;grid-template-columns:1fr;gap:18px}
   .home-page .tools-heading h2{margin:24px 0 0}
   .home-page .tools-heading>p{margin:0}
-  .home-page .home-main > .tools > .product,
+  .product-collection{grid-template-columns:1fr;border-radius:12px}
+  .product-collection-bar{padding:0 14px}
+  .product-collection-bar span:last-child{display:none}
+  .product-collection > .product + .product{border-top:1px solid rgba(245,242,234,.18);border-left:0}
+  .home-page .home-main > .tools > .product-collection > .product,
   .home-page .home-main > .tools > .next-tool{grid-column:1}
-  .home-page .home-main > .tools > .product .product-copy,
-  .home-page .home-main > .tools > .product .line-lab,
-  .home-page .home-main > .tools > .product .gradient-preview{min-height:280px}
+  .product-collection .product-copy{min-height:0;padding:30px 24px;gap:32px}
+}
+
+@media(max-width:560px){
+  .home-page .home-main > .tools > .product-collection > .product{margin-inline:0}
 }
 
 /* FV timeline v2: six deliberate three-second compositions. */
@@ -469,20 +519,16 @@ footer{min-height:auto;gap:48px;padding:40px 40px 30px}
 /* Tool actions: split the macOS analysis tool from the Adobe-native workflow. */
 .product-actions{display:grid;gap:10px;margin-top:26px}
 .product-action{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;padding:13px 14px;border:1px solid currentColor;font:10px/1 var(--mono);text-transform:uppercase;letter-spacing:.06em;transition:background .25s ease,color .25s ease,transform .25s ease}
-.product-action:hover{background:#171717;color:#f5f2ea;transform:translateY(-2px)}
-.product-action:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+a.product-action:hover{background:#f5f2ea;color:#171717;transform:translateY(-2px)}
+a.product-action:focus-visible{outline:2px solid #f5f2ea;outline-offset:3px}
 .product-action strong,.product-action small{display:block}
 .product-action strong{font:500 11px/1.2 var(--sans);text-transform:none;letter-spacing:-.02em}
 .product-action small{margin-top:4px;opacity:.62;font:8px/1 var(--mono);text-transform:uppercase;letter-spacing:.08em}
-.product-action-primary{background:#171717;color:#f5f2ea}
-.product-action-primary:hover{background:#f5f2ea;color:#171717}
+.product-action-primary{grid-template-columns:1fr auto;border-color:#ff6b58;background:#ff6b58;color:#171717}
+.product-action-coming-soon{border-color:rgba(245,242,234,.22);background:rgba(245,242,234,.035);color:rgba(245,242,234,.52);cursor:default}
+.coming-soon-label{padding:6px 8px;border:1px solid rgba(245,242,234,.24);border-radius:999px;font:8px/1 var(--mono);white-space:nowrap;letter-spacing:.08em}
 .macos-mark{display:grid;place-items:center;width:24px;height:24px}
 .macos-mark svg{display:block;width:20px;height:20px;fill:currentColor}
-.home-page .home-main > .tools > .product .product-copy{min-height:360px}
-
-@media(max-width:900px){
-  .home-page .home-main > .tools > .product .product-copy{min-height:340px}
-}
 
 /* Keep the home navigation light and transparent with the dark logo artwork. */
 .home-page .site-header{background:transparent;color:#171717;border-bottom:0;box-shadow:none;text-shadow:none}
