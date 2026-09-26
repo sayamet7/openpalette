@@ -29,19 +29,23 @@ test('Tool cards separate the upcoming macOS analysis tool from Adobe purchase a
   assert.match(css, /\.product-action-coming-soon\s*\{[^}]*cursor:\s*default/s);
 });
 
-test('Both Adobe plug-ins link to their live purchase pages', () => {
+test('Adobe plug-ins expose their Exchange pages', () => {
   assert.match(html, /href="https:\/\/exchange\.adobe\.com\/apps\/cc\/205682\/harmony-lines"/);
   assert.match(html, /href="https:\/\/exchange\.adobe\.com\/apps\/cc\/205730\/harmony-gradient"/);
+  assert.match(html, /href="https:\/\/exchange\.adobe\.com\/apps\/cc\/205643\/overview"/);
   assert.match(html, /aria-label="Buy Harmony Lines on Adobe Exchange \(opens in a new tab\)"/);
   assert.match(html, /aria-label="Buy Harmony Gradient on Adobe Exchange \(opens in a new tab\)"/);
-  assert.equal((html.match(/target="_blank" rel="noopener noreferrer"/g) || []).length, 2);
+  assert.match(html, /aria-label="View Harmony Match on Adobe Exchange \(opens in a new tab\)"/);
+  assert.equal((html.match(/target="_blank" rel="noopener noreferrer"/g) || []).length, 3);
 });
 
 test('Both products use their current Adobe first-view artwork', () => {
   assert.match(html, /src="\.\/assets\/harmony-lines-fv\.jpg"/);
   assert.match(html, /src="\.\/assets\/harmony-gradient-fv\.jpg"/);
+  assert.match(html, /src="\.\/assets\/harmony-match-fv\.jpg"/);
   assert.match(html, /class="product-fv product-fv-lines"/);
   assert.match(html, /class="product-fv product-fv-gradient"/);
+  assert.match(html, /class="product-fv product-fv-match"/);
   assert.doesNotMatch(html, /Preview unavailable|class="line-visual"/);
   assert.match(css, /\.product-fv\s*\{[^}]*aspect-ratio:\s*17\s*\/\s*10/s);
 });
@@ -49,6 +53,9 @@ test('Both products use their current Adobe first-view artwork', () => {
 test('Product copy stays concise and reflects the current release state', () => {
   assert.match(html, /Create smooth, G2-continuous corners in Illustrator\./);
   assert.match(html, /Beautiful gradients, made simple\./);
+  assert.match(html, /Compare PDF, Illustrator AI, JPG, and PNG versions directly in Photoshop\./);
   assert.equal((html.match(/class="status available"/g) || []).length, 2);
+  assert.equal((html.match(/class="status review"/g) || []).length, 1);
+  assert.match(html, /In review/);
   assert.doesNotMatch(html, /Submitted for review|Adobe review in progress|In development/);
 });

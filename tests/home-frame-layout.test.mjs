@@ -37,7 +37,7 @@ test('products form one connected side-by-side collection below the FV', () => {
   assert.match(html, /class="product-collection-bar"/);
   assert.match(css, /\.home-page \.home-main\s*>\s*\.tools\s*\{[^}]*grid-template-columns:\s*repeat\(2/s);
   assert.match(css, /\.product-collection\s*\{[^}]*display:\s*grid/s);
-  assert.match(css, /\.product-collection\s*\{[^}]*grid-template-columns:\s*repeat\(2/s);
+  assert.match(css, /\.product-collection\s*\{[^}]*grid-template-columns:\s*repeat\(3/s);
   assert.match(css, /\.product-collection\s*\{[^}]*border:\s*1px/s);
   assert.match(css, /\.home-page \.home-main\s*>\s*\.tools\s*>\s*\.product-collection\s*>\s*\.product\s*\{[^}]*display:\s*flex/s);
   assert.match(css, /\.home-page \.home-main\s*>\s*\.tools\s*>\s*\.product-collection\s*>\s*\.product\s*\{[^}]*flex-direction:\s*column/s);
