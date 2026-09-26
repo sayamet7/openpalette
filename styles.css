@@ -556,7 +556,7 @@ a.product-action:focus-visible{outline:2px solid #f5f2ea;outline-offset:3px}
 }
 .product-fv-lines{background:#f6f0e8}
 .product-fv-gradient{background:#07366c}
-.product-fv-match{background:#10283b}
+.product-fv-match{background:#10283b;aspect-ratio:1659 / 948}
 .home-page .home-main > .tools > .product .product-fv{min-height:0}
 
 @media(max-width:900px){
