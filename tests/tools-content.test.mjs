@@ -55,7 +55,7 @@ test('Product copy stays concise and reflects the current release state', () => 
   assert.match(html, /Beautiful gradients, made simple\./);
   assert.match(html, /Compare PDF, Illustrator AI, JPG, and PNG versions directly in Photoshop\./);
   assert.equal((html.match(/class="status available"/g) || []).length, 2);
-  assert.equal((html.match(/class="status review"/g) || []).length, 1);
-  assert.match(html, /In review/);
+  assert.equal((html.match(/class="status coming-soon"/g) || []).length, 1);
+  assert.match(html, /Coming soon/);
   assert.doesNotMatch(html, /Submitted for review|Adobe review in progress|In development/);
 });

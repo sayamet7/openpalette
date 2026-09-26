@@ -427,7 +427,7 @@ footer{min-height:auto;gap:48px;padding:40px 40px 30px}
 .product-collection .product-type{color:rgba(245,242,234,.62)}
 .product-collection .product-primary .status.available i{background:#ff6b58;box-shadow:0 0 0 4px rgba(255,107,88,.12)}
 .product-collection .product-gradient .status.available i{background:#6aa8ff;box-shadow:0 0 0 4px rgba(106,168,255,.12)}
-.product-collection .product-match .status.review i{background:#8dd7d2;box-shadow:0 0 0 4px rgba(141,215,210,.12)}
+.product-collection .product-match .status.coming-soon i{background:#8dd7d2;box-shadow:0 0 0 4px rgba(141,215,210,.12)}
 .home-page .home-main > .tools > .next-tool{
   grid-column:1 / -1;
   min-height:190px;
