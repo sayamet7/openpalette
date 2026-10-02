@@ -19,7 +19,7 @@ test('Tool cards separate the upcoming macOS analysis tool from Adobe purchase a
   assert.match(html, /aria-label="Analysis Tool for macOS, coming soon"/);
   assert.match(html, /class="coming-soon-label">Coming soon/);
   assert.doesNotMatch(html, /href="#contact"/);
-  assert.match(html, /<strong>Buy on Adobe Exchange<\/strong>/);
+  assert.match(html, /<strong>Try on Adobe Exchange<\/strong>/);
   assert.match(html, /<small>Native plug-in for Illustrator<\/small>/);
   assert.match(html, /class="macos-mark"/);
   assert.match(css, /\.product-actions\s*\{[^}]*display:\s*grid/s);
@@ -30,11 +30,11 @@ test('Tool cards separate the upcoming macOS analysis tool from Adobe purchase a
 });
 
 test('Adobe plug-ins expose their Exchange pages', () => {
-  assert.match(html, /href="https:\/\/exchange\.adobe\.com\/apps\/cc\/205682\/harmony-lines"/);
-  assert.match(html, /href="https:\/\/exchange\.adobe\.com\/apps\/cc\/205730\/harmony-gradient"/);
+  assert.match(html, /href="https:\/\/exchange\.adobe\.com\/apps\/cc\/206033\/harmony-lines-free"/);
+  assert.match(html, /href="https:\/\/exchange\.adobe\.com\/apps\/cc\/206034\/harmony-gradient-free"/);
   assert.match(html, /href="https:\/\/exchange\.adobe\.com\/apps\/cc\/205643\/overview"/);
-  assert.match(html, /aria-label="Buy Harmony Lines on Adobe Exchange \(opens in a new tab\)"/);
-  assert.match(html, /aria-label="Buy Harmony Gradient on Adobe Exchange \(opens in a new tab\)"/);
+  assert.match(html, /aria-label="Try Harmony Lines on Adobe Exchange \(opens in a new tab\)"/);
+  assert.match(html, /aria-label="Try Harmony Gradient on Adobe Exchange \(opens in a new tab\)"/);
   assert.match(html, /aria-label="View Harmony Match on Adobe Exchange \(opens in a new tab\)"/);
   assert.equal((html.match(/target="_blank" rel="noopener noreferrer"/g) || []).length, 3);
 });
